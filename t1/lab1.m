@@ -5,6 +5,8 @@ clear all
 
 pkg load symbolic
 
+format long
+
 R1 = 1.01360927043;
 R2 = 2.01657828976;
 R3 = 3.00681599161;
@@ -33,20 +35,40 @@ M = [R1+R3+R4, R3, R4, Z; Kb*R3, Kb*R3 - U, Z, Z; R4, Z, R4+R6+R7-Kc, Z; Z, Z, Z
 
 MB = [Va; Z; Z; Id];
 
-X= M\MB
+I = M\MB;
 
-N = [U, Z, Z, -U, Z, Z, Z; Z, -G2-Kb, G2, Z, Kb, Z, Z; -G1, G1+G2+G3, -G2, Z, -G3, Z, Z; Z, Kb, Z, Z, -G5-Kb, G5, Z; Z, Z, Z, -Kc*G6, U, Z, Kc*G6; Z, Z, Z, -G6, Z, Z, G6+G7; Z, Z, Z, Z, U, Z, -Kc*G7];
+N = [U, Z, Z, -U, Z, Z, Z; Z, -G2-Kb, G2, Z, Kb, Z, Z; -G1, G1+G2+G3, -G2, Z, -G3, Z, Z; Z, Kb, Z, Z, -G5-Kb, G5, Z; Z, Z, Z, -Kc*G6, U, Z, Kc*G6; Z, Z, Z, -G6, Z, Z, G6+G7; G1, -G1, Z, G4+G6, -G4, Z, -G6];
 
 NB = [Va; Z; Z; Id; Z; Z; Z];
 
-Y= N\NB
+V = N\NB;
 
+printf ("Resistências_TAB\n");
+printf ("R1 = %e kOhm\n", R1);
+printf ("R2 = %e kOhm\n", R2);
+printf ("R3 = %e kOhm\n", R3);
+printf ("R4 = %e kOhm\n", R4);
+printf ("R5 = %e kOhm\n", R5);
+printf ("R6 = %e kOhm\n", R6);
+printf ("R7 = %e kOhm\n", R7);
+printf ("Resistências_END\n");
 
+printf ("Correntes_TAB\n");
+printf ("Ia = %e mA\n", I(1));
+printf ("Ib = %e mA\n", I(2));
+printf ("Ic = %e mA\n", I(3));
+printf ("Id = %e mA\n", I(4));
+printf ("Correntes_END\n");
 
-
-
-
-
-
+printf ("Correntes_TAB\n");
+printf ("V1 = = %e V\n", V(1));
+printf ("V2 = = %e V\n", V(2));
+printf ("V3 = = %e V\n", V(3));
+printf ("V4 = = %e V\n", V(4));
+printf ("V5 = = %e V\n", V(5));
+printf ("V6 = = %e V\n", V(6));
+printf ("V7 = = %e V\n", V(7));
+printf ("V8 = = %e V\n", 0);
+printf ("Correntes_END\n");
 
 
