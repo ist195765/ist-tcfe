@@ -1,61 +1,25 @@
-Symbolic pkg v2.8.0: Python communication link active, SymPy v1.5.1.
-i(t) = (symfun)
-
-    d        
-  C⋅──(vo(t))
-    dt       
-
-
-
-KVL equation:
-vi(t) = (symfun)
-
-      d                
-  C⋅R⋅──(vo(t)) + vo(t)
-      dt               
-
-
-
-Solution is of the formv(t) = (symfun) vo_f(t) + voₙ(t)
-
-
-Natural solution:
-vi(t) = (symfun) 0
-i_n(t) = (symfun)
-
-    d         
-  C⋅──(voₙ(t))
-    dt        
-
-
-
- Natural solution is of the formvo_n(t) = (symfun)
-
-     t⋅wn
-  A⋅ℯ    
-
-ans = (sym)
-
-     t⋅wn       d             
-  A⋅ℯ     + C⋅R⋅──(voₙ(t)) = 0
-                dt            
-
-ans = (sym)
-
-            t⋅wn      t⋅wn    
-  A⋅C⋅R⋅wn⋅ℯ     + A⋅ℯ     = 0
-
-ans = (sym) C⋅R⋅wn + 1 = 0
-ans = (sym)
-
-  -1 
-  ───
-  C⋅R
-
-R =  1000
-C =  0.00000010000
-f =  1000
-Zc =     0.00000 - 1591.54943i
-Cgain =  0.71696 - 0.45048i
-Gain =  0.84673
-Phase = -0.56098
+Resistências_TAB
+R1 = 1.013609e+00 kOhm
+R2 = 2.016578e+00 kOhm
+R3 = 3.006816e+00 kOhm
+R4 = 4.049229e+00 kOhm
+R5 = 3.053925e+00 kOhm
+R6 = 2.092502e+00 kOhm
+R7 = 1.022320e+00 kOhm
+Resistências_END
+Correntes_TAB
+Ia = 2.732478e-01 mA
+Ib = -2.864551e-01 mA
+Ic = 9.563162e-01 mA
+Id = 1.029587e+00 mA
+Correntes_END
+Correntes_TAB
+V1 = = 8.194795e+00 V
+V2 = = 7.917828e+00 V
+V3 = = 7.340169e+00 V
+V4 = = 2.978754e+00 V
+V5 = = 7.957540e+00 V
+V6 = = 1.197664e+01 V
+V7 = = 9.776608e-01 V
+V8 = = 0.000000e+00 V
+Correntes_END
