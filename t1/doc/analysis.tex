@@ -1,10 +1,22 @@
 \section{Theoretical Analysis}
 \label{sec:analysis}
 
-In this section, the circuit shown in Figure ... is analysed
+In this section, the circuit shown in Figure~\ref{fig:t1systemanlysis} is analysed
 theoretically, in terms of its current and voltage.
 In analyzing a circuit using Kirchhoff's circuit laws, one can either do nodal analysis using Kirchhoff's current law (KCL) or mesh analysis using Kirchhoff's voltage law (KVL).
 In the subsections bellow we explain how the two methods ... in solving the circuit. 
+
+
+
+IMPRIME ISTO
+
+\begin{center}
+\begin{figure}
+\includegraphics[width  = 18cm]{t1systemsanalysis.odp}
+\end{figure}
+\end{center}
+
+IMPRIME ISTO
 
 
 \subsection{Nodal analysis}
@@ -23,6 +35,16 @@ $\begin{pmatrix}
 0 & 0 & 0 & -G6 & 0 & 0 & G6+G7 
 \end{pmatrix}$
 $\begin{pmatrix}
+V1\\
+V2\\
+V3\\
+V4\\
+V5\\
+V6\\
+V7
+\end{pmatrix}$
+=
+$\begin{pmatrix}
 Va\\
 0\\
 0\\
@@ -32,9 +54,10 @@ Id\\
 0
 \end{pmatrix}$
 
+
 The following table displays the various solutions to the :
 
-\begin{table}
+\begin{table}[ht]
 \centering
 \begin{tabular}{c|c} 
  \hline
@@ -47,7 +70,7 @@ V4 & 2.978754e+00 V\\ \hline
 V5 & 7.957540e+00 V\\ \hline
 V6 & 1.197664e+01 V\\ \hline
 V7 & 9.776608e-01 V\\ \hline
-V8 & 0.000000e+00 V\\ \hline [1ex] 
+V8 & 0.000000e+00 V\\ \hline 
 \end{tabular}
 \caption{Table ...}
 \label{table:2}
@@ -67,6 +90,13 @@ R4 & 0 & R4+R6+R7-Kc & 0 \\
 0 & 0 & 0 & 1 
 \end{pmatrix}$
 $\begin{pmatrix}
+I1\\
+I2\\
+I3\\
+I4
+\end{pmatrix}$
+=
+$\begin{pmatrix}
 Va\\
 0\\
 0\\
@@ -85,7 +115,7 @@ The following table is the info that was already given to us:
 Ia & 2.732478e-01 mA\\ \hline
 Ib & -2.864551e-01 mA\\ \hline
 Ic & 9.563162e-01 mA\\ \hline
-Id & 1.029587e+00 mA\\ \hline [1ex] 
+Id & 1.029587e+00 mA\\ \hline 
 \end{tabular}
 \caption{Table ...}
 \label{table:3}
