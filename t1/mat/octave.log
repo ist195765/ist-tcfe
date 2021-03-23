@@ -23,3 +23,7 @@ V6 = = 1.197664e+01 V
 V7 = = 9.776608e-01 V
 V8 = = 0.000000e+00 V
 Tensoes_END
+Constantes_TAB
+Kb = 7.213324e+00 V/mA
+Kb = 7.213324e+00 ma/V
+Constantes_END
