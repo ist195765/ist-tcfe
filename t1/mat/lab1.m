@@ -93,4 +93,8 @@ printf ("V7 = = %e V\n", V(7));
 printf ("V8 = = %e V\n", 0);
 printf ("Tensoes_END\n");
 
+printf("Constantes_TAB\n");
+printf("Kb = %e V/mA\n", Kb);
+printf("Kb = %e ma/V\n", Kb);
+printf("Constantes_END\n");
 
