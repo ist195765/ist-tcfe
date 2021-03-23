@@ -1,0 +1,29 @@
+Resistências_TAB
+R1 = 1.013609e+00 kOhm
+R2 = 2.016578e+00 kOhm
+R3 = 3.006816e+00 kOhm
+R4 = 4.049229e+00 kOhm
+R5 = 3.053925e+00 kOhm
+R6 = 2.092502e+00 kOhm
+R7 = 1.022320e+00 kOhm
+Resistências_END
+Correntes_TAB
+Ia = 2.732478e-01 mA
+Ib = -2.864551e-01 mA
+Ic = 9.563162e-01 mA
+Id = 1.029587e+00 mA
+Correntes_END
+Tensoes_TAB
+V1 = = 8.194795e+00 V
+V2 = = 7.917828e+00 V
+V3 = = 7.340169e+00 V
+V4 = = 2.978754e+00 V
+V5 = = 7.957540e+00 V
+V6 = = 1.197664e+01 V
+V7 = = 9.776608e-01 V
+V8 = = 0.000000e+00 V
+Tensoes_END
+Constantes_TAB
+Kb = 7.213324e+00 V/mA
+Kb = 7.213324e+00 ma/V
+Constantes_END
