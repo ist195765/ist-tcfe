@@ -1,0 +1,55 @@
+\section{Theoretical Analysis}
+\label{sec:analysis}
+
+In this section, the circuit shown in Figure ... is analysed
+theoretically, in terms of its current and voltage.
+In analyzing a circuit using Kirchhoff's circuit laws, one can either do nodal analysis using Kirchhoff's current law (KCL) or mesh analysis using Kirchhoff's voltage law (KVL).
+In the subsections bellow we explain how the two methods ... in solving the circuit. 
+
+TABELAS
+
+\subsection{Nodal analysis}
+The nodal analysis or the branch current method is a method of determining the voltage (potential difference) between "nodes" (points where elements or branches connect) in an electrical circuit in terms of the branch currents. 
+Nodal analysis writes an equation at each electrical node, requiring that the branch currents incident at a node must sum to zero.
+
+
+\begin{pmatrix}
+1 & 0 & 0 & -1 & 0 & 0 & 0 \\
+0 & -G2-Kb & G2 & 0 & Kb & 0 & 0 \\
+-G1 & G1+G2+G3 & -G2 & 0 & -G3 & 0 & 0 \\
+0 & Kb & 0 & 0 & -G5-Kb & G5 & 0 \\
+0 & 0 & 0 & -Kc*G6 & 1 & 0 & Kc*G6 \\
+0 & 0 & 0 & -G6 & 0 & 0 & G6+G7 \\
+0 & 0 & 0 & -G6 & 0 & 0 & G6+G7 \\
+\end{pmatrix}
+
+o q da cada um teoricamente
+
+\subsection{Mesh analysis}
+
+Mesh analysis is a method that is used to solve circuits for the currents at any place in the electrical circuit.\\
+This analysis makes use of Kirchhoff’s voltage law to arrive at a set of equations guaranteed to be solvable if the circuit has a solution.\\In this case, we use four equations in order to find the four circulation currents, since we have four elementar meshes in this circuit.
+
+\begin{pmatrix}
+R1+R3+R4 & R3 & R4 & 0 \\
+Kb*R3 & Kb*R3 - 1 & 0 & 0 \\
+R4 & 0 & R4+R6+R7-Kc & 0 \\
+0 & 0 & 0 & 1 \\
+\end{pmatrix}
+
+o que da cada um teoricamente
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

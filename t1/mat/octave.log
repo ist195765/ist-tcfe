@@ -13,7 +13,7 @@ Ib = -2.864551e-01 mA
 Ic = 9.563162e-01 mA
 Id = 1.029587e+00 mA
 Correntes_END
-Correntes_TAB
+Tensoes_TAB
 V1 = = 8.194795e+00 V
 V2 = = 7.917828e+00 V
 V3 = = 7.340169e+00 V
@@ -22,4 +22,4 @@ V5 = = 7.957540e+00 V
 V6 = = 1.197664e+01 V
 V7 = = 9.776608e-01 V
 V8 = = 0.000000e+00 V
-Correntes_END
+Tensoes_END
