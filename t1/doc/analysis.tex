@@ -1,22 +1,19 @@
 \section{Theoretical Analysis}
 \label{sec:analysis}
 
-In this section, the circuit shown in Figure~\ref{fig:t1systemanalysis.pdf} is analysed
+In this section, the circuit shown in Figure~\ref{fig:t1systemanalysis} is analysed
 theoretically, in terms of its current and voltage.
 In analyzing a circuit using Kirchhoff's circuit laws, one can either do nodal analysis using Kirchhoff's current law (KCL) or mesh analysis using Kirchhoff's voltage law (KVL).
-In the subsections bellow we explain how the two methods ... in solving the circuit. 
+In the subsections bellow we explain how the two methods are used in order to solve the circuit. 
 
-
-
-IMPRIME ISTO
 
 \begin{center}
-\begin{figure}
-\includegraphics[width  = 10cm]{t1systemanalysis.pdf}
-\end{figure}
+
+\includegraphics[width  = 12cm]{t1systemanalysis.pdf}
+
 \end{center}
 
-IMPRIME ISTO
+
 
 
 \subsection{Nodal analysis}
@@ -55,9 +52,9 @@ Id\\
 \end{pmatrix}$
 
 
-The following table displays the various solutions to the :
+The following table displays the various solutions to the various voltages :
 
-\begin{table}[ht]
+\begin{table}[h]
 \centering
 \begin{tabular}{c|c} 
  \hline
@@ -72,7 +69,7 @@ V6 & 1.197664e+01 V\\ \hline
 V7 & 9.776608e-01 V\\ \hline
 V8 & 0.000000e+00 V\\ \hline 
 \end{tabular}
-\caption{Table ...}
+\caption{Table 2: Octave nodal analyisis results}
 \label{table:2}
 \end{table}
 
@@ -83,6 +80,7 @@ o q da cada um teoricamente
 Mesh analysis is a method that is used to solve circuits for the currents at any place in the electrical circuit.\\
 This analysis makes use of Kirchhoff’s voltage law to arrive at a set of equations guaranteed to be solvable if the circuit has a solution.\\In this case, we use four equations in order to find the four circulation currents, since we have four elementar meshes in this circuit.
 
+\\
 $\begin{pmatrix}
 R1+R3+R4 & R3 & R4 & 0 \\
 Kb*R3 & Kb*R3 - 1 & 0 & 0 \\
@@ -103,10 +101,12 @@ Va\\
 Id
 \end{pmatrix}$
 
+\\
+\\
 
-The following table is the info that was already given to us:
+The following table displays the various solutions to the various currents:
 
-\begin{table}[ht]
+\begin{table}[h]
 \centering
 \begin{tabular}{c|c} 
  \hline
@@ -117,12 +117,11 @@ Ib & -2.864551e-01 mA\\ \hline
 Ic & 9.563162e-01 mA\\ \hline
 Id & 1.029587e+00 mA\\ \hline 
 \end{tabular}
-\caption{Table ...}
+\caption{Table 3: Octave mesh analysis results}
 \label{table:3}
 \end{table}
 
 
-o que da cada um teoricamente
 
 
 
