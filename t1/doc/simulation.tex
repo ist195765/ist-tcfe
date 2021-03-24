@@ -2,3 +2,37 @@
 \label{sec:simulation}
 
 
+In order to run the simulation, we wrote the ngspice code according to the image below. It is important to note that an extra voltage source, Vaux was added and therefore, another node was also added (node 7). This V_aux was intended to allow the measurement of the current Ic which voltage source Vc depends on, because ngspice doesn't measure the current between two nodes, only in resistors and independent voltage sources. Vaux's voltage is equal to 0 V, as expected by its name, since it is only an auxiliary component that doesn't interfere with the circuit (node's 8 voltage is equal to node's 7 voltage). 
+
+
+
+
+
+The results obtained from the simulation are shown in the table below. 
+
+
+
+Then, an analysis of the values obtained was conducted, in order to ascertain the compatibility with the expected values from the theorethical analysis. This result validation was achieved by calculating the relative errors between the theoretical values obtained in octave and the experimental values obtained in ngspice.
+
+\begin{table}[ht] \centering
+\begin{tabular}{|
+>{\columncolor[HTML]{FFCC67}}l |c|}
+\hline
+\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Relative Errors (\%)} \\ \hline
+{\color[HTML]{333333} V1}               & 0               \\ \hline
+{\color[HTML]{333333} V2}               & 0               \\ \hline
+{\color[HTML]{333333} V3}               & 0               \\ \hline
+{\color[HTML]{333333} V4}               & 0               \\ \hline
+{\color[HTML]{333333} V5}               & 0                       \\ \hline
+{\color[HTML]{333333} V6}               & 0                       \\ \hline
+{\color[HTML]{333333} V7}               & 0               \\ \hline
+{\color[HTML]{333333} IA}               & 0              \\ \hline
+{\color[HTML]{333333} IB}               & 3.49095e-05              \\ \hline
+{\color[HTML]{333333} IC}               & 0                       \\ \hline
+\end{tabular}
+\caption{Relative Errors between Octave and NgSpice results}
+\end{table}
+
+
+
+After the analysis of these errors, it is possible to infer that the accuracy is extremely high. The maximum relative error is 3.49095e-05, which is extremely low. This error is associated to the dissipated power in the resistors. Based on this, the simulation results are validated.
