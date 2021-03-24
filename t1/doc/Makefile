@@ -6,7 +6,11 @@ all: $(FILE).pdf
 	evince $< &
 	
 $(FILE).pdf: $(wildcard *.tex) $(LODFIGS)
-
+	export TEXINPUTS=$(TEXINPUTS)
+	
+	pdflatex $(FILE).tex
+	pdflatex $(FILE).TEX
+	pdflatex $(FILE).tex
 	
 %.pdf: %.odg
 	soffice --headless --convert-to pdf $<
