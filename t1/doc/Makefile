@@ -7,6 +7,7 @@ all: $(FILE).pdf
 	
 $(FILE).pdf: $(wildcard *.tex) $(LODFIGS)
 
+
 	
 %.pdf: %.odg
 	soffice --headless --convert-to pdf $<
