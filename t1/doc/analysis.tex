@@ -1,17 +1,17 @@
 \section{Theoretical Analysis}
 \label{sec:analysis}
 
-In this section, the circuit shown in Figure~\ref{fig:t1systemanalysis.pdf} is analysed
+In this section, the circuit shown in Figure~\ref{fig:system2} is analysed
 theoretically, in terms of its current and voltage.
 In analyzing a circuit using Kirchhoff's circuit laws, one can either do nodal analysis using Kirchhoff's current law (KCL) or mesh analysis using Kirchhoff's voltage law (KVL).
 In the subsections bellow we explain how the two methods are used in order to solve the circuit. 
 
+\begin{figure}[ht]
+\centering
+\includegraphics[width = 15cm]{system2.pdf}
+\caption {Circuit}
+\end{figure}
 
-\begin{center}
-
-\includegraphics[width  = 12cm]{t1systemanalysis.pdf}
-{Figure 1: Circuit}
-\end{center}
 
 
 \subsection{Nodal analysis}
@@ -20,16 +20,19 @@ Nodal analysis writes an equation at each electrical node, requiring that the br
 Since there are 8 nodes in total in this circuit we must have 8 equations in order to find all the 8 voltages.
 
 
+
 $\begin{pmatrix}
-1 & 0 & 0 & -1 & 0 & 0 & 0 \\
-0 & -G2-Kb & G2 & 0 & Kb & 0 & 0 \\
--G1 & G1+G2+G3 & -G2 & 0 & -G3 & 0 & 0 \\
-0 & Kb & 0 & 0 & -G5-Kb & G5 & 0 \\
-0 & 0 & 0 & -Kc*G6 & 1 & 0 & Kc*G6 \\
-0 & 0 & 0 & -G6 & 0 & 0 & G6+G7 \\
-0 & 0 & 0 & -G6 & 0 & 0 & G6+G7 
+1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 1 & 0 & 0 & -1 & 0 & 0 & 0 \\
+0 & -G1 & G1+G2+G3 & -G2 & 0 & -G3 & 0 & 0 \\
+0 & 0 & -G2-Kb & G2 & 0 & Kb & 0 & 0  \\
+0 & G1 & -G1 & 0 & G4+G6 & -G4 & 0 & -G6\\
+0 & 0 & 0 & 0 & -Kc*G6 & 1 & 0 & Kc*G6  \\
+-1 & 0 & Kb & 0 & 0 & -G5-Kb & G5 & 0  \\
+-G7 & 0 & 0 & 0 & -G6 & 0 & 0 & G6+G7  \\ 
 \end{pmatrix}$
 $\begin{pmatrix}
+V0\\
 V1\\
 V2\\
 V3\\
@@ -40,6 +43,7 @@ V7
 \end{pmatrix}$
 =
 $\begin{pmatrix}
+0\\
 Va\\
 0\\
 0\\
@@ -48,6 +52,7 @@ Id\\
 0\\
 0
 \end{pmatrix}$
+
 
 
 The following table displays the various solutions to the various voltages :
@@ -65,7 +70,7 @@ The following table displays the various solutions to the various voltages :
 {\color[HTML]{333333} V7}               & 9.776608e-01              \\ \hline
 {\color[HTML]{333333} V8}               & 0.000000e+00             \\ \hline
 \end{tabular}
-\caption{Octave nodal analyisis results}
+\caption{Octave nodal analysis results}
 \end{table}
 
 
@@ -108,7 +113,7 @@ The following table displays the various solutions to the various currents:
 {\color[HTML]{333333} Ic}               & 9.563162e-01                \\ \hline
 {\color[HTML]{333333} Id}               & 1.029587e+00               \\ \hline
 \end{tabular}
-\caption{Octave mesh analyisis results}
+\caption{Octave mesh analysis results}
 \end{table}
 
 
