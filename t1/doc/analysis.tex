@@ -1,7 +1,7 @@
 \section{Theoretical Analysis}
 \label{sec:analysis}
 
-In this section, the circuit shown in Figure~\ref{fig:t1systemanalysis} is analysed
+In this section, the circuit shown in Figure~\ref{fig:t1systemanalysis.pdf} is analysed
 theoretically, in terms of its current and voltage.
 In analyzing a circuit using Kirchhoff's circuit laws, one can either do nodal analysis using Kirchhoff's current law (KCL) or mesh analysis using Kirchhoff's voltage law (KVL).
 In the subsections bellow we explain how the two methods are used in order to solve the circuit. 
@@ -10,10 +10,8 @@ In the subsections bellow we explain how the two methods are used in order to so
 \begin{center}
 
 \includegraphics[width  = 12cm]{t1systemanalysis.pdf}
-
+{Figure 1: Circuit}
 \end{center}
-
-
 
 
 \subsection{Nodal analysis}
@@ -54,33 +52,29 @@ Id\\
 
 The following table displays the various solutions to the various voltages :
 
-\begin{table}[h]
-\centering
-\begin{tabular}{c|c} 
- \hline
- BAMUS\\ [0.5ex] 
- \hline\hline
-V1 & 8.194795e+00 V\\ \hline
-V2 & 7.917828e+00 V\\ \hline
-V3 & 7.340169e+00 V\\ \hline
-V4 & 2.978754e+00 V\\ \hline
-V5 & 7.957540e+00 V\\ \hline
-V6 & 1.197664e+01 V\\ \hline
-V7 & 9.776608e-01 V\\ \hline
-V8 & 0.000000e+00 V\\ \hline 
+\begin{table}[ht] \centering
+\begin{tabular}{|
+>{\columncolor[HTML]{FFCC67}}l |c|}
+\hline
+\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B} Voltage (V)} \\ \hline
+{\color[HTML]{333333} V1}               & 8.194795e+00               \\ \hline
+{\color[HTML]{333333} V2}               & 7.917828e+00               \\ \hline
+{\color[HTML]{333333} V3}               & 7.340169e+00                \\ \hline
+{\color[HTML]{333333} V4}               & 2.978754e+00               \\ \hline
+{\color[HTML]{333333} V5}               & 7.957540e+00                \\ \hline
+{\color[HTML]{333333} V7}               & 9.776608e-01              \\ \hline
+{\color[HTML]{333333} V8}               & 0.000000e+00             \\ \hline
 \end{tabular}
-\caption{Table 2: Octave nodal analyisis results}
-\label{table:2}
+\caption{Octave nodal analyisis results}
 \end{table}
 
-o q da cada um teoricamente
 
 \subsection{Mesh analysis}
 
 Mesh analysis is a method that is used to solve circuits for the currents at any place in the electrical circuit.\\
 This analysis makes use of Kirchhoff’s voltage law to arrive at a set of equations guaranteed to be solvable if the circuit has a solution.\\In this case, we use four equations in order to find the four circulation currents, since we have four elementar meshes in this circuit.
 
-\\
+
 $\begin{pmatrix}
 R1+R3+R4 & R3 & R4 & 0 \\
 Kb*R3 & Kb*R3 - 1 & 0 & 0 \\
@@ -101,36 +95,21 @@ Va\\
 Id
 \end{pmatrix}$
 
-\\
-\\
-
 The following table displays the various solutions to the various currents:
 
-\begin{table}[h]
-\centering
-\begin{tabular}{c|c} 
- \hline
- BAMUS\\ [0.5ex] 
- \hline\hline
-Ia & 2.732478e-01 mA\\ \hline
-Ib & -2.864551e-01 mA\\ \hline
-Ic & 9.563162e-01 mA\\ \hline
-Id & 1.029587e+00 mA\\ \hline 
+
+\begin{table}[ht] \centering
+\begin{tabular}{|
+>{\columncolor[HTML]{FFCC67}}l |c|}
+\hline
+\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B} Current (mA)} \\ \hline
+{\color[HTML]{333333} Ia}               & 2.732478e-01               \\ \hline
+{\color[HTML]{333333} Ib}               & -2.864551e-01               \\ \hline
+{\color[HTML]{333333} Ic}               & 9.563162e-01                \\ \hline
+{\color[HTML]{333333} Id}               & 1.029587e+00               \\ \hline
 \end{tabular}
-\caption{Table 3: Octave mesh analysis results}
-\label{table:3}
+\caption{Octave mesh analyisis results}
 \end{table}
-
-
-
-
-
-
-
-
-
-
-
 
 
 
