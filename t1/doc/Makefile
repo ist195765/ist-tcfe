@@ -9,7 +9,7 @@ $(FILE).pdf: $(wildcard *.tex) $(LODFIGS)
 	export TEXINPUTS=$(TEXINPUTS)
 	
 	pdflatex $(FILE).tex
-	pdflatex $(FILE).TEX
+	pdflatex $(FILE).tex
 	pdflatex $(FILE).tex
 	
 %.pdf: %.odg
