@@ -1,24 +1,21 @@
 \section{Theoretical Analysis}
 \label{sec:analysis}
 
-In this section, the circuit shown in Figure~\ref{fig:system2} is analysed
-theoretically, in terms of its current and voltage.
-In analyzing a circuit using Kirchhoff's circuit laws, one can either do nodal analysis using Kirchhoff's current law (KCL) or mesh analysis using Kirchhoff's voltage law (KVL).
-In the subsections bellow we explain how the two methods are used in order to solve the circuit. 
 
-\begin{figure}[ht]
-\centering
-\includegraphics[width = 15cm]{system2.pdf}
-\caption {Circuit}
-\end{figure}
+In this section, the circuit shown in the introduction is analysed
+theoretically, in terms of its current and voltage.
+Analyzing a circuit using Kirchhoff's circuit laws, one can either use the nodal analysis method, a method derivated of Kirchhoff's current law (KCL) or the mesh analysis method, a method derivated of Kirchhoff's voltage law (KVL).
+In the subsections bellow we will explain how the two methods are used in order to solve the circuit. 
+
 
 
 \subsection{Nodal analysis}
-The nodal analysis or the branch current method is a method of determining the voltage (potential difference) between "nodes" (points where elements or branches connect) in an electrical circuit in terms of the branch currents. 
-Nodal analysis writes an equation at each electrical node, requiring that the branch currents incident at a node must sum to zero.
-Since there are 8 nodes in total in this circuit we must have 8 equations in order to find all the 8 voltages.
 
+The nodal analysis or the branch current method is a method of determining the voltage in each node (points where elements or branches connect) in an electrical circuit in terms of the branch currents, using one of the nodes as reference (in this case the node 0). 
+Nodal analysis writes an equation at each electrical node, requiring that the branch currents incident at a node must sum to zero. For example, in the node 2 the current from the branch 1-2, from the branch 2-3, and the branch 2-5 must sum zero. however the current in each branch is the potencial difference of the two nodes over the resistence. considering this and simplify this equation, we've obtained a equation for the voltages in the nodes 1, 2, 3 and 5. To make this easier, instead of using the resistences , we use their inverse, the condutivities. 
+Since there are 8 nodes in total in this circuit we must have 8 equations in order to find all the 8 voltages. After finding all these 8 equations we obtain the following matrix: 
 
+\setlength{\parskip}{2em}
 
 $\begin{pmatrix}
 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
@@ -53,8 +50,9 @@ Id\\
 \end{pmatrix}$
 
 
-
 The following table displays the various solutions to the various voltages :
+
+\setlength{\parskip}{1em}
 
 \begin{table}[ht] \centering
 \begin{tabular}{|
@@ -72,12 +70,15 @@ The following table displays the various solutions to the various voltages :
 \caption{Octave nodal analysis results}
 \end{table}
 
+\pagebreak
 
 \subsection{Mesh analysis}
 
-Mesh analysis is a method that is used to solve circuits for the currents at any place in the electrical circuit.\\
-This analysis makes use of Kirchhoff’s voltage law to arrive at a set of equations guaranteed to be solvable if the circuit has a solution.\\In this case, we use four equations in order to find the four circulation currents, since we have four elementar meshes in this circuit.
+Mesh analysis is a method that is used to solve the currents at any place in the electrical circuit. This analysis makes use of Kirchhoff’s voltage law to ensure that the sum of the potencial difference in every circuit loop is zero. To do this we find the loops that don't contain other loops, or meshes, and within these meshes we define a single current for each one. After these we just need to apply the Kirchhoff’s voltage law for every mesh and using these currents (circulation currents).
 
+In this case, we use four equations in order to find the four circulation currents, since we have four meshes in this circuit. After finding the four equations we find the following matrix:
+
+\setlength{\parskip}{2em}
 
 $\begin{pmatrix}
 R1+R3+R4 & R3 & R4 & 0 \\
@@ -101,6 +102,7 @@ Id
 
 The following table displays the various solutions to the various currents:
 
+\setlength{\parskip}{1em}
 
 \begin{table}[ht] \centering
 \begin{tabular}{|
@@ -114,9 +116,6 @@ The following table displays the various solutions to the various currents:
 \end{tabular}
 \caption{Octave mesh analysis results}
 \end{table}
-
-
-
 
 
 

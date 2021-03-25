@@ -4,17 +4,14 @@
 
 	In order to run the simulation, we wrote the ngspice code according to the image below. It is important to note that an extra voltage source, Vaux, was added and therefore, another node was also added (node 8). This Vaux was intended to allow the measurement of the current Ic which voltage source Vc depends on, since ngspice doesn't allow us to introduce Resistor R6's current in the computation. Vaux's voltage is equal to 0 V, since it is only an auxiliary component that doesn't interfere with the circuit (node's 8 voltage is equal to node's 7 voltage) and allowed us to obtain the current through it.
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \includegraphics[width = 15cm]{system1.pdf}
 \caption {Circuit}
 \end{figure}
 
 
-
-
-
-	The results obtained from the simulation are shown in the table below. 
+The results obtained from the simulation are shown in the table below. 
 
 \begin{table}[ht] \centering
 \begin{tabular}{|
@@ -38,9 +35,9 @@ Vaux                         & 9.563162e-04                               & Va  
 
 
 
-	Then, an analysis of the values obtained was conducted, in order to ascertain the compatibility with the expected values from the theorethical analysis. This result validation was achieved by calculating the relative errors between the theoretical values obtained in octave and the experimental values obtained in ngspice.
+Then, an analysis of the values obtained was conducted, in order to ascertain the compatibility with the expected values from the theorethical analysis. This result validation was achieved by calculating the relative errors between the theoretical values obtained in octave and the experimental values obtained in ngspice.
 
-\begin{table}[ht] \centering
+\begin{table}[H] \centering
 \begin{tabular}{|
 >{\columncolor[HTML]{FFCC67}}l |c|}
 \hline
@@ -61,4 +58,6 @@ Vaux                         & 9.563162e-04                               & Va  
 
 
 
-	After the analysis of these errors, it is possible to infer that the accuracy is extremely high. The maximum relative error is 3.49095e-05, which is extremely low. This error is associated to the dissipated power in the resistors. Based on this, it is possible to conclude that the simulation results are validated.
+After the analysis of these errors, it is possible to infer that the accuracy is extremely high. The maximum relative error is 3.49095e-05, which is extremely low. "This error is associated to the dissipated power in the resistors".This error is most likely due to rounding up of the ngspice, since the decimal digits obtained using ngspice and in octave are different. Based on this, it is possible to conclude that the simulation results are validated.
+	
+
