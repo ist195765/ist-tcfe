@@ -124,7 +124,7 @@ Req = Vx/Ix;
 
 t = 0:1e-6:20e-3;
 
-Vi = V1(6)-V1(8);
+Vi = V1(6) - V1(8);
 
 V6n = Vi*exp(-t/(C*Req));
 
@@ -137,10 +137,11 @@ ylabel ("V6n(t) [V]");
 
 f = 1000;
 w = 2*pi*f;
-Zc = 1/(j*w*C)
+Zc = 1/(j*w*C);
+phi = -pi/2;
 
 
-N1 = [U, Z, Z, -U, Z, Z, Z, Z; 
+N3 = [U, Z, Z, -U, Z, Z, Z, Z; 
     Z, -G2-Kb, G2, Z, Kb, Z, Z, Z; 
     -G1, G1+G2+G3, -G2, Z, -G3, Z, Z, Z; 
     Z, Kb, Z, Z, -G5-Kb, G5+U/Zc, Z, -U/Zc; 
@@ -149,16 +150,45 @@ N1 = [U, Z, Z, -U, Z, Z, Z, Z;
     G1, -G1, Z, G4+G6, -G4, Z, -G6, Z; 
     Z, Z, Z, U, Z, Z, Z, Z];
 
-NB1 = [Vs; Z; Z; Z; Z; Z; Z; Z];
+NB3 = [U; Z; Z; Z; Z; Z; Z; Z];
 
+V3 = N3\NB3;
 
+printf ("ComplexAmplitudes_TAB\n");
+printf ("V1 = = %e + i(%e) V\n", real(V3(1)), imag(V3(1)));
+printf ("V2 = = %e + i(%e) V\n", real(V3(2)), imag(V3(2)));
+printf ("V3 = = %e + i(%e) V\n", real(V3(3)), imag(V3(3)));
+printf ("V4 = = %e + i(%e) V\n", real(V3(4)), imag(V3(4)));
+printf ("V5 = = %e + i(%e) V\n", real(V3(5)), imag(V3(5)));
+printf ("V6 = = %e + i(%e) V\n", real(V3(6)), imag(V3(6)));
+printf ("V7 = = %e + i(%e) V\n", real(V3(7)), imag(V3(7)));
+printf ("V8 = = %e + i(%e) V\n", real(V3(8)), imag(V3(8)));
+printf ("ComplexAmplitudes_END\n");
 
+%%Theoretical analysis point 5
 
+s = -5e-3:1e-6:20e-3;
 
+ph6 = arg(V3(6) - V3(8)) + phi;
 
+V6i = abs(V3(6) - V3(8));
 
+V6n = Vi*exp(-t/(C*Req));
+V6f = V6i*cos(w*t + ph6);
 
+V6(-5e-3 <= s & s <= 0) = V1(6) - V1(8);
+V6(0 <= s & s <= 20e-3) = V6n + V6f;
 
+vs(-5e-3 <= s & s <= 0) = Vs;
+vs(0 <= s & s <= 20e-3) = sin(w*t);
+
+h = figure ();
+plot (s*1000, vs, "g");
+hold on;
+plot (s*1000, V6, "b");
+
+xlabel ("t[ms]");
+ylabel ("Vs(t), V6(t) [V]");
 
 
 
