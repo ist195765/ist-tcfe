@@ -1,0 +1,32 @@
+*
+* NGSPICE simulation script lab2 QUESTION4
+* Group 37
+*
+
+.options savecurrents
+.include ../mat/circuit2.cir
+
+* START OF THE SIMULATION
+
+
+.model group 37
+
+.control
+
+
+op
+
+echo "****************************************************"
+echo  RESULTS NGSPICE SIMULATION GROUP 37, LAB1 QUESTION 2
+echo "****************************************************"
+
+echo "op2_TAB" 
+print all
+print vx/vx#branch
+echo "op2_END"
+quit
+
+
+.endc
+
+.end
