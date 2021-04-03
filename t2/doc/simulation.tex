@@ -1,0 +1,7 @@
+\section{Simulation Analysis}
+\label{sec:simulation}
+
+
+	In order to run the simulation, we wrote the ngspice code according to the image below. It is important to note that an extra voltage source, Vaux, was added and therefore, another node was also added (node 8). This Vaux was intended to allow the measurement of the current Ic which voltage source Vc depends on, since ngspice doesn't allow us to introduce Resistor R6's current in the computation. Vaux's voltage is equal to 0 V, since it is only an auxiliary component that doesn't interfere with the circuit (node's 8 voltage is equal to node's 7 voltage) and allowed us to obtain the current through it.
+
+
