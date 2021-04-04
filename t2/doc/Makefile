@@ -12,7 +12,10 @@ all: $(FILE).pdf
 	evince $< &
 
 $(FILE).pdf: $(wildcard *.tex) $(LODFIGS)
-	
+	cp -f ../mat/*.eps .
+	cp -f ../mat/*.tex .
+	cp -f ../sim/*.ps .
+	cp -f ../sim/*.tex .
 	pdflatex  $(FILE).tex
 	pdflatex  $(FILE).tex
 	pdflatex  $(FILE).tex
@@ -23,7 +26,7 @@ $(FILE).pdf: $(wildcard *.tex) $(LODFIGS)
 	soffice --headless --convert-to pdf $<
 
 clean:
-	@rm -rf *.aux *.bbl *.blg *.glg *.glo *.gls *.ilg *.ist *.lof
+	@rm -rf *.aux *.bbl *.blg *.glg *.glo *.gls *.ilg *.ist *.lof *.ps
 	@rm -rf *.log *.lot *.nlo *.nls *.out *.toc *~ *.*% ./*.pdf ./*.eps
 
 .PHONY: all clean
