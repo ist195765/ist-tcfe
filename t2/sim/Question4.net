@@ -4,7 +4,7 @@
 *
 
 .options savecurrents
-.include ../mat/
+.include ../mat/circuit4.cir
 
 * START OF THE SIMULATION
 

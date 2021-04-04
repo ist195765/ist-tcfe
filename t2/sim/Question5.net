@@ -4,7 +4,7 @@
 *
 
 .options savecurrents
-.include ../mat/
+.include ../mat/circuit4.cir
 
 * START OF THE SIMULATION
 
@@ -30,10 +30,10 @@ echo "********************************************"
 
 ac dec 100 0.1 100MEG
 
-hardcopy sim5_db.ps db(v(1)) db(v(6))
+hardcopy sim5_db.ps db(v(1)) db(v(6)) db(v(6)-v(8))
 echo sim5_db_FIG
 
-hardcopy sim5_ph.ps ph(v(1))*180/pi ph(v(6))*180/pi
+hardcopy sim5_ph.ps ph(v(1))*180/pi ph(v(6))*180/pi ph(v(6) - v(8))*180/pi
 echo sim5_db_FIG
 
 

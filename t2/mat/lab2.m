@@ -128,17 +128,39 @@ Vi = V1(6) - V1(8);
 
 V6n = Vi*exp(-t/(C*Req));
 
-hf = figure ();
+NaturalResponse = figure ();
 plot (t*1000, V6n, "g");
 xlabel ("t[ms]");
 ylabel ("V6n(t) [V]");
+legend({"V6n(t)"});
+print(NaturalResponse, "NaturalResponse.eps", "-depsc");
+
+cir3 = fopen('circuit3.cir','w');
+
+fprintf (cir3,".OP\n");
+fprintf (cir3,"R1 1 2 %e \n", R1);
+fprintf (cir3,"R2 3 2 %e \n", R2);
+fprintf (cir3,"R3 2 5 %e \n", R3);
+fprintf (cir3,"R4 5 0 %e \n", R4);
+fprintf (cir3,"R5 5 6 %e \n", R5);
+fprintf (cir3,"R6 9 7 %e \n", R6);
+fprintf (cir3,"R7 7 8 %e \n", R7);
+fprintf (cir3,"C1 6 8 %e \n", C);
+fprintf (cir3,".IC v(6) = %e v(8) = %e\n", V1(6), V1(8));
+fprintf (cir3,"Vaux 0 9 %e \n", 0);
+fprintf (cir3,"Hd 5 8 Vaux %e \n", Kd);
+fprintf (cir3,"Gb 6 3 (2,5) %e \n", Kb);
+fprintf (cir3,".END\n");
+
+fclose(cir3);
+
 
 %%Theoretical analysis point 4
 
 f = 1000;
 w = 2*pi*f;
 Zc = 1/(j*w*C);
-phi = -pi/2;
+phi = 0;
 
 
 N3 = [U, Z, Z, -U, Z, Z, Z, Z; 
@@ -165,32 +187,104 @@ printf ("V7 = = %e + i(%e) V\n", real(V3(7)), imag(V3(7)));
 printf ("V8 = = %e + i(%e) V\n", real(V3(8)), imag(V3(8)));
 printf ("ComplexAmplitudes_END\n");
 
+cir4 = fopen('circuit4.cir','w');
+
+fprintf (cir4,".OP\n");
+fprintf (cir4, "Vs 1 0 0.0 AC 1.0 sin(0 1 1000)\n");
+fprintf (cir4,"R1 1 2 %e \n", R1);
+fprintf (cir4,"R2 3 2 %e \n", R2);
+fprintf (cir4,"R3 2 5 %e \n", R3);
+fprintf (cir4,"R4 5 0 %e \n", R4);
+fprintf (cir4,"R5 5 6 %e \n", R5);
+fprintf (cir4,"R6 9 7 %e \n", R6);
+fprintf (cir4,"R7 7 8 %e \n", R7);
+fprintf (cir4,"C1 6 8 %e \n", C);
+fprintf (cir4,".IC v(6) = %e v(8) = %e\n", V1(6), V1(8));
+fprintf (cir4,"Vaux 0 9 %e \n", 0);
+fprintf (cir4,"Hd 5 8 Vaux %e \n", Kd);
+fprintf (cir4,"Gb 6 3 (2,5) %e \n", Kb);
+fprintf (cir4,".END\n");
+
+fclose(cir4);
+
 %%Theoretical analysis point 5
 
 s = -5e-3:1e-6:20e-3;
 
-ph6 = arg(V3(6) - V3(8)) + phi;
+ph6 = arg(V3(6)) + phi;
 
-V6i = abs(V3(6) - V3(8));
+V6i = abs(V3(6));
 
 V6n = Vi*exp(-t/(C*Req));
-V6f = V6i*cos(w*t + ph6);
+V6f = V6i*sin(w*t + ph6);
 
-V6(-5e-3 <= s & s <= 0) = V1(6) - V1(8);
+V6(-5e-3 <= s & s <= 0) = V1(6);
 V6(0 <= s & s <= 20e-3) = V6n + V6f;
 
 vs(-5e-3 <= s & s <= 0) = Vs;
 vs(0 <= s & s <= 20e-3) = sin(w*t);
 
-h = figure ();
+Solution = figure ();
 plot (s*1000, vs, "g");
 hold on;
 plot (s*1000, V6, "b");
-
+legend({"Vs(t)","V6(t)"});
+print(Solution, "Solution.eps", "-depsc");
 xlabel ("t[ms]");
 ylabel ("Vs(t), V6(t) [V]");
 
+%%Theoretical analysis point 6
+
+f = logspace(-1,6,200);
+
+for i = 1:200
+
+w = 2*pi*f(i);
+Zc = 1/(j*w*C);
+phi = 0;
 
 
+N3 = [U, Z, Z, -U, Z, Z, Z, Z; 
+    Z, -G2-Kb, G2, Z, Kb, Z, Z, Z; 
+    -G1, G1+G2+G3, -G2, Z, -G3, Z, Z, Z; 
+    Z, Kb, Z, Z, -G5-Kb, G5+U/Zc, Z, -U/Zc; 
+    Z, Z, Z, -Kd*G6, U, Z, Kd*G6, -U; 
+    Z, Z, Z, -G6, Z, Z, G6+G7, -G7; 
+    G1, -G1, Z, G4+G6, -G4, Z, -G6, Z; 
+    Z, Z, Z, U, Z, Z, Z, Z];
 
+NB3 = [U; Z; Z; Z; Z; Z; Z; Z];
+
+V3 = N3\NB3;  
+  
+Vc = V3(6) - V3(8);
+
+A6(i) = abs(V3(6));
+Ac(i) = abs(Vc);
+
+PH6(i) = arg(V3(6)) + phi;
+PHc(i) = arg(Vc) + phi;
+  
+end
+
+
+A = figure ();
+plot (log10(f), 20*log10(1), "g");
+hold on;
+plot (log10(f), 20*log10(Ac), "b");
+plot (log10(f), 20*log10(A6), "r");
+legend({"Vs(f)","Vc(f)","V6(f)"});
+print(A, "Amplitude.eps", "-depsc");
+xlabel ("f[Hz]");
+ylabel ("Vs(f), V6(f), Vc(f) [dB]");
+
+Arg = figure ();
+plot (log10(f), 0*(180/pi), "g");
+hold on;
+plot (log10(f), PHc*(180/pi), "b");
+plot (log10(f), PH6*(180/pi), "r");
+legend({"Vs(f)","Vc(f)","V6(f)"});
+print(Arg, "Arguments.eps", "-depsc");
+xlabel ("f[Hz]");
+ylabel ("arg(Vs(f)), arg(V6(f)), arg(Vc(f)) [degrees]");
 
