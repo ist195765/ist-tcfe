@@ -34,7 +34,7 @@ hardcopy sim5_db.ps db(v(1)) db(v(6)) db(v(6)-v(8))
 echo sim5_db_FIG
 
 hardcopy sim5_ph.ps ph(v(1))*180/pi ph(v(6))*180/pi ph(v(6) - v(8))*180/pi
-echo sim5_db_FIG
+echo sim5_ph_FIG
 
 
 quit

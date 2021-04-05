@@ -228,10 +228,11 @@ Solution = figure ();
 plot (s*1000, vs, "g");
 hold on;
 plot (s*1000, V6, "b");
+hold off;
 legend({"Vs(t)","V6(t)"});
-print(Solution, "Solution.eps", "-depsc");
 xlabel ("t[ms]");
 ylabel ("Vs(t), V6(t) [V]");
+print(Solution, "Solution.eps", "-depsc");
 
 %%Theoretical analysis point 6
 
@@ -268,23 +269,24 @@ PHc(i) = arg(Vc) + phi;
 end
 
 
-A = figure ();
-plot (log10(f), 20*log10(1), "g");
+Amplitude = figure ();
+pa1 = plot (log10(f), 20*log10(1), "g");
 hold on;
-plot (log10(f), 20*log10(Ac), "b");
-plot (log10(f), 20*log10(A6), "r");
-legend({"Vs(f)","Vc(f)","V6(f)"});
-print(A, "Amplitude.eps", "-depsc");
+pa2 = plot (log10(f), 20*log10(Ac), "b");
+pa3 = plot (log10(f), 20*log10(A6), "r");
+legend([pa1(1) pa2(1) pa3(1)],{'Vs(f)','Vc(f)','V6(f)'});
 xlabel ("f[Hz]");
 ylabel ("Vs(f), V6(f), Vc(f) [dB]");
+hold off;
+print(Amplitude, "Amplitude.eps", "-depsc");
 
-Arg = figure ();
-plot (log10(f), 0*(180/pi), "g");
+Arguments = figure ();
+pp1 = plot (log10(f), 0, "g");
 hold on;
-plot (log10(f), PHc*(180/pi), "b");
-plot (log10(f), PH6*(180/pi), "r");
-legend({"Vs(f)","Vc(f)","V6(f)"});
-print(Arg, "Arguments.eps", "-depsc");
+pp2 = plot (log10(f), PHc*(180/pi), "b");
+pp3 = plot (log10(f), PH6*(180/pi), "r");
+hold off;
+legend([pp1(1) pp2(1) pp3(1)],{'Vs(f)','Vc(f)','V6(f)'});
 xlabel ("f[Hz]");
 ylabel ("arg(Vs(f)), arg(V6(f)), arg(Vc(f)) [degrees]");
-
+print(Arguments, "Arguments.eps", "-depsc");
