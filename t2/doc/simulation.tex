@@ -2,9 +2,10 @@
 \label{sec:simulation}
 
 
-\subsection{1}
-%Op_Tab
-The results obtained from the simulation are shown in the table below. 
+
+\subsection{Operating point analysis for t<0}
+
+In this section, an operating point analysis of the circuit (referência ao circuito) was conducted in order to calculate the voltage in all nodes and the current through the resistors for a t < 0. To contextualize the values obtained using the tools in ngspice, it is necessary to state that, as node 0 is connected to ground, its nodal voltage does not appear on the table of results. It is important to note that an extra voltage source, Vaux, was added and therefore, another node was also added (node 9). This Vaux was intended to allow the measurement of the current Ic which voltage source Vc depends on, since ngspice doesn't allow us to introduce Resistor R6's current in the computation. Vaux's voltage is equal to 0 V, since it is only an auxiliary component that doesn't interfere with the circuit (node's 7 voltage is equal to node's 9 voltage) and allowed us to obtain the current through it.
 
 \begin{table}[H] \centering
 \begin{tabular}{|
@@ -27,9 +28,13 @@ The results obtained from the simulation are shown in the table below.
 \caption{NgSpice simulation results 1}
 \end{table}
 
-\subsection{2}
 
-%Op2_tab
+
+\subsection{Calculus of $Req$ - Simulation}
+
+Similarly to the last section, an operating point analysis to the circuit (referência ao circuito) was conducted, with the difference being that the voltage source $vs$ was turned off and the capacitor was replaced by the independent voltage source Vx which corresponds to the value of $v(6)$-$v(8)$. This Vx is equivalent to the voltage in the capacitor's terminals. 
+The values of currents and nodal voltages were then put in a table, as well as the Req, hence:
+
 \begin{table}[H] \centering
 \begin{tabular}{|
 >{\columncolor[HTML]{FFCC67}}l l
@@ -49,11 +54,16 @@ The results obtained from the simulation are shown in the table below.
  \hline
 \end{tabular}
 \caption{NgSpice simulation results 2}
-\end{table}
+\end{table} 
 
-\subsection{3}
+\begin{equation}
+Req = (v(6)-v(8))/vxbranch,
+\end{equation}
+with vxbranch corresponding to the current Ix that flows through the Vx's branch.
 
-%plot_natural
+\subsection{Operating Point Analysis for t $\geq$ (Natural Solution)}
+
+In this section, a transient analysis was conducted in order to evaluate the natural response of the circuit, which means, the variation over time. Once that to calculate the natural response, the voltage source $vs$ is turned off, so the circuit simulated was equal to the one in the previous question. From this, the voltage in the capacitor's over time (time interval considered was [0,20]ms) was calculated and plotted.
 
 \begin{figure}[h] \centering
 
@@ -69,16 +79,9 @@ The results obtained from the simulation are shown in the table below.
 \end{subfigure}
 
 \end{figure}
-
-%se for preciso
-%\end{figure}
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width = 15cm]{sim_3.pdf}
-%\caption {Ngspice simulation plot 1}
-%\end{figure}
-
-\subsection{4}	
+ 
+\subsection{Operating Point Analysis for t $\geq$ (Natural and Forced Solution)}
+In this section, as previously, a transient analysis was conducted in order to evaluate the natural and forced response of the circuit. In order to achieve this, the procedure adopted was the same as the one in the previous step, but with the voltage souce $vs(t)$ as sinusoidal wave %sen(2*\pi*f).  
 
 \begin{figure}[h] \centering
 
@@ -95,14 +98,17 @@ The results obtained from the simulation are shown in the table below.
 
 \end{figure}
 
-%se for preciso
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width = 15cm]{sim4.pdf}
-%\caption {Ngspice simulation plot 2}
-%\end{figure}
+\subsection{Frequency Responses}
 
-\subsection{5}
+In this part of the assignment, an AC (Small Signal Analysis was conducted, in order to match the goal afore-
+mentioned. This type of analysis allows to study the frequency response of the circuit. In other words, there
+is no frequency variation over time, the so called steady-state analysis.After comparing the graphics showed
+below, it is clear to admit that the results in ngspice and octave match. Any minor difference may be explained
+by aproximation errors.
+
+\subsubsection{Frequency Responses - Amplitude}
+
+
 
 \begin{figure}[h] \centering
 
@@ -119,14 +125,7 @@ The results obtained from the simulation are shown in the table below.
 
 \end{figure}
 
-
-%se for preciso
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width = 15cm]{sim5_db.pdf}
-%\caption {Ngspice simulation plot 3}
-%\end{figure}
-
+\subsubsection{Frequency Responses - Phase}
 
 \begin{figure}[h] \centering
 
@@ -142,6 +141,40 @@ The results obtained from the simulation are shown in the table below.
 \end{subfigure}
 
 \end{figure}
+
+\section{Octave and Ngspice comparisation}
+
+
+
+
+%se for preciso
+%\end{figure}
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width = 15cm]{sim_3.pdf}
+%\caption {Ngspice simulation plot 1}
+%\end{figure}
+
+
+
+%se for preciso
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width = 15cm]{sim4.pdf}
+%\caption {Ngspice simulation plot 2}
+%\end{figure}
+
+
+
+
+%se for preciso
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width = 15cm]{sim5_db.pdf}
+%\caption {Ngspice simulation plot 3}
+%\end{figure}
+
+
 
 
 %se for preciso
