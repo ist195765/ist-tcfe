@@ -71,14 +71,14 @@ NB1 = [Vs; Z; Z; Z; Z; Z; Z; Z];
 V1 = N1\NB1; 
 
 printf ("Tensoes_TAB\n");
-printf ("V1 = = %e V\n", V1(1));
-printf ("V2 = = %e V\n", V1(2));
-printf ("V3 = = %e V\n", V1(3));
-printf ("V4 = = %e V\n", V1(4));
-printf ("V5 = = %e V\n", V1(5));
-printf ("V6 = = %e V\n", V1(6));
-printf ("V7 = = %e V\n", V1(7));
-printf ("V8 = = %e V\n", V1(8));
+printf ("V1 = %e V\n", V1(1));
+printf ("V2 = %e V\n", V1(2));
+printf ("V3 = %e V\n", V1(3));
+printf ("V4 = %e V\n", V1(4));
+printf ("V5 = %e V\n", V1(5));
+printf ("V6 = %e V\n", V1(6));
+printf ("V7 = %e V\n", V1(7));
+printf ("V8 = %e V\n", V1(8));
 printf ("Tensoes_END\n");
 
 %%Theoretical analysis point 2
@@ -119,6 +119,19 @@ V2 = N2\NB2;
 Ix = -(V2(5)-V2(6))*G5 - Kb*(V2(2)-V2(5));
 
 Req = Vx/Ix;
+
+printf ("Tensoes2_TAB\n");
+printf ("V1 = %e V\n", V2(1));
+printf ("V2 = %e V\n", V2(2));
+printf ("V3 = %e V\n", V2(3));
+printf ("V4 = %e V\n", V2(4));
+printf ("V5 = %e V\n", V2(5));
+
+printf ("V6 = %e V\n", V2(6));
+printf ("V7 = %e V\n", V2(7));
+printf ("V8 = %e V\n", V2(8));
+printf ("Tensoes2_END\n");
+
 
 %%Theoretical analysis point 3
 
@@ -177,14 +190,14 @@ NB3 = [U; Z; Z; Z; Z; Z; Z; Z];
 V3 = N3\NB3;
 
 printf ("ComplexAmplitudes_TAB\n");
-printf ("V1 = = %e + i(%e) V\n", real(V3(1)), imag(V3(1)));
-printf ("V2 = = %e + i(%e) V\n", real(V3(2)), imag(V3(2)));
-printf ("V3 = = %e + i(%e) V\n", real(V3(3)), imag(V3(3)));
-printf ("V4 = = %e + i(%e) V\n", real(V3(4)), imag(V3(4)));
-printf ("V5 = = %e + i(%e) V\n", real(V3(5)), imag(V3(5)));
-printf ("V6 = = %e + i(%e) V\n", real(V3(6)), imag(V3(6)));
-printf ("V7 = = %e + i(%e) V\n", real(V3(7)), imag(V3(7)));
-printf ("V8 = = %e + i(%e) V\n", real(V3(8)), imag(V3(8)));
+printf ("V1 = %e + i(%e) V\n", real(V3(1)), imag(V3(1)));
+printf ("V2 = %e + i(%e) V\n", real(V3(2)), imag(V3(2)));
+printf ("V3 = %e + i(%e) V\n", real(V3(3)), imag(V3(3)));
+printf ("V4 = %e + i(%e) V\n", real(V3(4)), imag(V3(4)));
+printf ("V5 = %e + i(%e) V\n", real(V3(5)), imag(V3(5)));
+printf ("V6 = %e + i(%e) V\n", real(V3(6)), imag(V3(6)));
+printf ("V7 = %e + i(%e) V\n", real(V3(7)), imag(V3(7)));
+printf ("V8 = %e + i(%e) V\n", real(V3(8)), imag(V3(8)));
 printf ("ComplexAmplitudes_END\n");
 
 cir4 = fopen('circuit4.cir','w');

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.19)  7 APR 2021 00:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.20)  7 APR 2021 15:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -49,9 +49,9 @@ File: babel.def 2020/02/14 3.40 Babel common definitions
 Package babel Info: \l@canadian = using hyphenrules for english
 (babel)             (\language0) on input line 102.
 Package babel Info: \l@australian = using hyphenrules for ukenglish
-(babel)             (\language45) on input line 105.
+(babel)             (\language13) on input line 105.
 Package babel Info: \l@newzealand = using hyphenrules for ukenglish
-(babel)             (\language45) on input line 108.
+(babel)             (\language13) on input line 108.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/notoccite/notoccite.sty
 Package: notoccite 2000/07/20
@@ -534,15 +534,6 @@ Package zref Info: New property: mdf@pagevalue on input line 895.
 LaTeX Warning: Label `fig:first' multiply defined.
 
 
-LaTeX Warning: Label `sub@fig:first' multiply defined.
-
-
-LaTeX Warning: Label `fig:second' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:second' multiply defined.
-
-
 LaTeX Warning: Label `fig:first' multiply defined.
 
 
@@ -719,18 +710,17 @@ S.pdf>])
 \openout4 = `report.toc'.
 
  (./intro.tex [2]
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
+
 <circuit1.pdf, id=121, 796.67719pt x 448.1309pt>
 File: circuit1.pdf Graphic file (type pdf)
 <use circuit1.pdf>
-Package pdftex.def Info: circuit1.pdf  used on input line 11.
-(pdftex.def)             Requested size: 210.54718pt x 118.43272pt.
-<circuit2.pdf, id=122, 796.67719pt x 448.1309pt>
-File: circuit2.pdf Graphic file (type pdf)
-<use circuit2.pdf>
-Package pdftex.def Info: circuit2.pdf  used on input line 16.
-(pdftex.def)             Requested size: 210.54718pt x 118.43272pt.
+Package pdftex.def Info: circuit1.pdf  used on input line 30.
+(pdftex.def)             Requested size: 526.376pt x 296.10236pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--28
+Underfull \hbox (badness 10000) in paragraph at lines 37--42
 
  []
 
@@ -739,228 +729,228 @@ LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10.95> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 8.
 LaTeX Font Info:    Font shape `TS1/phv/m/it' in size <10.95> not available
 (Font)              Font shape `TS1/phv/m/sl' tried instead on input line 8.
-
-Underfull \vbox (badness 1281) has occurred while \output is active []
-
- [3 <./circuit1.pdf> <./circuit2.pdf
-
-pdfTeX warning: pdflatex (file ./circuit2.pdf): PDF inclusion: multiple pdfs wi
-th page group included in a single page
->]
-<circuit3.pdf, id=159, 796.67719pt x 448.1309pt>
+ [3 <./circuit1.pdf>]
+<circuit3.pdf, id=145, 796.67719pt x 448.1309pt>
 File: circuit3.pdf Graphic file (type pdf)
 <use circuit3.pdf>
 Package pdftex.def Info: circuit3.pdf  used on input line 94.
-(pdftex.def)             Requested size: 284.52756pt x 160.0483pt.
+(pdftex.def)             Requested size: 426.79134pt x 240.07245pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
 Package epstopdf Info: Source file: <NaturalResponse.eps>
-(epstopdf)                    date: 2021-04-07 00:23:28
-(epstopdf)                    size: 363145 bytes
+(epstopdf)                    date: 2021-04-07 15:18:21
+(epstopdf)                    size: 363151 bytes
 (epstopdf)             Output file: <NaturalResponse-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-04-07 00:23:32
-(epstopdf)                    size: 117307 bytes
+(epstopdf)                    date: 2021-04-07 15:18:28
+(epstopdf)                    size: 117313 bytes
 (epstopdf)             Command: <repstopdf --outfile=NaturalResponse-eps-conver
 ted-to.pdf NaturalResponse.eps>
 (epstopdf)             \includegraphics on input line 112.
 Package epstopdf Info: Output file is already uptodate.
-<NaturalResponse-eps-converted-to.pdf, id=160, 578.16pt x 433.62pt>
+<NaturalResponse-eps-converted-to.pdf, id=154, 578.16pt x 433.62pt>
 File: NaturalResponse-eps-converted-to.pdf Graphic file (type pdf)
 <use NaturalResponse-eps-converted-to.pdf>
 Package pdftex.def Info: NaturalResponse-eps-converted-to.pdf  used on input li
 ne 112.
 (pdftex.def)             Requested size: 227.62204pt x 170.71231pt.
- [4 <./circuit3.pdf>]
+
+[5 <./circuit3.pdf> <./NaturalResponse-eps-converted-to.pdf>]
+(../doc/ComplexAmplitudes_tab.tex)
 Package epstopdf Info: Source file: <Solution.eps>
-(epstopdf)                    date: 2021-04-07 00:23:28
-(epstopdf)                    size: 897831 bytes
+(epstopdf)                    date: 2021-04-07 15:18:21
+(epstopdf)                    size: 897824 bytes
 (epstopdf)             Output file: <Solution-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-04-07 00:23:38
-(epstopdf)                    size: 221112 bytes
+(epstopdf)                    date: 2021-04-07 15:18:38
+(epstopdf)                    size: 221117 bytes
 (epstopdf)             Command: <repstopdf --outfile=Solution-eps-converted-to.
 pdf Solution.eps>
-(epstopdf)             \includegraphics on input line 172.
+(epstopdf)             \includegraphics on input line 188.
 Package epstopdf Info: Output file is already uptodate.
-<Solution-eps-converted-to.pdf, id=186, 578.16pt x 433.62pt>
+<Solution-eps-converted-to.pdf, id=184, 578.16pt x 433.62pt>
 File: Solution-eps-converted-to.pdf Graphic file (type pdf)
 <use Solution-eps-converted-to.pdf>
-Package pdftex.def Info: Solution-eps-converted-to.pdf  used on input line 172.
+Package pdftex.def Info: Solution-eps-converted-to.pdf  used on input line 188.
 
 (pdftex.def)             Requested size: 227.62204pt x 170.71231pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5 <./NaturalResponse-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Amplitude.eps>
-(epstopdf)                    date: 2021-04-07 00:23:28
-(epstopdf)                    size: 64104 bytes
+(epstopdf)                    date: 2021-04-07 15:18:21
+(epstopdf)                    size: 64108 bytes
 (epstopdf)             Output file: <Amplitude-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-04-07 00:23:39
-(epstopdf)                    size: 16581 bytes
+(epstopdf)                    date: 2021-04-07 15:18:40
+(epstopdf)                    size: 16583 bytes
 (epstopdf)             Command: <repstopdf --outfile=Amplitude-eps-converted-to
 .pdf Amplitude.eps>
-(epstopdf)             \includegraphics on input line 183.
+(epstopdf)             \includegraphics on input line 199.
 Package epstopdf Info: Output file is already uptodate.
-<Amplitude-eps-converted-to.pdf, id=197, 578.16pt x 433.62pt>
+<Amplitude-eps-converted-to.pdf, id=185, 578.16pt x 433.62pt>
 File: Amplitude-eps-converted-to.pdf Graphic file (type pdf)
 <use Amplitude-eps-converted-to.pdf>
-Package pdftex.def Info: Amplitude-eps-converted-to.pdf  used on input line 183
+Package pdftex.def Info: Amplitude-eps-converted-to.pdf  used on input line 199
 .
 (pdftex.def)             Requested size: 227.62204pt x 170.71231pt.
+
+Underfull \vbox (badness 5622) has occurred while \output is active []
+
+ [6 <./Solution-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Arguments.eps>
-(epstopdf)                    date: 2021-04-07 00:23:28
-(epstopdf)                    size: 62259 bytes
+(epstopdf)                    date: 2021-04-07 15:18:21
+(epstopdf)                    size: 62263 bytes
 (epstopdf)             Output file: <Arguments-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-04-07 00:23:40
-(epstopdf)                    size: 17183 bytes
+(epstopdf)                    date: 2021-04-07 15:18:42
+(epstopdf)                    size: 17185 bytes
 (epstopdf)             Command: <repstopdf --outfile=Arguments-eps-converted-to
 .pdf Arguments.eps>
-(epstopdf)             \includegraphics on input line 189.
+(epstopdf)             \includegraphics on input line 205.
 Package epstopdf Info: Output file is already uptodate.
-<Arguments-eps-converted-to.pdf, id=198, 578.16pt x 433.62pt>
+<Arguments-eps-converted-to.pdf, id=197, 578.16pt x 433.62pt>
 File: Arguments-eps-converted-to.pdf Graphic file (type pdf)
 <use Arguments-eps-converted-to.pdf>
-Package pdftex.def Info: Arguments-eps-converted-to.pdf  used on input line 189
+Package pdftex.def Info: Arguments-eps-converted-to.pdf  used on input line 205
 .
 (pdftex.def)             Requested size: 227.62204pt x 170.71231pt.
 ) (./simulation.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6.
+(hyperref)                removing `math shift' on input line 4.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 6.
+(hyperref)                removing `math shift' on input line 4.
 
-[6 <./Solution-eps-converted-to.pdf> <./Amplitude-eps-converted-to.pdf> <./Argu
-ments-eps-converted-to.pdf>]
+(../doc/op_tab.tex) (../doc/Tensoes_tab.tex)
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 14.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 14.
+(hyperref)                removing `math shift' on input line 34.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 27.
+(hyperref)                removing `math shift' on input line 34.
+
+[7 <./Amplitude-eps-converted-to.pdf> <./Arguments-eps-converted-to.pdf>]
+(../doc/op2_tab.tex) (../doc/Tensoes2_tab.tex)
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 69.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\geq' on input line 27.
+(hyperref)                removing `\geq' on input line 69.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 27.
+(hyperref)                removing `math shift' on input line 69.
 
+[8]
 Package epstopdf Info: Source file: <NaturalResponse.eps>
-(epstopdf)                    date: 2021-04-07 00:23:28
-(epstopdf)                    size: 363145 bytes
+(epstopdf)                    date: 2021-04-07 15:18:21
+(epstopdf)                    size: 363151 bytes
 (epstopdf)             Output file: <NaturalResponse-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-04-07 00:23:32
-(epstopdf)                    size: 117307 bytes
+(epstopdf)                    date: 2021-04-07 15:18:28
+(epstopdf)                    size: 117313 bytes
 (epstopdf)             Command: <repstopdf --outfile=NaturalResponse-eps-conver
 ted-to.pdf NaturalResponse.eps>
-(epstopdf)             \includegraphics on input line 35.
+(epstopdf)             \includegraphics on input line 77.
 Package epstopdf Info: Output file is already uptodate.
 File: NaturalResponse-eps-converted-to.pdf Graphic file (type pdf)
 <use NaturalResponse-eps-converted-to.pdf>
 Package pdftex.def Info: NaturalResponse-eps-converted-to.pdf  used on input li
-ne 35.
+ne 77.
 (pdftex.def)             Requested size: 263.188pt x 197.39003pt.
-<sim_3.pdf, id=221, 597.23125pt x 845.1575pt>
+<sim_3.pdf, id=223, 597.23125pt x 845.1575pt>
 File: sim_3.pdf Graphic file (type pdf)
 <use sim_3.pdf>
-Package pdftex.def Info: sim_3.pdf  used on input line 40.
+Package pdftex.def Info: sim_3.pdf  used on input line 82.
 (pdftex.def)             Requested size: 221.07695pt x 312.84523pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 49.
+(hyperref)                removing `math shift' on input line 91.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\geq' on input line 49.
+(hyperref)                removing `\geq' on input line 91.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 49.
+(hyperref)                removing `math shift' on input line 91.
 
 Package epstopdf Info: Source file: <Solution.eps>
-(epstopdf)                    date: 2021-04-07 00:23:28
-(epstopdf)                    size: 897831 bytes
+(epstopdf)                    date: 2021-04-07 15:18:21
+(epstopdf)                    size: 897824 bytes
 (epstopdf)             Output file: <Solution-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-04-07 00:23:38
-(epstopdf)                    size: 221112 bytes
+(epstopdf)                    date: 2021-04-07 15:18:38
+(epstopdf)                    size: 221117 bytes
 (epstopdf)             Command: <repstopdf --outfile=Solution-eps-converted-to.
 pdf Solution.eps>
-(epstopdf)             \includegraphics on input line 56.
+(epstopdf)             \includegraphics on input line 98.
 Package epstopdf Info: Output file is already uptodate.
 File: Solution-eps-converted-to.pdf Graphic file (type pdf)
 <use Solution-eps-converted-to.pdf>
-Package pdftex.def Info: Solution-eps-converted-to.pdf  used on input line 56.
+Package pdftex.def Info: Solution-eps-converted-to.pdf  used on input line 98.
 (pdftex.def)             Requested size: 263.188pt x 197.39003pt.
-<sim4.pdf, id=229, 597.23125pt x 845.1575pt>
+<sim4.pdf, id=224, 597.23125pt x 845.1575pt>
 File: sim4.pdf Graphic file (type pdf)
 <use sim4.pdf>
-Package pdftex.def Info: sim4.pdf  used on input line 61.
+Package pdftex.def Info: sim4.pdf  used on input line 103.
 (pdftex.def)             Requested size: 221.07695pt x 312.84523pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
- [8 <./sim_3.pdf>]
 Package epstopdf Info: Source file: <Amplitude.eps>
-(epstopdf)                    date: 2021-04-07 00:23:28
-(epstopdf)                    size: 64104 bytes
+(epstopdf)                    date: 2021-04-07 15:18:21
+(epstopdf)                    size: 64108 bytes
 (epstopdf)             Output file: <Amplitude-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-04-07 00:23:39
-(epstopdf)                    size: 16581 bytes
+(epstopdf)                    date: 2021-04-07 15:18:40
+(epstopdf)                    size: 16583 bytes
 (epstopdf)             Command: <repstopdf --outfile=Amplitude-eps-converted-to
 .pdf Amplitude.eps>
-(epstopdf)             \includegraphics on input line 81.
+(epstopdf)             \includegraphics on input line 122.
 Package epstopdf Info: Output file is already uptodate.
 File: Amplitude-eps-converted-to.pdf Graphic file (type pdf)
 <use Amplitude-eps-converted-to.pdf>
-Package pdftex.def Info: Amplitude-eps-converted-to.pdf  used on input line 81.
-
+Package pdftex.def Info: Amplitude-eps-converted-to.pdf  used on input line 122
+.
 (pdftex.def)             Requested size: 263.188pt x 197.39003pt.
-<sim5_db.pdf, id=240, 597.23125pt x 845.1575pt>
+<sim5_db.pdf, id=225, 597.23125pt x 845.1575pt>
 File: sim5_db.pdf Graphic file (type pdf)
 <use sim5_db.pdf>
-Package pdftex.def Info: sim5_db.pdf  used on input line 86.
+Package pdftex.def Info: sim5_db.pdf  used on input line 127.
 (pdftex.def)             Requested size: 221.07695pt x 312.84523pt.
-
+[9 <./sim_3.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9 <./sim4.pdf>]
+ [10 <./sim4.pdf>]
 Package epstopdf Info: Source file: <Arguments.eps>
-(epstopdf)                    date: 2021-04-07 00:23:28
-(epstopdf)                    size: 62259 bytes
+(epstopdf)                    date: 2021-04-07 15:18:21
+(epstopdf)                    size: 62263 bytes
 (epstopdf)             Output file: <Arguments-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-04-07 00:23:40
-(epstopdf)                    size: 17183 bytes
+(epstopdf)                    date: 2021-04-07 15:18:42
+(epstopdf)                    size: 17185 bytes
 (epstopdf)             Command: <repstopdf --outfile=Arguments-eps-converted-to
 .pdf Arguments.eps>
-(epstopdf)             \includegraphics on input line 99.
+(epstopdf)             \includegraphics on input line 140.
 Package epstopdf Info: Output file is already uptodate.
 File: Arguments-eps-converted-to.pdf Graphic file (type pdf)
 <use Arguments-eps-converted-to.pdf>
-Package pdftex.def Info: Arguments-eps-converted-to.pdf  used on input line 99.
-
+Package pdftex.def Info: Arguments-eps-converted-to.pdf  used on input line 140
+.
 (pdftex.def)             Requested size: 263.188pt x 197.39003pt.
-<sim5_ph.pdf, id=252, 597.23125pt x 845.1575pt>
+<sim5_ph.pdf, id=247, 597.23125pt x 845.1575pt>
 File: sim5_ph.pdf Graphic file (type pdf)
 <use sim5_ph.pdf>
-Package pdftex.def Info: sim5_ph.pdf  used on input line 104.
+Package pdftex.def Info: sim5_ph.pdf  used on input line 145.
 (pdftex.def)             Requested size: 221.07695pt x 312.84523pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10 <./sim5_db.pdf>]) (./conclusion.tex)
+ [11 <./sim5_db.pdf>]) (./conclusion.tex)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 162.
- [11 <./sim5_ph.pdf>]
+ [12 <./sim5_ph.pdf>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 162.
  (./report.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 162.
@@ -974,13 +964,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 162.
  ) 
 Here is how much of TeX's memory you used:
- 12188 strings out of 481239
- 192236 string characters out of 5920377
- 591856 words of memory out of 5000000
- 27163 multiletter control sequences out of 15000+600000
+ 12209 strings out of 481239
+ 192582 string characters out of 5920377
+ 596877 words of memory out of 5000000
+ 27165 multiletter control sequences out of 15000+600000
  558058 words of font info for 62 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 41i,9n,42p,959b,489s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,11n,42p,959b,490s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
@@ -994,10 +984,10 @@ y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
 share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on report.pdf (11 pages, 744161 bytes).
+Output written on report.pdf (12 pages, 733793 bytes).
 PDF statistics:
- 332 PDF objects out of 1000 (max. 8388607)
- 258 compressed objects within 3 object streams
- 44 named destinations out of 1000 (max. 500000)
- 197 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 327 PDF objects out of 1000 (max. 8388607)
+ 257 compressed objects within 3 object streams
+ 48 named destinations out of 1000 (max. 500000)
+ 192 words of extra memory for PDF output out of 10000 (max. 10000000)
 

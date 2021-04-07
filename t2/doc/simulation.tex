@@ -1,14 +1,34 @@
 \section{Simulation Analysis}
 \label{sec:simulation}
 
-
-
 \subsection{Operating point analysis for t$<$0}
 
 In this section, an operating point analysis of the circuit (referência ao circuito) was conducted in order to calculate the voltage in all nodes and the current through the resistors for a t $<$ 0. To contextualize the values obtained using the tools in ngspice, it is necessary to state that, as node 0 is connected to ground, its nodal voltage does not appear on the table of results. It is important to note that an extra voltage source, Vaux, was added and therefore, another node was also added (node 9). This Vaux was intended to allow the measurement of the current Id which voltage source Vd depends on, since ngspice doesn't allow us to introduce Resistor R6's current in the computation. Vaux's voltage is equal to 0 V, since it is only an auxiliary component that doesn't interfere with the circuit (node's 7 voltage is equal to node's 9 voltage) and allowed us to obtain the current through it.
 
 %Introduzir a primeira tabela dos valores das correntes e da tensão dos nós do spice e do octave lado a lado para comparar o erro
+\begin{table}[h] 
+\begin{minipage}{0.5\linewidth}
+\centering
+\begin{tabular}{|
+>{\columncolor[HTML]{FFCC67}}l |c|}
+\hline
+\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}NgSpice - Voltages (V)} \\ \hline
+\input{../doc/op_tab}
+\end{tabular}
+\end{minipage}%
+\begin{minipage}{0.5\linewidth}
+\centering
+\begin{tabular}{|
+>{\columncolor[HTML]{FFCC67}}l |c|}
+\hline
+\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Octave - Voltages (V)} \\ \hline
+\input{../doc/Tensoes_tab}
+\end{tabular} 
+\end{minipage}%
+%
 
+\caption{Nodal Voltage Comparison}
+\end{table}
 
 
 \subsection{Calculus of $Req$ - Simulation}
@@ -22,13 +42,35 @@ Req = (v(6)-v(8))/vxbranch,
 with $vxbranch$ corresponding to the current $Ix$ that flows through the $Vx$'s branch.
 
 %Introduzir a primeira tabela dos valores das correntes e da tensão dos nós do spice e do octave lado a lado para comparar o erro
+\begin{table}[H] 
+\begin{minipage}{0.5\linewidth}
+\centering
+\begin{tabular}{|
+>{\columncolor[HTML]{FFCC67}}l |c|}
+\hline
+\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}NgSpice - Voltages (V)} \\ \hline
+\input{../doc/op2_tab}
+\end{tabular}
+\end{minipage}%
+\begin{minipage}{0.5\linewidth}
+\centering
+\begin{tabular}{|
+>{\columncolor[HTML]{FFCC67}}l |c|}
+\hline
+\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Octave - Voltages (V)} \\ \hline
+\input{../doc/Tensoes2_tab}
+\end{tabular} 
+\end{minipage}%
+%
+\caption{Nodal Voltage Comparison}
+\end{table}
 
 
 \subsection{Transient Analysis for t $\geq$ (Natural Solution)}
 
 In this section, a transient analysis was conducted in order to evaluate the natural response of the circuit, which means, the variation over time. Once that to calculate the natural response, the voltage source $vs$ is turned off, the circuit simulated was equal to the one in the previous question. From this, the voltage in the capacitor's over time (time interval considered was [0,20]ms) was calculated and plotted, using $Vx$ (calculated in the previous section) as the initial condition for the capacitor's voltage.
 
-\begin{figure}[H] 
+\begin{figure}[h] 
 \centering
 
 \begin{subfigure}{0.5\textwidth}
@@ -49,7 +91,7 @@ In this section, a transient analysis was conducted in order to evaluate the nat
 \subsection{Operating Point Analysis for t $\geq$ (Natural and Forced Solution)}
 In this section, as previously, a transient analysis was conducted in order to evaluate the natural and forced response of the circuit. In order to achieve this, the procedure adopted was the same as the one in the previous step, but with the voltage souce $vs(t)$ consisting of a sinusoidal wave sen(2*$\pi$*f).  
 
-\begin{figure}[H] 
+\begin{figure}[h] 
 \centering
 
 \begin{subfigure}{0.5\textwidth}
@@ -74,17 +116,16 @@ In this part of the assignment, an AC (Alternating Current) Analysis was conduct
 
 \subsubsection{Frequency Responses - Amplitude}
 
-
 \begin{figure}[H] 
 \centering
 \begin{subfigure}{0.5\textwidth}
 \includegraphics[width=\textwidth]{Amplitude.eps}
-\caption{First Circuit}
+\caption{Amplitude (Octave)}
 \label{fig:first}
 \end{subfigure}
 \begin{subfigure}{0.42\textwidth}
 \includegraphics[width=\textwidth]{sim5_db.pdf}
-\caption{Second Circuit}
+\caption{Amplitude (NgSpice)}
 \label{fig:second}
 \end{subfigure}
 \end{figure}
@@ -97,52 +138,15 @@ As expected, the results obtained from the ngspice simulation and the theorethic
 \centering
 \begin{subfigure}{0.5\textwidth}
 \includegraphics[width=\textwidth]{Arguments.eps}
-\caption{First Circuit}
+\caption{Arguments (Octave)}
 \label{fig:first}
 \end{subfigure}
 \begin{subfigure}{0.42\textwidth}
 \includegraphics[width=\textwidth]{sim5_ph.pdf}
-\caption{Second Circuit}
+\caption{Arguments (NgSpice)}
 \label{fig:second}
 \end{subfigure}
 \end{figure}
 
 As expected, the results obtained from the ngspice simulation and the theorethical analysis in octave match.
-
-%se for preciso
-%\end{figure}
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width = 15cm]{sim_3.pdf}
-%\caption {Ngspice simulation plot 1}
-%\end{figure}
-
-
-
-%se for preciso
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width = 15cm]{sim4.pdf}
-%\caption {Ngspice simulation plot 2}
-%\end{figure}
-
-
-
-
-%se for preciso
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width = 15cm]{sim5_db.pdf}
-%\caption {Ngspice simulation plot 3}
-%\end{figure}
-
-
-
-
-%se for preciso
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width = 15cm]{sim5_ph.pdf}
-%\caption {Ngspice simulation plot 4}
-%\end{figure}
 

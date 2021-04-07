@@ -3,20 +3,34 @@
 \label{sec:introduction}
 % state the learning objective 
 
-In this laboratory assignment we study a circuit containing various elements, amongst them a capacitor, resistances and dependent and independent sources of voltage and current in order to accomplish various objectives. At first we analyse the circuit when t<0, using the nodal method to determine the voltages in all nodes and currents in all branches. Then, in order to find the $R_eq$, we change the circuit into what is displayed in Figure 2, and with this new circuit, we'll find the total solution of the voltage $V_s$. To finalize, we are going to determine the frequency responses of the voltage in the capacitor and in the node 6. 
+In this laboratory assignment we study a circuit (Fig. 1) containing various elements, to be more specific, 1 capacitor, 7 resistances, 1 sinusoidal voltage source $V_s$, 1 dependent source of voltage and 1 dependent source of current. In order to study this circuit we use various methods, such as the node method, we change the circuit so we can find various variables associated with it, like the $R_{eq}$ and the total solution of $V_6$ and also study the frequency response on the main circuit.\\
+
+The sinusoidal voltage source $V_s$ varies in time exactly as it follows:
+
+%\begin{equation}
+%
+%V_{s}(t) = V_{s}u(-t) + sin(2\pi ft)u(t)
+
+%\end{equation}
+
+While
+
+%\begin{equation}
+ %u(t)= e
+  %  \begin{cases}
+  %    0 & \text{t $<$ 0}\\
+  %    1 & \text{t $geq$ 0}
+  %  \end{cases}       
+%\end{equation}
+
 
 \begin{figure}[h] 
+
 \centering
-\begin{subfigure}{0.4\textwidth}
 \includegraphics[width=\textwidth]{circuit1.pdf}
-\caption{First Circuit}
+\caption{The RC Circuit}
 \label{fig:first}
-\end{subfigure}
-\begin{subfigure}{0.4\textwidth}
-\includegraphics[width=\textwidth]{circuit2.pdf}
-\caption{Second Circuit}
-\label{fig:second}
-\end{subfigure}
+
 \end{figure}
 
 
