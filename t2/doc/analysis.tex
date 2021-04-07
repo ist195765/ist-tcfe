@@ -9,6 +9,8 @@ Initially, the circuits's independent voltage source inputs in the circuit a con
 
 After performing the node analysis we've obtained the following matrix:
 
+\setlength{\parskip}{4em}
+
 $\begin{pmatrix}
 1 & 0 & 0 & -1 & 0 & 0 & 0 & 0\\
 -G1 & G1+G2+G3 & -G2 & 0 & -G3 & 0 & 0 & 0\\
@@ -43,7 +45,11 @@ V5\\
 
 \subsection{Point 2: Determine the equivalent resistance seen by the capacitor}
 
+\setlength{\parskip}{1em}
+
 To determine the equivalent resistance, we've defined a voltage source Vx between the nodes 6 and 8 and we've powered off the independent voltage source Vs. After that, we use the node analysis to determine the volatge in all nodes, which resulted in the following matrix:
+
+\setlength{\parskip}{4em}
 
 $\begin{pmatrix}
 0 & 0 & 0 & 0 & 0 & 1 & 0 & -1\\
@@ -78,6 +84,8 @@ Vx\\
 \end{pmatrix}$
 
 After knowing these voltages, it's easy to determine the currents in all branches. To determine the equivalent resistance we need to determine the current in the branch 6-8, Ix, just because $R_{eq}=V_{x}/I_{x}$. We've obtained Ix by analysing the node 8 and we've obtained the following expression for Ix:
+
+\setlength{\parskip}{1em}
 
 \begin{equation}
 I_x = -Kb*(V_2 - V_5) + G_5*(V_5 - V_6) 
@@ -120,6 +128,8 @@ V_{6n} = V_{capacitor_i} * e^{-\frac{t}{C*R_{eq}}}
 We already know that in a forced circuit the voltages in all nodes will gain the same frequency as the source. Knowing this we know that the solution for the node i will be $V_{i} = V_{i_{max}}*cos(w*t + \phi_{i})$. So, in order to determine the voltages for all nodes, we just need to determine the voltages amplitudes and phases, or in other words, their complex amplitude. This brings an interesting point: if we consider the complex world the solutions will be in the form of $V_{i} = V_{i_{max}}*e^{w*t} * e^{\phi_{i}}$, which makes easy to obtain both the amplitudes and the phases.
 Alongside this, we just need to solve the node analysis for all the circuit, which will result in the following matrix:
 
+\setlength{\parskip}{4em}
+
 $\begin{pmatrix}
 1 & 0 & 0 & -1 & 0 & 0 & 0 & 0\\
 -G1 & G1+G2+G3 & -G2 & 0 & -G3 & 0 & 0 & 0\\
@@ -154,7 +164,11 @@ V_s\\
 
 Note: For the node 6 we have the following equation:
 
-%equação no 6
+\setlength{\parskip}{1em}
+
+\begin{equation}
+K_bV_2 + (- K_b - G_5)V_5 + (G_5 + \frac{1}{Z_c})V_6 - \frac{1}{Z_c}V_8 
+\end{equation}
 
 And this is what we see in the matrix
 
@@ -173,15 +187,16 @@ Solving the matrix using the given values, the complex amplitudes generated are 
 
 \subsection{Point 5: Determine the solution for the voltage in node 6}
 
-%\[
- %V_{6}(t)=
-  %  \begin{cases}
-   %   V_{6i} & \text{para t $\in$ [-5, 0]}\\
-   %   V_{6n}(t) + V_{6f}(t) = V_{6i}e^{$\frac{t}{C*R_5}$} + Acos($\omega$ t - $\phi$_1)
-   % \end{cases}       
-%\]
 
 Using the data obtained in the points 3 and 4 is relatively easy to find the solution for the voltage in the node 6. We just need to find the forced solution using the amplitude and phase for the node 6 obtained in point 4 e aplying it in this formula: $V_{6f} = V_{6_{max}}*cos(w*t + \phi_{6})$. After that it's just add it to the natural solution and we've obtained the following:
+
+\begin{equation}
+ V_{6}(t)=
+    \begin{cases}
+      V_{6i} & \text{para t $\in$ [-5, 0]}\\
+      V_{6n}(t) + V_{6f}(t) = V_{6i}e^\frac{t}{C*R_5} + V_{6_{max}}cos(\omega t - \phi _6)
+    \end{cases}       
+\end{equation}
 
 \begin{figure}[H]
 \centering

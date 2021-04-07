@@ -22,6 +22,20 @@ Kd = sscanf(char (str(14,1)), "Kd = %e")*1000;
 
 fclose(fp);  
 
+printf ("InitialValues_TAB\n");
+printf ("R1 = %e Ohm\n", R1);
+printf ("R2 = %e Ohm\n", R2);
+printf ("R3 = %e Ohm\n", R3);
+printf ("R4 = %e Ohm\n", R4);
+printf ("R5 = %e Ohm\n", R5);
+printf ("R6 = %e Ohm\n", R6);
+printf ("R7 = %e Ohm\n", R7);
+printf ("C = %e F\n", C);
+printf ("Kb = %e A/V \n", Kb);
+printf ("Kd = %e V/A \n", Kd);
+printf ("InitialValues_END\n");
+
+
 %% Difining variables
 
 
