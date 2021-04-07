@@ -7,24 +7,35 @@ In this laboratory assignment we study a circuit (Fig. 1) containing various ele
 
 The sinusoidal voltage source $V_s$ varies in time exactly as it follows:
 
-%\begin{equation}
-%
-%V_{s}(t) = V_{s}u(-t) + sin(2\pi ft)u(t)
-
-%\end{equation}
-
-While
-
-%\begin{equation}
- %u(t)= e
-  %  \begin{cases}
-  %    0 & \text{t $<$ 0}\\
-  %    1 & \text{t $geq$ 0}
-  %  \end{cases}       
-%\end{equation}
+\begin{equation}
+V_{s}(t) = V_{s}u(-t) + sin(2 \pi f t)u(t)
+\label{equation1}
+\end{equation}
+Where
+\begin{equation}
+ u(t)= e
+    \begin{cases}
+     0 & \text{t $<$ 0}\\
+      1 & \text{t $\geq$ 0}
+    \end{cases} 
+\label{eq:tt}      
+\end{equation}
 
 
-\begin{figure}[h] 
+The next table displays the data generated automatically by the Python Script:
+
+\begin{table}[H] \centering
+\begin{tabular}{|
+>{\columncolor[HTML]{FFCC67}}l |c|}
+\hline
+\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Octave - Voltages (V)} \\ \hline
+\input{../doc/InitialValues_tab}
+\end{tabular}
+\caption{Initial data}
+\end{table}
+
+
+\begin{figure}[H] 
 
 \centering
 \includegraphics[width=\textwidth]{circuit1.pdf}
