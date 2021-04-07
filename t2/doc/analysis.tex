@@ -13,27 +13,27 @@ After performing the node analysis we've obtained the following matrix:
 
 $\begin{pmatrix}
 1 & 0 & 0 & -1 & 0 & 0 & 0 & 0\\
--G1 & G1+G2+G3 & -G2 & 0 & -G3 & 0 & 0 & 0\\
-0 & -G2-Kb & G2 & 0 & Kb & 0 & 0 & 0 \\
-G1 & -G1 & 0 & G4+G6 & -G4 & 0 & -G6 & 0\\
-0 & 0 & 0 & -Kd*G6 & 1 & 0 & Kd*G6 & 0 \\
-0 & Kb & 0 & 0 & -G5-Kb & G5 & 0 & 0 \\
-0 & 0 & 0 & -G6 & 0 & 0 & G6+G7 & 0  \\ 
+-G_1 & G_1+G_2+G_3 & -G_2 & 0 & -G_3 & 0 & 0 & 0\\
+0 & -G_2-K_b & G_2 & 0 & K_b & 0 & 0 & 0 \\
+G_1 & -G_1 & 0 & G_4+G_6 & -G_4 & 0 & -G_6 & 0\\
+0 & 0 & 0 & -K_d*G_6 & 1 & 0 & K_d*G_6 & 0 \\
+0 & K_b & 0 & 0 & -G_5-K_b & G_5 & 0 & 0 \\
+0 & 0 & 0 & -G_6 & 0 & 0 & G_6+G_7 & 0  \\ 
 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0
 \end{pmatrix}$
 $\begin{pmatrix}
-V1\\
-V2\\
-V3\\
-V4\\
-V5\\
-V6\\
-V7\\
-V8
+V_1\\
+V_2\\
+V_3\\
+V_4\\
+V_5\\
+V_6\\
+V_7\\
+V_8
 \end{pmatrix}$
 =
 $\begin{pmatrix}
-V5\\
+V_s\\
 0\\
 0\\
 0\\
@@ -42,6 +42,8 @@ V5\\
 0\\
 0
 \end{pmatrix}$
+
+After resolving the matrix, we've obtained the theoretical results for the voltages in all nodes. 
 
 \subsection{Point 2: Determine the equivalent resistance seen by the capacitor}
 
@@ -53,27 +55,27 @@ To determine the equivalent resistance, we've defined a voltage source Vx betwee
 
 $\begin{pmatrix}
 0 & 0 & 0 & 0 & 0 & 1 & 0 & -1\\
--G1 & G1+G2+G3 & -G2 & 0 & -G3 & 0 & 0 & 0\\
-0 & -G2-Kb & G2 & 0 & Kb & 0 & 0 & 0 \\
-G1 & -G1 & 0 & G4+G6 & -G4 & 0 & -G6 & 0\\
-0 & 0 & 0 & -Kd*G6 & 1 & 0 & Kd*G6 & 0 \\
+-G_1 & G_1+G_2+G_3 & -G_2 & 0 & -G_3 & 0 & 0 & 0\\
+0 & -G_2-K_b & G_2 & 0 & K_b & 0 & 0 & 0 \\
+G_1 & -G_1 & 0 & G_4+G_6 & -G_4 & 0 & -G_6 & 0\\
+0 & 0 & 0 & -K_d*G_6 & 1 & 0 & K_d*G_6 & 0 \\
 1 & 0 & 0 & -1 & 0 & 0 & 0 & 0\\
-0 & 0 & 0 & -G6 & 0 & 0 & G6+G7 & -G7  \\ 
+0 & 0 & 0 & -G_6 & 0 & 0 & G_6+G_7 & -G_7  \\ 
 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0
 \end{pmatrix}$
 $\begin{pmatrix}
-V1\\
-V2\\
-V3\\
-V4\\
-V5\\
-V6\\
-V7\\
-V8
+V_1\\
+V_2\\
+V_3\\
+V_4\\
+V_5\\
+V_6\\
+V_7\\
+V_8
 \end{pmatrix}$
 =
 $\begin{pmatrix}
-Vx\\
+V_x\\
 0\\
 0\\
 0\\
@@ -99,7 +101,7 @@ Using the results in point 2, we can determine the natural solution of the circu
 
 \begin{figure}[H]
 \centering
-\includegraphics[width = 15cm]{circuit3.pdf}
+\includegraphics[width = 10cm]{circuit3.pdf}
 \caption {Circuit3}
 \end{figure}
 
@@ -132,23 +134,23 @@ Alongside this, we just need to solve the node analysis for all the circuit, whi
 
 $\begin{pmatrix}
 1 & 0 & 0 & -1 & 0 & 0 & 0 & 0\\
--G1 & G1+G2+G3 & -G2 & 0 & -G3 & 0 & 0 & 0\\
-0 & -G2-Kb & G2 & 0 & Kb & 0 & 0 & 0 \\
-G1 & -G1 & 0 & G4+G6 & -G4 & 0 & -G6 & 0\\
-0 & 0 & 0 & -Kd*G6 & 1 & 0 & Kd*G6 & -1 \\
-0 & Kb & 0 & 0 & -G5-Kb & G5+\frac{1}{Z_c} & 0 & -\frac{1}{Z_c} \\
-0 & 0 & 0 & -G6 & 0 & 0 & G6+G7 & -G7  \\ 
+-G_1 & G_1+G_2+G_3 & -G_2 & 0 & -G_3 & 0 & 0 & 0\\
+0 & -G_2-K_b & G_2 & 0 & K_b & 0 & 0 & 0 \\
+G_1 & -G_1 & 0 & G_4+G_6 & -G_4 & 0 & -G_6 & 0\\
+0 & 0 & 0 & -K_d*G_6 & 1 & 0 & K_d*G_6 & -1 \\
+0 & K_b & 0 & 0 & -G_5-K_b & G_5+\frac{1}{Z_c} & 0 & -\frac{1}{Z_c} \\
+0 & 0 & 0 & -G_6 & 0 & 0 & G_6+G_7 & -G_7  \\ 
 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0
 \end{pmatrix}$
 $\begin{pmatrix}
-V1\\
-V2\\
-V3\\
-V4\\
-V5\\
-V6\\
-V7\\
-V8
+V_1\\
+V_2\\
+V_3\\
+V_4\\
+V_5\\
+V_6\\
+V_7\\
+V_8
 \end{pmatrix}$
 =
 $\begin{pmatrix}
@@ -162,7 +164,7 @@ V_s\\
 0
 \end{pmatrix}$
 
-Note: For the node 6 we have the following equation:
+As explained, all nodes will have the same frequency, so by using the complex amplitudes we can use the matrix obtained in the nodal analysis just to determine these amplitudes. To explain thsi statement let's take a look in what happens in the node 6: 
 
 \setlength{\parskip}{1em}
 
@@ -187,7 +189,6 @@ Solving the matrix using the given values, the complex amplitudes generated are 
 
 \subsection{Point 5: Determine the solution for the voltage in node 6}
 
-
 Using the data obtained in the points 3 and 4 is relatively easy to find the solution for the voltage in the node 6. We just need to find the forced solution using the amplitude and phase for the node 6 obtained in point 4 e aplying it in this formula: $V_{6f} = V_{6_{max}}*cos(w*t + \phi_{6})$. After that it's just add it to the natural solution and we've obtained the following:
 
 \begin{equation}
@@ -204,10 +205,11 @@ Using the data obtained in the points 3 and 4 is relatively easy to find the sol
 \caption {Natural and forced response}
 \end{figure}
 
+Note: In this plot we can also see the $V_s(t)$, which is detailed in the introduction.
 
 \subsection{Point 6: Determine the frequency response for Vc(f), V6(f) and Vs(f)}
 
-In the final section of the work we just needed to repeat the point 4 multiples times modifying the fequencies of the source, to see how the amplitude and phase of Vc(f) (that is V6 - V8), V6(f) and Vs(f). The results can be seen below.
+In this final subsection we want to determine the frequency response for Vc(f), V6(f) and Vs(f) for f belonging to [0.1;1M](Hz). To do so we've repeated the point 4 of this analysis, but varying the frequencys, which are logaritmic spaced from one another just to plot the grapth related to the $log_{10}(f)$. The results can be seen below alognside their description.
 
 \begin{figure}[H]
 \centering
@@ -215,8 +217,16 @@ In the final section of the work we just needed to repeat the point 4 multiples 
 \caption {Amplitude}
 \end{figure}
 
+In the graphic shown above we can see the amplitude of the 3 voltages that we are studing. As predicted, Vs(f) is constant because is the user that inputs this value and just looking at the formula in the introduction we see that Vs = 1V during all the time studied. The value of Vs is 0 in the graph due to Vs = 1V = 20*log(1)[dB] = 0 dB. Relatively to V6(f), we see that it decreases slightly with the frequency's increase, but it tends to estabalize. As for Vc, it decreases a lot with the frequency increse, which is according to the expected, since the impedance of the capacitor is $Z_c = 1/(iwC)$.
+
 \begin{figure}[H]
 \centering
 \includegraphics[width = 8cm]{Arguments.eps}
 \caption {Arguments}
 \end{figure}
+
+The above graphic now details the phases of the 3 studied voltages. The phase of Vs is once more constant and equal to 0 since itś provided by input. The phases of the othe voltages tend to decrease as the frequency increses, but estabalizing near the -90 degrees for Vc and near -180 degrees for V6.  
+
+
+
+

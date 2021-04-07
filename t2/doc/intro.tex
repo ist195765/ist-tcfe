@@ -3,9 +3,20 @@
 \label{sec:introduction}
 % state the learning objective 
 
-In this laboratory assignment we study a circuit (Fig. 1) containing various elements, to be more specific, 1 capacitor, 7 resistances, 1 sinusoidal voltage source $V_s$, 1 dependent source of voltage and 1 dependent source of current. In order to study this circuit we use various methods, such as the node method, we change the circuit so we can find various variables associated with it, like the $R_{eq}$ and the total solution of $V_6$ and also study the frequency response on the main circuit.\\
+In this laboratory assignment we study a circuit (Fig. 1) containing various elements, to be more specific, 1 capacitor, 7 resistances, 1 independent voltage source $V_s$, 1 dependent voltage source and 1 dependent current source. %In order to study this circuit we use various methods, such as the nodal method, we change the circuit so we can find various variables associated with it, like the $R_{eq}$ and the total solution of $V_6$ and also study the frequency response on the main circuit.%\\
 
-The sinusoidal voltage source $V_s$ varies in time exactly as it follows:
+\begin{figure}[H] 
+
+\centering
+\includegraphics[width=\textwidth]{circuit1.pdf}
+\caption{The RC Circuit}
+\label{fig:first}
+
+\end{figure}
+
+
+
+The independent voltage source $V_s$ varies in time exactly as it follows:
 
 \begin{equation}
 V_{s}(t) = V_{s}u(-t) + sin(2 \pi f t)u(t)
@@ -33,16 +44,6 @@ The next table displays the data generated automatically by the Python Script:
 \end{tabular}
 \caption{Initial data}
 \end{table}
-
-
-\begin{figure}[H] 
-
-\centering
-\includegraphics[width=\textwidth]{circuit1.pdf}
-\caption{The RC Circuit}
-\label{fig:first}
-
-\end{figure}
 
 
 In Section~\ref{sec:analysis}, a theoretical analysis of the circuit is
