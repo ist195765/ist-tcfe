@@ -24,9 +24,7 @@ In this section, an operating point analysis of the circuit (referência ao circ
 \multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Octave - Voltages (V)} \\ \hline
 \input{../doc/Tensoes_tab}
 \end{tabular} 
-\end{minipage}%
-%
-
+\end{minipage}
 \caption{Nodal Voltage Comparison}
 \end{table}
 
@@ -42,7 +40,7 @@ Req = (v(6)-v(8))/vxbranch,
 with $vxbranch$ corresponding to the current $Ix$ that flows through the $Vx$'s branch.
 
 %Introduzir a primeira tabela dos valores das correntes e da tensão dos nós do spice e do octave lado a lado para comparar o erro
-\begin{table}[H] 
+\begin{table}[h] 
 \begin{minipage}{0.5\linewidth}
 \centering
 \begin{tabular}{|
@@ -60,8 +58,7 @@ with $vxbranch$ corresponding to the current $Ix$ that flows through the $Vx$'s 
 \multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Octave - Voltages (V)} \\ \hline
 \input{../doc/Tensoes2_tab}
 \end{tabular} 
-\end{minipage}%
-%
+\end{minipage}
 \caption{Nodal Voltage Comparison}
 \end{table}
 
@@ -72,7 +69,6 @@ In this section, a transient analysis was conducted in order to evaluate the nat
 
 \begin{figure}[h] 
 \centering
-
 \begin{subfigure}{0.5\textwidth}
 \includegraphics[width=\textwidth]{NaturalResponse.eps}
 \caption{Natural Response (Octave)}
@@ -83,7 +79,6 @@ In this section, a transient analysis was conducted in order to evaluate the nat
 \caption{Natural Response (NGSpice)}
 \label{fig:second}
 \end{subfigure}
-
 \end{figure}
  
  When observing the graph obtained from the simulation in Ngspice, we see that the capacitor's voltage overtime is a negative exponential matching the one obtained from the theorethical analysis in octave.
@@ -93,7 +88,6 @@ In this section, as previously, a transient analysis was conducted in order to e
 
 \begin{figure}[h] 
 \centering
-
 \begin{subfigure}{0.5\textwidth}
 \includegraphics[width=\textwidth]{Solution.eps}
 \caption{Natural and forced response (Octave)}
@@ -104,7 +98,6 @@ In this section, as previously, a transient analysis was conducted in order to e
 \caption{Natural and forced response}
 \label{fig:second}
 \end{subfigure}
-
 \end{figure}
 
 When observing the graph obtained from the simulation  Ngspice, it is possible to conclude that, over the period of time considered, the voltage in the capacitor tends
