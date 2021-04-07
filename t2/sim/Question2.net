@@ -10,7 +10,8 @@
 
 
 .model group 37
-
+.op
+.end
 .control
 
 
@@ -24,9 +25,7 @@ echo "op2_TAB"
 print all
 print (v(6)-v(8))/vx#branch
 echo "op2_END"
-quit
 
 
 .endc
 
-.end

@@ -11,7 +11,8 @@
 *START OF THE SIMULATION
 
 .model group 37
-
+.op
+.end
 .control
 
 
@@ -25,11 +26,7 @@ echo  "op_TAB"
 print all
 echo  "op_END"
 
-quit
-
-
 .endc
 
-.end
 
 *END OF SIMULATION

@@ -5,8 +5,8 @@ clear all
 
 %% Read data.txt file to obtain the values
 
-fp = fopen ("~/ist-tcfe/t2/data.txt","r");
-str = importdata("~/ist-tcfe/t2/data.txt", '\t', 14);
+fp = fopen ("../data.txt","r");
+str = importdata("../data.txt", '\t', 14);
 
 R1 = sscanf(char (str(4,1)), "Values:  R1 = %e")*1000;
 R2 = sscanf(char (str(5,1)), "R2 = %e")*1000;
@@ -61,10 +61,10 @@ fprintf (cir1,"R2 3 2 %e \n", R2);
 fprintf (cir1,"R3 2 5 %e \n", R3);
 fprintf (cir1,"R4 5 0 %e \n", R4);
 fprintf (cir1,"R5 5 6 %e \n", R5);
-fprintf (cir1,"R6 9 7 %e \n", R6);
+fprintf (cir1,"R6 0 9 %e \n", R6);
 fprintf (cir1,"R7 7 8 %e \n", R7);
 fprintf (cir1,"Vs 1 0 %e \n", Vs);
-fprintf (cir1,"Vaux 0 9 %e \n", 0);
+fprintf (cir1,"Vaux 9 7 %e \n", 0);
 fprintf (cir1,"Hd 5 8 Vaux %e \n", Kd);
 fprintf (cir1,"Gb 6 3 (2,5) %e \n", Kb);
 fprintf (cir1,".END\n");
@@ -204,15 +204,26 @@ NB3 = [U; Z; Z; Z; Z; Z; Z; Z];
 V3 = N3\NB3;
 
 printf ("ComplexAmplitudes_TAB\n");
-printf ("V1 = %e + i(%e) V\n", real(V3(1)), imag(V3(1)));
-printf ("V2 = %e + i(%e) V\n", real(V3(2)), imag(V3(2)));
-printf ("V3 = %e + i(%e) V\n", real(V3(3)), imag(V3(3)));
-printf ("V4 = %e + i(%e) V\n", real(V3(4)), imag(V3(4)));
-printf ("V5 = %e + i(%e) V\n", real(V3(5)), imag(V3(5)));
-printf ("V6 = %e + i(%e) V\n", real(V3(6)), imag(V3(6)));
-printf ("V7 = %e + i(%e) V\n", real(V3(7)), imag(V3(7)));
-printf ("V8 = %e + i(%e) V\n", real(V3(8)), imag(V3(8)));
+printf ("amplitude-V1 = %e\n", abs(V3(1)));
+printf ("amplitude-V2 = %e\n", abs(V3(2)));
+printf ("amplitude-V3 = %e\n", abs(V3(3)));
+printf ("amplitude-V4 = %e\n", abs(V3(4)));
+printf ("amplitude-V5 = %e\n", abs(V3(5)));
+printf ("amplitude-V6 = %e\n", abs(V3(6)));
+printf ("amplitude-V7 = %e\n", abs(V3(7)));
+printf ("amplitude-V8 = %e\n", abs(V3(8)));
 printf ("ComplexAmplitudes_END\n");
+
+printf ("ComplexPhases_TAB\n");
+printf ("phase-V1 = %e\n", arg(V3(1))*180/pi);
+printf ("phase-V2 = %e\n", arg(V3(2))*180/pi);
+printf ("phase-V3 = %e\n", arg(V3(3))*180/pi);
+printf ("phase-V4 = %e\n", arg(V3(4))*180/pi);
+printf ("phase-V5 = %e\n", arg(V3(5))*180/pi);
+printf ("phase-V6 = %e\n", arg(V3(6))*180/pi);
+printf ("phase-V7 = %e\n", arg(V3(7))*180/pi);
+printf ("phase-V8 = %e\n", arg(V3(8))*180/pi);
+printf ("ComplexPhases_END\n");
 
 cir4 = fopen('circuit4.cir','w');
 

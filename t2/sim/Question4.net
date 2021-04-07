@@ -10,8 +10,11 @@
 
 
 .model group 37
-
+.op
+.end
 .control
+
+
 *makes plots in color
 set hcopypscolor = 0
 set color0=white
@@ -34,9 +37,5 @@ hardcopy sim4.ps v(6) v(1)
 echo sim4_FIG
 
 
-quit
-
-
 .endc
 
-.end

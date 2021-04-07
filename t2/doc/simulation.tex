@@ -3,7 +3,7 @@
 
 \subsection{Operating point analysis for t$<$0}
 
-In this section, an operating point analysis of the circuit (referência ao circuito) was conducted in order to calculate the voltage in all nodes and the current through the resistors for a t $<$ 0. To contextualize the values obtained using the tools in ngspice, it is necessary to state that, as node 0 is connected to ground, its nodal voltage does not appear on the table of results. It is important to note that an extra voltage source, Vaux, was added and therefore, another node was also added (node 9). This Vaux was intended to allow the measurement of the current Id which voltage source Vd depends on, since ngspice doesn't allow us to introduce Resistor R6's current in the computation. Vaux's voltage is equal to 0 V, since it is only an auxiliary component that doesn't interfere with the circuit (node's 7 voltage is equal to node's 9 voltage) and allowed us to obtain the current through it.
+In this section, an operating point analysis of the circuit (Figure 1) was conducted in order to calculate the voltage in all nodes and the current through the resistors for a t $<$ 0. To contextualize the values obtained using the tools in ngspice, it is necessary to state that, as node 0 is connected to ground, its nodal voltage does not appear on the table of results. It is important to note that an extra voltage source, Vaux, was added and therefore, another node was also added (node 9). This Vaux was intended to allow the measurement of the current Id which voltage source Vd depends on, since ngspice doesn't allow us to introduce Resistor R6's current in the computation. Vaux's voltage is equal to 0 V, since it is only an auxiliary component that doesn't interfere with the circuit (node's 7 voltage is equal to node's 9 voltage) and allowed us to obtain the current through it.
 
 %Introduzir a primeira tabela dos valores das correntes e da tensão dos nós do spice e do octave lado a lado para comparar o erro
 \begin{table}[H] 
@@ -31,7 +31,7 @@ In this section, an operating point analysis of the circuit (referência ao circ
 
 \subsection{Calculus of $Req$ - Simulation}
 
-Similarly to the last section, an operating point analysis to the circuit (referência ao circuito) was conducted, with the difference being that the voltage source $vs$ was turned off and the capacitor was replaced by the independent voltage source $Vx$ which corresponds to the value of $v(6)$-$v(8)$. This $Vx$ is equivalent to the voltage in the capacitor's terminals. 
+Similarly to the last section, an operating point analysis to the circuit was conducted, with the difference being that the voltage source $vs$ was turned off and the capacitor was replaced by the independent voltage source $Vx$ which corresponds to the value of $v(6)$-$v(8)$. This $Vx$ is equivalent to the voltage in the capacitor's terminals. 
 The values of currents and nodal voltages were then put in a table, while the equivalent thevenin resistor was calculated by the following equation:
 
 \begin{equation}
