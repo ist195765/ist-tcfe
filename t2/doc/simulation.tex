@@ -12,7 +12,7 @@ In this section, an operating point analysis of the circuit (Figure 1) was condu
 \begin{tabular}{|
 >{\columncolor[HTML]{FFCC67}}l |c|}
 \hline
-\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}NgSpice - Voltages (V)} \\ \hline
+\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}NgSpice - Voltages (V) and Currents (A)} \\ \hline
 \input{../doc/op_tab}
 \end{tabular}
 \end{minipage}%
@@ -21,7 +21,7 @@ In this section, an operating point analysis of the circuit (Figure 1) was condu
 \begin{tabular}{|
 >{\columncolor[HTML]{FFCC67}}l |c|}
 \hline
-\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Octave - Voltages (V)} \\ \hline
+\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Octave - Voltages (V) and Currents (A)} \\ \hline
 \input{../doc/Tensoes_tab}
 \end{tabular} 
 \end{minipage}
@@ -31,7 +31,7 @@ In this section, an operating point analysis of the circuit (Figure 1) was condu
 
 \subsection{Calculus of $Req$ - Simulation}
 
-Similarly to the last section, an operating point analysis to the circuit was conducted, with the difference being that the voltage source $vs$ was turned off and the capacitor was replaced by the independent voltage source $Vx$ which corresponds to the value of $v(6)$-$v(8)$. This $Vx$ is equivalent to the voltage in the capacitor's terminals. 
+Similarly to the last section, an operating point analysis to the circuit (Figure 7) was conducted, with the difference being that the voltage source $vs$ was turned off and the capacitor was replaced by the independent voltage source $Vx$ which corresponds to the value of $v(6)$-$v(8)$. This $Vx$ is equivalent to the voltage in the capacitor's terminals. 
 The values of currents and nodal voltages were then put in a table, while the equivalent thevenin resistor was calculated by the following equation:
 
 \begin{equation}
@@ -39,14 +39,19 @@ Req = (v(6)-v(8))/vxbranch,
 \end{equation}
 with $vxbranch$ corresponding to the current $Ix$ that flows through the $Vx$'s branch.
 
-%Introduzir a primeira tabela dos valores das correntes e da tensão dos nós do spice e do octave lado a lado para comparar o erro
+\begin{figure}[H]
+\centering
+\includegraphics[width = 10cm]{circuit2.pdf}
+\caption {Circuit introduced in ngspice}
+\end{figure}
+
 \begin{table}[H] 
 \begin{minipage}{0.5\linewidth}
 \centering
 \begin{tabular}{|
 >{\columncolor[HTML]{FFCC67}}l |c|}
 \hline
-\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}NgSpice - Voltages (V)} \\ \hline
+\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}NgSpice - Voltages (V) and Currents (A)} \\ \hline
 \input{../doc/op2_tab}
 \end{tabular}
 \end{minipage}%
@@ -83,7 +88,6 @@ In this section, a transient analysis was conducted in order to evaluate the nat
  
  When observing the graph obtained from the simulation in Ngspice, we see that the capacitor's voltage overtime is a negative exponential matching the one obtained from the theorethical analysis in octave.
  
-\pagebreak
  
 \subsection{Operating Point Analysis for t $\geq$ 0 (Natural and Forced Solution)}
 In this section, as previously, a transient analysis was conducted in order to evaluate the natural and forced response of the circuit. In order to achieve this, the procedure adopted was the same as the one in the previous step, but with the voltage souce $vs(t)$ consisting of a sinusoidal wave sin(2*$\pi$*f).  

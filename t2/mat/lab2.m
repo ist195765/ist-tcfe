@@ -84,7 +84,20 @@ NB1 = [Vs; Z; Z; Z; Z; Z; Z; Z];
 
 V1 = N1\NB1; 
 
+Ia = (V1(2)-V1(1))/R1;
+Ib = Kb * (V1(2)-V1(5));
+Ic = (V1(7)-V1(8))/R7;
+Id = Ib - ((V1(5)-V1(6))/R5);
+
 printf ("Tensoes_TAB\n");
+printf ("Ib = %e A\n", Ib);
+printf ("I1 = %e A\n", -Ia);
+printf ("I2 = %e A\n", Ib);
+printf ("I3 = %e A\n", Ib-Ia);
+printf ("I4 = %e A\n", -Ia+Ic);
+printf ("I5 = %e A\n", Ib-Id);
+printf ("I6 = %e A\n", Ic);
+printf ("I7 = %e A\n", Ic);
 printf ("V1 = %e V\n", V1(1));
 printf ("V2 = %e V\n", V1(2));
 printf ("V3 = %e V\n", V1(3));
