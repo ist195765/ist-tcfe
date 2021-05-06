@@ -3,21 +3,30 @@
 \label{sec:introduction}
 % state the learning objective 
 
-In this laboratory assignment we study a circuit (Fig. 1) containing various elements, to be more specific, 1 capacitor, 7 resistances, 1 independent voltage source $V_s$, 1 dependent voltage source and 1 dependent current source.
+The objective of this laboratory assignment is to choose an architecture of the Envelope Detector and Voltage Regulator circuits to build an AC/DC converter. We did this while paying attention to the merit of the project designed.\\
+This merit is calculated exactly as the next equation:
 
+\begin{equation} 
+M = \frac{1}{cost*(ripple(V_{0}) + average(V_{0}-12) + 1e-6}
+\label{eq1}
+\end{equation}
 
-The next table displays the data generated automatically by the Python Script:
+Being the cost the following:
+\begin{itemize}
+	\item cost = cost of resistors  + cost of capacitors + cost of diodes
+	\item cost of resistors = 1 monetary unit (MU) per kOhm
+	\item cost of capacitors = 1 MU/$\mu$F
+	\item cost of diodes = 0.1 MU per diode
+	
+\end{itemize}
 
-\begin{table}[H] \centering
-\begin{tabular}{|
->{\columncolor[HTML]{FFCC67}}l |c|}
-\hline
-\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Octave - Voltages (V)} \\ \hline
-\input{../doc/InitialValues_tab}
-\end{tabular}
-\caption{Initial data}
-\end{table}
+\begin{figure}[H] 
+\centering
+\includegraphics[width=\textwidth]{lab3draw.pdf} 
+\caption{AC/DC Converter}
+\label{fig:first}
 
+\end{figure}
 
 In Section~\ref{sec:analysis}, a theoretical analysis of the circuit is
 presented. In Section~\ref{sec:simulation}, the circuit is analysed by
