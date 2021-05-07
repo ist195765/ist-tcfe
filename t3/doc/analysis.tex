@@ -13,7 +13,7 @@ to achieve that, we are going to describe the three different sectors that are i
 The Bridge circuit is composed by the four diodes that are shown in the first figure.\\
 The four diodes labelled $D_1$ to $D_4$ are arranged in "series pairs" with only two diodes conducting current during each half cycle. During the positive half cycle of the supple, diodes $D_1$ and $D_4$ conduct in series while diodes $D_2$ and $D_3$ are reverse biased and the current flows through the load.\\
 Summarizing, these four diodes work as a full wave rectifier which means, they transform the AC current in an equal
-amplitude unidirectional current, which corresponds to the purple plot in figure 2. To compute all of that we had to take the absolute value of the transformed voltage $V_r$.
+amplitude unidirectional current, which corresponds to the module of the purple plot in figure 2. To compute all of that we had to take the absolute value of the transformed voltage $V_r$.
 
 \subsection{Second sector: Envelope detector circuit (rectifier + capacitor)}
 
@@ -34,8 +34,8 @@ Periodically,
 
 \begin{equation}
     \begin{cases}
-      V_0=V_r & \text{$t<t_{OFF}$}\\
-      V_0=V_s*cos(w*t_{OFF})*exp(-(t-t_{OFF})/(R1*c)) & \text{$t>t_{OFF}$}
+      V_0=|V_r| & \text{$t<t_{OFF}$}\\
+      V_0=|V_s*cos(w*t_{OFF})|*exp(-(t-t_{OFF})/(R1*c)) & \text{$t>t_{OFF}$}
     \end{cases}       
 \end{equation}
 
