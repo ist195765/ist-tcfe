@@ -197,14 +197,19 @@ hardcopy sim3.ps {v(2)-v(3)} {v(4)} {v(5)} {v(5)-12}
 echo sim3_FIG
 
 
-
 hardcopy sim31.ps {v(4)-12} 
 
 echo sim31_FIG
 
 
+hardcopy sim32.ps {v(4)} 
+
+echo sim32_FIG
 
 
+hardcopy sim33.ps {v(5)} 
+
+echo sim33_FIG
 
 
 

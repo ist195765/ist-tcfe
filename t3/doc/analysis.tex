@@ -3,7 +3,6 @@
 
 In this section we will analyse theoretical our AC/DC converter circuit. \\
 To do so, and because there were several things to be analysed, we divided the following subsections in the three different sectors that our circuit has and each one will be detailed separately.\\
-%Basicamente é um setor, depois decide-se se adiciona ou n
 Initially, we used a transformer to turn Vs=230V in a smaller value, being Vr=230/n, with n equal to 11, so that thew
 rest of the circuit can aproximate it to 12 V that are requested. However, we want a DC voltage and not the initial AC voltage. In order
 to achieve that, we are going to describe the three different sectors that are in the circuit that is shown in the Introdution.\\
@@ -40,17 +39,15 @@ due to the capacitor.\\
 The ripple voltage is basically max($V_{0}$)- min($V_{0}$). \\
 To make the next point clear vO will be renamed to ??
 
-%\begin{table}[H] \centering
-%\begin{tabular}{|
-%>{\columncolor[HTML]{FFCC67}}l |c|}
-%\hline
-%\multicolumn{2}{|l|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
-%\input{../doc/}
-%\end{tabular}
-%\caption{Ripple and average envelope values}
-%\end{table}
-
-
+\begin{table}[H] \centering
+\begin{tabular}{|
+>{\columncolor[HTML]{FFCC67}}l |c|}
+\hline
+\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
+\input{../doc/Envelope_Detector_Values_tab}
+\end{tabular}
+\caption{Ripple and average envelope values}
+\end{table}
 
 \subsection{Third sector: Voltage regulator circuit}
 
@@ -67,31 +64,30 @@ Right now, we have the voltage due to the DC so we still need the voltage due to
 To finish, vO = a*$c_v$*O + d*$c_v$*O. 
 The average must be approximately 12V.
 
-%\begin{table}[H] \centering
-%\begin{tabular}{|
-%>{\columncolor[HTML]{FFCC67}}l |c|}
-%\hline
-%\multicolumn{2}{|l|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
-%\input{../doc/}
-%\end{tabular}
-%\caption{Ripple and average regulator values}
-%\end{table}
+\begin{table}[H] \centering
+\begin{tabular}{|
+>{\columncolor[HTML]{FFCC67}}l |c|}
+\hline
+\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
+\input{../doc/Voltage_Regulator_Values_tab}
+\end{tabular}
+\caption{Ripple and average regulator values}
+\end{table}
 
 
 %%%%%
+\begin{figure}[H] 
+\centering
+\includegraphics[width=\textwidth]{MainPlot.pdf} 
+\caption{Input voltage of the secondary circuit (v(2)), output Voltage of the Envelope Detector (v(4)), Voltage
+Regulator (v(5)), and v(5)-12}
+\label{fig:first}
+\end{figure}
 
-%\begin{figure}[H] 
-%\centering
-%\includegraphics[width=\textwidth]{} 
-%\caption{Output AC components + DC deviation}
-%\label{fig:first}
-%\end{figure}
-
-%\begin{figure}[H] 
-%\centering
-%\includegraphics[width=\textwidth]{} 
-%\caption{Input voltage of the secundary circuit (v(2)), output Voltage of the Envelope Detector (v(4)), Voltage
-%Regulator (v(5)), and v(5)-12}
-%\label{fig:first}
-%\end{figure}
+\begin{figure}[H] 
+\centering
+\includegraphics[width=\textwidth]{EnvelopeDetector.eps} 
+\caption{Output AC components + DC deviation}
+\label{fig:first}
+\end{figure}
 
