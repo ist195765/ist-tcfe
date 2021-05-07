@@ -64,22 +64,23 @@ This next table represents the Ngspice results for the voltage regulator.
  
  
  The oscilations between theorectial and simulation results that happened in the output voltage of the envelope detector are extended to the voltage regulator for the same reasons. Therefore, it was expected to happen a small discrepancy between the results of both models. Nevertheless, we believe that once theoutput voltage is aproximately 12V, as wanted, the model worked successfuly.\\
- The implemented circuit gave us a MERIT of ...
+ The implemented circuit gave us a MERIT of 0.36 in NGSpice and 11.68 in Octave. 
 
 %SO TEMOS DUAS FIGURAS PARA IMPRIMIR NO NGSPICE, como coloca-las, final, ou em cada subsection
-%\begin{figure}[H] 
-%\centering
-%\begin{subfigure}{0.4\textwidth}
-%\includegraphics[width=\textwidth]{}
-%\caption{Amplitude (Octave)}
-%\label{fig:first}
-%\end{subfigure}
-%\begin{subfigure}{0.3\textwidth}
-%\includegraphics[width=\textwidth]{sim33.ps}
-%\caption{Amplitude (NgSpice)}
-%\label{fig:second}
-%\end{subfigure}
-%\end{figure}
+\begin{figure}[H] 
+\centering
+\begin{subfigure}{0.4\textwidth}
+\includegraphics[width=\textwidth]{DCDeviation.eps}
+\caption{Octave}
+\label{fig:first}
+\end{subfigure}
+\begin{subfigure}{0.3\textwidth}
+\includegraphics[width=\textwidth]{sim31.pdf}
+\caption{NgSpice}
+\label{fig:second}
+\end{subfigure}
+\caption{Output DC Deviation}
+\end{figure}
 
 \begin{figure}[H] 
 \centering
@@ -93,5 +94,5 @@ This next table represents the Ngspice results for the voltage regulator.
 \caption{NGSPICE}
 \label{fig:second}
 \end{subfigure}
-\caption{v(5)}
+\caption{Output Voltage}
 \end{figure}
