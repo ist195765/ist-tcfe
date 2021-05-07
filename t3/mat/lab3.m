@@ -72,7 +72,7 @@ vcentroenvelope = (ripple_venvelope/2) + min(venvelope);
 printf ("Envelope_Detector_Values_TAB\n");
 printf ("Ripple = %e\n", ripple_venvelope);
 printf ("Average = %e\n", venvelopeDC);
-printf ("Envlope_Detctor_Values_END\n");
+printf ("Envelope_Detector_Values_END\n");
 
 rdiode = (eta*Vt)/(I_sat*exp((12/ndiode)/(eta*Vt)));
 vregulatedAC  = ((ndiode*rdiode)/(ndiode*rdiode + R2))*(venvelope - venvelopeDC);
@@ -89,10 +89,10 @@ average = mean(vregulated);
 
 ripple = max(vregulated) - min(vregulated);
 
-printf ("Volatge_Regulator_Values_TAB\n");
+printf ("Voltage_Regulator_Values_TAB\n");
 printf ("Ripple = %e\n", ripple);
 printf ("Average = %e\n", average);
-printf ("Volatge_Regulator_Values_END\n");
+printf ("Voltage_Regulator_Values_END\n");
 
 V_i = (230/t_ratio)*cos(w*t);
 Deviation = vregulated - 12;
@@ -104,7 +104,7 @@ hold on
 plot(t*1000,vregulated);
 plot(t*1000, Deviation);
 plot(t*1000, V_i);
-legend('EnvlopeDetector','VolatgeRegulator','DC Deviation','InitialVoltage');
+legend('EnvlopeDetector','VoltageRegulator','DC Deviation','InitialVoltage');
 xlabel ("Time [ms]");
 ylabel ("Voltages[V]");
 hold off
@@ -123,3 +123,10 @@ legend('DC Deviation');
 xlabel ("Time [ms]");
 ylabel ("Voltages[V]");
 print(DCDeviation, "DCDeviation.eps", "-depsc");
+
+EnvelopeDetector = figure();
+plot(t*1000, venvelope);
+legend('Envelope Detector');
+xlabel ("Time [ms]");
+ylabel ("Voltages[V]");
+print(EnvelopeDetector, "EnvelopeDetector.eps", "-depsc");
