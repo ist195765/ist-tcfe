@@ -84,8 +84,7 @@ endif
 
 v0_reg = v0_reg_ac + v0_reg_dc;
 
-testar = v0_reg - 12;
-average = mean(testar);
+average = mean(v0_reg);
 ripple = max(v0_reg) - min(v0_reg);
 
 printf ("Voltage_Regulator_Values_TAB\n");

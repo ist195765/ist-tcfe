@@ -17,7 +17,7 @@ amplitude unidirectional current, which corresponds to the purple plot in figure
 
 \subsection{Second sector: Envelope detector circuit (rectifier + capacitor)}
 
-Then, we use a capacitor in order to reduce the magnitude of the voltage making it closer to a DC (yellow plot).
+Then, we use a capacitor in order to reduce the magnitude of the voltage making it closer to a DC (orange plot).
 In order to compute this, we discovered when are the diodes ON and OFF.\\
 The equation that describes $t_{OFF}$ is:
 
@@ -41,7 +41,7 @@ Periodically,
 
 due to the capacitor.\\
 The ripple voltage is basically max($V_{0}$)- min($V_{0}$). \\
-To make the next point clear vO will be renamed to ??
+
 
 \begin{table}[H] \centering
 \begin{tabular}{|
@@ -55,7 +55,7 @@ To make the next point clear vO will be renamed to ??
 
 \subsection{Third sector: Voltage regulator circuit}
 
-At last, in the third sector, a series of 20 diodes reduce the noise making the current an almost perfect DC (orange plot).
+At last, in the third sector, a series of 22 diodes reduce the noise making the current an almost perfect DC.
 By calculating the $v0_average$ from the second sector, we are able to see if the voltage difference between v5 and v0 is limited by
 the maximum voltage that the diodes can handle. This only happens if the average is greater than that maximum.\\
 Right now, we have the voltage due to the DC so we still need the voltage due to AC. It is possible to compute that in octave, calculating rD which is the resistance of each diode and also:
