@@ -3,59 +3,60 @@ clear all;
 
 format long;
 
+Vd = 0.6;
+eta = 1;
+fq = 50;
+I_sat = 1e-14;
+t_ratio = 10;
+ndiode= 22;
+Vs = 230;
 R1 = 98437;
 C = 0.0073476945;
-n = 10;
-eta = 1;
-freq = 50;
-I_s = 1e-14;
-k = 22;
-Vd = 0.6;
-Vs = 230;
 Vt = 0.025;
-w = 2*pi*freq;
+w = 2*pi*fq;
+T = 1/(2*fq);
+toff = (1/4)*T;
 
-T = 1/(2*freq);
-t_off = (1/4)*T;
 
-R2 = ((230/n)-12)/(I_s*(exp(12/(eta*Vt*k))-1));
+R2 = ((230/t_ratio)-12)/(I_sat*(exp(12/(eta*Vt*ndiode))-1));
 
-for i = 1:20
-  f = (Vs/n)*C*w*sin(w*t_off) - (1/R1)*(Vs/n)*cos(w*t_off) - I_s*(exp(12/(eta*Vt*k))-1);
-  fl = (Vs/n)*C*(w^2)*cos(w*t_off)+(1/R1)*(Vs/n)*w*sin(w*t_off);
-  t_off = t_off - (f/fl);
+
+for k = 1:20
+  func = (Vs/t_ratio)*C*w*sin(w*toff) - (1/R1)*(Vs/t_ratio)*cos(w*toff) - I_sat*(exp(12/(eta*Vt*ndiode))-1);
+  funcd = (Vs/t_ratio)*C*(w^2)*cos(w*toff)+(1/R1)*(Vs/t_ratio)*w*sin(w*toff);
+  toff = toff - (func/funcd);
 endfor
 
-t_on = (3/4)*T;
+ton = (3/4)*T;
 
 Req = 1/((1/R1)+(1/R2));
 
-for i = 1:20
-  f = (Vs/n)*cos(w*t_on)+(Vs/n)*cos(w*t_off)*exp(-(1/(Req*C))*(t_on-t_off));
-  fl = -w*(Vs/n)*sin(w*t_on)-(Vs/n)*cos(w*t_off)*(1/(Req*C))*exp(-(1/(Req*C))*(t_on-t_off));
-  t_on = t_on - (f/fl);
+for k = 1:20
+  func = (Vs/t_ratio)*cos(w*ton)+(Vs/t_ratio)*cos(w*toff)*exp(-(1/(Req*C))*(ton-toff));
+  funcd = -w*(Vs/t_ratio)*sin(w*ton)-(Vs/t_ratio)*cos(w*toff)*(1/(Req*C))*exp(-(1/(Req*C))*(ton-toff));
+  ton = ton - (func/funcd);
 endfor
 
 t = 0:(1e-6):0.2;
 
-l = length(t);
+tlength = length(t);
 
-v0_env = ones(1,l);
+venvelope = ones(1, tlength);
 
-for i = 1:l
-  if t(i)<=t_off
-    v0_env(i) = abs((230/n)*cos(w*t(i)));
+for j = 1:tlength
+  if t(j) <= toff
+    venvelope(j) = abs((230/t_ratio)*cos(w*t(j)));
   else
-    if t(i)<=t_on
-      v0_env(i) = (230/n)*abs(cos(w*t_off))*exp(-(1/(Req*C))*(t(i)-t_off));
+    if t(j)<=ton
+      venvelope(j) = (230/t_ratio)*abs(cos(w*toff))*exp(-(1/(Req*C))*(t(j)-toff));
     else
-      t_off = t_off + T;
-      t_on = t_on + T;
-      if t(i)<=t_off
-        v0_env(i) = abs((230/n)*cos(w*t(i)));
+      toff = toff + T;
+      ton = ton + T;
+      if t(j)<=toff
+        venvelope(j) = abs((230/t_ratio)*cos(w*t(j)));
       else
-        if t(i)<=t_on
-          v0_env(i) = (230/n)*abs(cos(w*t_off))*exp(-(1/(Req*C))*(t(i)-t_off));
+        if t(j)<=ton
+          venvelope(j) = (230/t_ratio)*abs(cos(w*toff))*exp(-(1/(Req*C))*(t(j)-toff));
         endif
       endif
     endif
@@ -64,54 +65,54 @@ endfor
 
 
 
-v0_env_dc = mean(v0_env);
-ripple_v0_env = max(v0_env) - min(v0_env);
-v0_env_centro = (ripple_v0_env/2) + min(v0_env);
+venvelopeDC = mean(venvelope);
+ripple_venvelope = max(venvelope) - min(venvelope);
+vcentroenvelope = (ripple_venvelope/2) + min(venvelope);
 
 printf ("Envelope_Detector_Values_TAB\n");
-printf ("Ripple = %e\n", ripple_v0_env);
-printf ("Average = %e\n", v0_env_dc);
-printf ("Envelope_Detector_Values_END\n");
+printf ("Ripple = %e\n", ripple_venvelope);
+printf ("Average = %e\n", venvelopeDC);
+printf ("Envlope_Detctor_Values_END\n");
 
-rd = (eta*Vt)/(I_s*exp((12/k)/(eta*Vt)));
-v0_reg_ac = ((k*rd)/(k*rd + R2))*(v0_env - v0_env_dc);
+rdiode = (eta*Vt)/(I_sat*exp((12/ndiode)/(eta*Vt)));
+vregulatedAC  = ((ndiode*rdiode)/(ndiode*rdiode + R2))*(venvelope - venvelopeDC);
 
-if v0_env_centro >= 12
-    v0_reg_dc = 12;
+if vcentroenvelope >= 12
+    vregulatedDC = 12;
 else
-    v0_reg_dc = v0_env_centro;
+    vregulatedDC = vcentroenvelope;
 endif
 
-v0_reg = v0_reg_ac + v0_reg_dc;
+vregulated = vregulatedAC + vregulatedDC;
 
-average = mean(v0_reg);
-ripple = max(v0_reg) - min(v0_reg);
+average = mean(vregulated);
 
-printf ("Voltage_Regulator_Values_TAB\n");
+ripple = max(vregulated) - min(vregulated);
+
+printf ("Volatge_Regulator_Values_TAB\n");
 printf ("Ripple = %e\n", ripple);
 printf ("Average = %e\n", average);
-printf ("Voltage_Regulator_Values_END\n");
+printf ("Volatge_Regulator_Values_END\n");
 
-V_i = (230/n)*cos(w*t);
-Deviation = v0_env - 12;
-Error = v0_reg - 12;
+V_i = (230/t_ratio)*cos(w*t);
+Deviation = vregulated - 12;
 
 
 MainPlot = figure();
-plot(t*1000,v0_env);
+plot(t*1000,venvelope);
 hold on
-plot(t*1000,v0_reg);
-plot(t*1000, Error);
+plot(t*1000,vregulated);
+plot(t*1000, Deviation);
 plot(t*1000, V_i);
-legend('EnvelopeDetector','VoltageRegulator','Error','InitialVoltage');
+legend('EnvlopeDetector','VolatgeRegulator','DC Deviation','InitialVoltage');
 xlabel ("Time [ms]");
 ylabel ("Voltages[V]");
 hold off
 print(MainPlot, "MainPlot.eps", "-depsc");
 
 VoltageRegulator = figure();
-plot(t*1000,v0_reg);
-legend('VoltageRegulator');
+plot(t*1000, vregulated);
+legend('VolatgeRegulator');
 xlabel ("Time [ms]");
 ylabel ("Voltages[V]");
 print(VoltageRegulator, "VoltageRegulator.eps", "-depsc");
@@ -122,10 +123,3 @@ legend('DC Deviation');
 xlabel ("Time [ms]");
 ylabel ("Voltages[V]");
 print(DCDeviation, "DCDeviation.eps", "-depsc");
-
-EnvelopeDetector = figure();
-plot(t*1000, v0_env);
-legend('EnvelopeDetector');
-xlabel ("Time [ms]");
-ylabel ("Voltages[V]");
-print(EnvelopeDetector, "EnvelopeDetector.eps", "-depsc");
