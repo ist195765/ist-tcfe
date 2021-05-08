@@ -28,20 +28,20 @@ osilations that naturally occur in ngspice. These happen because the diodes used
 which means that a linear relaton between the current and the voltage does not exist. The exponential function
 that comes into the equations leads to these type of oscilation.
 
+
 \begin{figure}[H] 
 \centering
 \begin{subfigure}{0.4\textwidth}
-\includegraphics[width=\textwidth]{MainPlot.eps}
+\includegraphics[width=\textwidth]{EnvelopeDetector.eps}
 \caption{Octave}
 \label{fig:first}
 \end{subfigure}
 \begin{subfigure}{0.3\textwidth}
-\includegraphics[width=\textwidth]{sim3.pdf}
+\includegraphics[width=\textwidth]{sim32.pdf}
 \caption{NGSPICE}
 \label{fig:second}
 \end{subfigure}
-\caption{Input voltage of the secundary circuit (v(2)), output Voltage of the Envelope Detector (v(4)), Voltage
-Regulator (v(5)), and v(5)-12}
+\caption{Envlope Detector Voltage}
 \end{figure}
 
 \subsection{Third sector: Voltage regulator circuit}
@@ -64,9 +64,9 @@ This next table represents the Ngspice results for the voltage regulator.
  
  
  The oscilations between theorectial and simulation results that happened in the output voltage of the envelope detector are extended to the voltage regulator for the same reasons. Therefore, it was expected to happen a small discrepancy between the results of both models. Nevertheless, we believe that once theoutput voltage is aproximately 12V, as wanted, the model worked successfuly.\\
- The implemented circuit gave us a MERIT of 0.36 in NGSpice and 11.68 in Octave. 
+ The implemented circuit gave us a MERIT of 0.36 in NGSpice and 11.68 in Octave. This difference in the both merits is due to tha fact that the ripple in NGspice isn't properly the real ripple, because it was caculated by doing the difference between the maximum and the minimum.
 
-%SO TEMOS DUAS FIGURAS PARA IMPRIMIR NO NGSPICE, como coloca-las, final, ou em cada subsection
+
 \begin{figure}[H] 
 \centering
 \begin{subfigure}{0.4\textwidth}
@@ -79,7 +79,7 @@ This next table represents the Ngspice results for the voltage regulator.
 \caption{NgSpice}
 \label{fig:second}
 \end{subfigure}
-\caption{Output DC Deviation}
+\caption{Output AC Component}
 \end{figure}
 
 \begin{figure}[H] 
@@ -95,4 +95,20 @@ This next table represents the Ngspice results for the voltage regulator.
 \label{fig:second}
 \end{subfigure}
 \caption{Output Voltage}
+\end{figure}
+
+\begin{figure}[H] 
+\centering
+\begin{subfigure}{0.4\textwidth}
+\includegraphics[width=\textwidth]{MainPlot.eps}
+\caption{Octave}
+\label{fig:first}
+\end{subfigure}
+\begin{subfigure}{0.3\textwidth}
+\includegraphics[width=\textwidth]{sim3.pdf}
+\caption{NGSPICE}
+\label{fig:second}
+\end{subfigure}
+\caption{Input voltage of the secundary circuit (v(2)), output Voltage of the Envelope Detector (v(4)), Voltage
+Regulator (v(5)), and v(5)-12}
 \end{figure}

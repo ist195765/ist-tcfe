@@ -13,7 +13,8 @@ to achieve that, we are going to describe the three different sectors that are i
 The Bridge circuit is composed by the four diodes that are shown in the first figure.\\
 The four diodes labelled $D_1$ to $D_4$ are arranged in "series pairs" with only two diodes conducting current during each half cycle. During the positive half cycle of the supple, diodes $D_1$ and $D_4$ conduct in series while diodes $D_2$ and $D_3$ are reverse biased and the current flows through the load.\\
 Summarizing, these four diodes work as a full wave rectifier which means, they transform the AC current in an equal
-amplitude unidirectional current, which corresponds to the purple plot in figure 2. To compute all of that we had to take the absolute value of the transformed voltage $V_r$.
+amplitude unidirectional current, which corresponds to the purple plot in figure 2. To compute all of that we had to take the absolute value of the transformed voltage $V_r$. 
+To simplify the code in octave we've considered these 4 diodes as ideal, since it's contribution to th4e output is minimum.
 
 \subsection{Second sector: Envelope detector circuit (rectifier + capacitor)}
 
@@ -53,6 +54,14 @@ The ripple voltage is basically max($V_{0}$)- min($V_{0}$). \\
 \caption{Ripple and average envelope values}
 \end{table}
 
+
+\begin{figure}[H] 
+\centering
+\includegraphics[width = 8cm]{EnvelopeDetector.eps} 
+\caption{Output Voltage in Envelope Detector}
+\label{fig:first}
+\end{figure}
+
 \subsection{Third sector: Voltage regulator circuit}
 
 At last, in the third sector, a series of 22 diodes reduce the noise making the current an almost perfect DC.
@@ -86,17 +95,11 @@ The average must be approximately 12V.
 \label{fig:first}
 \end{figure}
 
-\begin{figure}[H] 
-\centering
-\includegraphics[width = 8cm]{EnvelopeDetector.eps} 
-\caption{Output Voltage in Envelope Detector}
-\label{fig:first}
-\end{figure}
 
 \begin{figure}[H] 
 \centering
 \includegraphics[width = 8cm]{DCDeviation.eps} 
-\caption{Output DC Deviation}
+\caption{Output AC component}
 \label{fig:first}
 \end{figure}
 

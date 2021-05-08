@@ -1,16 +1,16 @@
-* NGSPICE simulation LAB 3 GROUP 28
+* NGSPICE simulation LAB 3 GROUP 37
 
-* Group 28
+* Group 37
 
 *
 
 .options savecurrents
 
-.param n =1/11
+.param n =1/10
 
 *INDEPENDENT VOLTAGE SOURCE, Vs
 
-Vs 1 0 0 sin(0 230 50 0 0 90) 
+Vs 1 0 0 sin(0 230 50 0 0 -90) 
 
 
 
@@ -18,9 +18,9 @@ Vs 1 0 0 sin(0 230 50 0 0 90)
 
 *RESISTORS
 
-R1 4 GND 8k
+R1 4 GND 98437
 
-R2 4 5 63.5k
+R2 4 5 677410
 
 
 
@@ -104,17 +104,17 @@ D22 22 23 D28
 
 D23 23 24 D28
 
-D24 24 GND D28
+D24 24 25 D28
 
+D25 25 26 D28
 
-
-
+D26 26 GND D28
 
 
 
 *CAPACITOR. 
 
-C1 4 GND 0.0025
+C1 4 GND 0.0073476945
 
 
 
@@ -197,7 +197,7 @@ hardcopy sim3.ps {v(2)-v(3)} {v(4)} {v(5)} {v(5)-12}
 echo sim3_FIG
 
 
-hardcopy sim31.ps {v(4)-12} 
+hardcopy sim31.ps {v(5)-12} 
 
 echo sim31_FIG
 

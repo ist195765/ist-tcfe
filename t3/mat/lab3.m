@@ -18,7 +18,7 @@ T = 1/(2*fq);
 toff = (1/4)*T;
 
 
-R2 = ((230/t_ratio)-12)/(I_sat*(exp(12/(eta*Vt*ndiode))-1));
+R2 = 677410;
 
 
 for k = 1:20
@@ -93,6 +93,14 @@ printf ("Voltage_Regulator_Values_TAB\n");
 printf ("Ripple = %e\n", ripple);
 printf ("Average = %e\n", average);
 printf ("Voltage_Regulator_Values_END\n");
+
+printf ("Circuit_Values_TAB\n");
+printf ("C = %e\n", C);
+printf ("R1 = %e\n", R1);
+printf ("R2 = %e\n", R2);
+printf ("num diodes = %e\n", ndiode);
+printf ("Transformer Ratio = %e\n", t_ratio);
+printf ("Circuit_Values_END\n");
 
 V_i = (230/t_ratio)*cos(w*t);
 Deviation = vregulated - 12;
