@@ -9,19 +9,19 @@ Vin in 0 0 ac 1.0 sin(0 10m 1k)
 Rin in in2 100
 
 * input coupling capacitor
-Ci in2 base 1.9345u
+Ci in2 base 1.7695u
 
 * bias circuit
-R1 vcc base 76.2k
-R2 base 0 19.401k
+R1 vcc base 6.6346k
+R2 base 0 1.3184k
 
 * gain stage
 Q1 coll base emit BC547A
-Rc vcc coll 20k
-Re emit 0 3.8921k
+Rc vcc coll 9.9714k
+Re emit 0 1.4440k
 
 * bypass capacitor
-Cb emit 0 1.0345u
+Cb emit 0 78.6660u
 
 
 * output stage
@@ -56,13 +56,14 @@ hardcopy vo1f.ps vdb(coll)
 
 plot vdb(out)
 plot vp(out)
-hardcopy vo2f.ps vdb(coll)
+hardcopy vo2f.ps vdb(out)
 
 *input impedance in kohm
-*print all
+print all
 
 plot abs(v(in2)[40]/vin#branch[40]/(-1000))
 print v(in2)[40]/vin#branch[40]/(-1000)
+<<<<<<< HEAD:t4/sim/t4.net
 
 meas ac peak MAX vdb(out) FROM=10 TO=100MEG
 let f3db= peak/sqrt(2)
@@ -73,7 +74,9 @@ print bandwidth
 print peak
 print f1
 print f2
-print (peak*bandwidth)/(f1*123.5621)
+print (peak*bandwidth)/(f1*100.1039)
+=======
+>>>>>>> 0a9853e81437021c4f40351c97adc65b0e54ec48:t4/t4.net
 
 *need a different setup to measure output impedance
 
