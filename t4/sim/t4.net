@@ -45,9 +45,9 @@ op
 echo "**************"
 echo "NPN_TAB"
 let V_CE=v(coll)-v(emit)
-echo "V_CE=$&V_CE"
+echo "V_CE = $&V_CE"
 let V_BE=v(base)-v(emit)
-echo "V_BE=$&V_BE"
+echo "V_BE = $&V_BE"
 if (V_CE>V_BE)
 echo "V_CE>V_BE = Correct F.A.R"
 else
@@ -59,9 +59,9 @@ echo "NPN_END"
 echo "**************"
 echo "PNP_TAB"
 let V_EC=v(emit2)
-echo "V_CE=$&V_EC"
+echo "V_CE = $&V_EC"
 let V_EB=v(emit2)-v(coll)
-echo "V_EB=$&V_EB"
+echo "V_EB = $&V_EB"
 if (V_EC>V_EB)
 echo "V_EC>V_EB = Correct F.A.R"
 else
@@ -124,9 +124,9 @@ echo "Zin_END"
 
 
 echo "results_TAB"
-echo "V_Gain=$&peak"
-echo "Bandwidth=$&bandwidth"
-echo "CO_Freq= $&lowerCOFF"
+echo "V_Gain = $&peak"
+echo "Bandwidth = $&bandwidth"
+echo "CO_Freq = $&lowerCOFF"
 echo "results_END"
 
 echo "**************"
