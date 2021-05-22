@@ -3,6 +3,7 @@ VCE = 1.900021e+00 V
 VBEON = 7.000000e-01 V 
 op_END
 
+maximo =  48.968
 ponto2_TAB
 AV1 = 2.818450e+02 
 ZI1 = 9.032400e+02 

@@ -39,6 +39,38 @@ RL out 0 8
 
 .control
 
+op
+
+*Verificacao correto funcionamento transistors.
+echo "**************"
+echo "NPN_TAB"
+let V_CE=v(coll)-v(emit)
+echo "V_CE=$&V_CE"
+let V_BE=v(base)-v(emit)
+echo "V_BE=$&V_BE"
+if (V_CE>V_BE)
+echo "V_CE>V_BE = Correct F.A.R"
+else
+echo "V_CE>V_BE = Wrong F.A.R"
+endif
+
+echo "NPN_END"
+
+echo "**************"
+echo "PNP_TAB"
+let V_EC=v(emit2)
+echo "V_CE=$&V_EC"
+let V_EB=v(emit2)-v(coll)
+echo "V_EB=$&V_EB"
+if (V_EC>V_EB)
+echo "V_EC>V_EB = Correct F.A.R"
+else
+echo "V_EC>V_EB = Wrong F.A.R"
+endif
+echo "PNP_END"
+
+
+
 
 * time analysis
 tran 1e-5 1e-2
@@ -65,20 +97,44 @@ plot abs(v(in2)[40]/vin#branch[40]/(-1000))
 print v(in2)[40]/vin#branch[40]/(-1000)
 <<<<<<< HEAD:t4/sim/t4.net
 
-meas ac peak MAX vdb(out) FROM=10 TO=100MEG
-let f3db= peak/sqrt(2)
-meas ac f1 WHEN vdb(out)=f3db RISE=1
-meas ac f2 WHEN vdb(out)=f3db FALL=1
+meas AC max MAX vdb(out) from=10 to=100MEG
+let range = max - 3
+
+meas AC lower WHEN vdb(out) = range
+meas AC upper WHEN vdb(out) = range CROSS=LAST
+
+let bandwidth = upper-lower
+let peak = max
+let lowerCOFF= lower
+let higherCOFF = upper 
+let quality = bandwidth*gain/Cut_Out_Freq
 let bandwidth=f2-f1
-print bandwidth
-print peak
-print f1
-print f2
-print (peak*bandwidth)/(f1*100.1039)
-=======
->>>>>>> 0a9853e81437021c4f40351c97adc65b0e54ec48:t4/t4.net
+let cost = 100.1039
+let merit = (peak*bandwidth)/(lowerCOFF*cost)
 
 *need a different setup to measure output impedance
+
+*input impedance in ohm
+echo "Zin_TAB"
+let Zr_in= Re(v(in2)[40]/i(Vin)[40])
+let Zim_in= Im(v(in2)[40]/i(Vin)[40])
+echo "Zin = $&Zr_in + $&Zim_in j"
+echo "Zin_END"
+
+
+
+echo "results_TAB"
+echo "V_Gain=$&peak"
+echo "Bandwidth=$&bandwidth"
+echo "CO_Freq= $&lowerCOFF"
+echo "results_END"
+
+echo "**************"
+echo "cost_TAB"
+echo "Cost = $&cost"
+echo "merit = $&merit"
+echo "cost_END"
+echo "**************"
 
 .endc
 

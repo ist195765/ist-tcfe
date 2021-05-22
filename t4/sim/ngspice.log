@@ -4,6 +4,22 @@ Circuit: .options savecurrents
 Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
 
 
+No. of Data Rows : 1
+**************
+NPN_TAB
+V_CE=4.71217
+V_BE=0.642988
+V_CE>V_BE = Correct F.A.R
+NPN_END
+**************
+PNP_TAB
+V_CE=6.83806
+V_EB=0.785099
+V_EC>V_EB = Correct F.A.R
+PNP_END
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
 Initial Transient Solution
 --------------------------
 
@@ -43,7 +59,7 @@ Can't open viewport for graphics.
 
 The file "vo2f.ps" may be printed on a postscript printer.
                              .options savecurrents
-                             AC Analysis  Fri May 21 23:19:55  2021
+                             AC Analysis  Sat May 22 01:38:58  2021
 --------------------------------------------------------------------------------
 Index   frequency       base                            
 --------------------------------------------------------------------------------
@@ -123,7 +139,7 @@ Index   frequency       base
 70	1.000000e+08	6.863519e-02,	-2.04901e-01	
 
                              .options savecurrents
-                             AC Analysis  Fri May 21 23:19:55  2021
+                             AC Analysis  Sat May 22 01:38:58  2021
 --------------------------------------------------------------------------------
 Index   frequency       coll                            
 --------------------------------------------------------------------------------
@@ -203,7 +219,7 @@ Index   frequency       coll
 70	1.000000e+08	8.174218e-02,	8.355973e-02	
 
                              .options savecurrents
-                             AC Analysis  Fri May 21 23:19:55  2021
+                             AC Analysis  Sat May 22 01:38:58  2021
 --------------------------------------------------------------------------------
 Index   frequency       emit                            
 --------------------------------------------------------------------------------
@@ -283,7 +299,7 @@ Index   frequency       emit
 70	1.000000e+08	-1.00322e-07,	-2.17869e-07	
 
                              .options savecurrents
-                             AC Analysis  Fri May 21 23:19:55  2021
+                             AC Analysis  Sat May 22 01:38:58  2021
 --------------------------------------------------------------------------------
 Index   frequency       emit2                           
 --------------------------------------------------------------------------------
@@ -363,7 +379,7 @@ Index   frequency       emit2
 70	1.000000e+08	6.934222e-02,	6.848543e-02	
 
                              .options savecurrents
-                             AC Analysis  Fri May 21 23:19:55  2021
+                             AC Analysis  Sat May 22 01:38:58  2021
 --------------------------------------------------------------------------------
 Index   frequency       in                              
 --------------------------------------------------------------------------------
@@ -443,7 +459,7 @@ Index   frequency       in
 70	1.000000e+08	1.000000e+00,	0.000000e+00	
 
                              .options savecurrents
-                             AC Analysis  Fri May 21 23:19:55  2021
+                             AC Analysis  Sat May 22 01:38:58  2021
 --------------------------------------------------------------------------------
 Index   frequency       in2                             
 --------------------------------------------------------------------------------
@@ -523,7 +539,7 @@ Index   frequency       in2
 70	1.000000e+08	6.863703e-02,	-2.04909e-01	
 
                              .options savecurrents
-                             AC Analysis  Fri May 21 23:19:55  2021
+                             AC Analysis  Sat May 22 01:38:58  2021
 --------------------------------------------------------------------------------
 Index   frequency       out                             
 --------------------------------------------------------------------------------
@@ -603,7 +619,7 @@ Index   frequency       out
 70	1.000000e+08	6.932860e-02,	6.849922e-02	
 
                              .options savecurrents
-                             AC Analysis  Fri May 21 23:19:55  2021
+                             AC Analysis  Sat May 22 01:38:58  2021
 --------------------------------------------------------------------------------
 Index   frequency       vcc                             
 --------------------------------------------------------------------------------
@@ -683,7 +699,7 @@ Index   frequency       vcc
 70	1.000000e+08	0.000000e+00,	0.000000e+00	
 
                              .options savecurrents
-                             AC Analysis  Fri May 21 23:19:55  2021
+                             AC Analysis  Sat May 22 01:38:58  2021
 --------------------------------------------------------------------------------
 Index   frequency       vcc#branch                      
 --------------------------------------------------------------------------------
@@ -763,7 +779,7 @@ Index   frequency       vcc#branch
 70	1.000000e+08	7.119649e-04,	6.623506e-04	
 
                              .options savecurrents
-                             AC Analysis  Fri May 21 23:19:55  2021
+                             AC Analysis  Sat May 22 01:38:58  2021
 --------------------------------------------------------------------------------
 Index   frequency       vin#branch                      
 --------------------------------------------------------------------------------
@@ -845,16 +861,27 @@ ERROR: (internal)  This operation is not defined for display type printf.
 Can't open viewport for graphics.
 v(in2)[40]/vin#branch[40]/(-1000) = 8.995141e-01,-6.65422e-02
 Error: `<<' redirection is not implemented.
-peak                =  2.761991e+01 at=  6.309573e+04
-f1                  =  1.402100e+03
-f2                  =  3.138717e+06
-bandwidth = 3.137315e+06
-peak = 2.761991e+01
-f1 = 1.402100e+03
-f2 = 3.138717e+06
-(peak*bandwidth)/(f1*100.1039) = 6.173769e+02
-=======: no such command available in ngspice
-Error: ambiguous output redirect.
+max                 =  2.761991e+01 at=  6.309573e+04
+lower               =  3.250958e+03
+upper               =  1.352203e+06
+Error(parse.c--checkvalid): gain: no such vector.
+Error: RHS "bandwidth*gain/cut_out_freq" invalid
+Error(parse.c--checkvalid): f2: no such vector.
+Error: RHS "f2-f1" invalid
+Zin_TAB
+Zin = -899.514 + 66.5422 j
+Zin_END
+results_TAB
+V_Gain=27.6199
+Bandwidth=1.34895E+06
+CO_Freq= 3250.96
+results_END
+**************
+cost_TAB
+Cost = 100.104
+merit = 114.487
+cost_END
+**************
 Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
 
 
@@ -1115,16 +1142,16 @@ capacitance                 1e-06            7.8666e-05            1.7695e-06
           p                    -0              0.644706
 
 
-Total analysis time (seconds) = 0.111
+Total analysis time (seconds) = 0.03
 
-Total elapsed time (seconds) = 0.221 
+Total elapsed time (seconds) = 0.058 
 
-Total DRAM available = 3935.898 MB.
-DRAM currently available = 1060.695 MB.
-Total ngspice program size =   21.996 MB.
-Resident set size =    9.945 MB.
+Total DRAM available = 7961.879 MB.
+DRAM currently available = 5579.008 MB.
+Total ngspice program size =   22.117 MB.
+Resident set size =   10.203 MB.
 Shared ngspice pages =    8.062 MB.
 Text (code) pages =    5.070 MB.
 Stack = 0 bytes.
-Library pages =    2.254 MB.
+Library pages =    2.375 MB.
 
