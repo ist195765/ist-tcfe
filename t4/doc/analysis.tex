@@ -49,6 +49,62 @@ Both of the capacitors are being analysed in the section of Simulation Analysis.
 
 \subsubsection{Cutoff frequencies}
 
+After obtaining the gain for the medium frequencies we need to determine the frequency dependance of this gain. To do so we've used two methods called short circuit time constant(SCTC) and open circuit time constant(OCTC). The SCTC was used in the determination of the lower cutoff frequency and it consists in the determination of the equivalent resistance seen by all capacitors individually using the in the following steps:
+
+\begin{itemize}
+
+\item Short-Circuit all large Capacitors that are not being analysed 
+\item Replace the capacitor that is being analysed by a test voltage source
+\item Remove all the independant sources(Short-circuit the independant voltage sources and open-circuit the independant current sources) 
+\item Open-circuit all the small capacitors
+
+\end{itemize}
+
+by large capacitors we mean the capacitors implemented in the circuit and by small capacitors we mean the capacitors associated with the transistor.
+
+After doing this steps, we use the dominant pole aproximation, which converts all poles of the graphic in just the one that has the most influence in the graphic. By these aproximation, the lower cutoff frequency is given by:
+
+\begin{equation}
+w_L = \sum_{n = 1}^n \frac{1}{R_{iS}C_i}
+\label{wl}
+\end{equation} 
+
+Being n the number of large capacitors.
+
+Proceding as described we've obtained the following expressions for the equivalent resistances:
+
+\begin{equation}
+R_{eq_{in}} = R_{in} + Z_{In1}
+\end{equation} 
+
+\begin{equation}
+R_{eq_{E}} = \frac{1}{\frac{1}{R_E}+\frac{1+g_mr_{\pi 1}}{R_S \parallel R_B + r_{\pi 1}}}
+\end{equation} 
+
+\begin{equation}
+R_{eq_{in}} = R_{L} + Z_{Out2}
+\end{equation} 
+
+So using the formulae \ref{wl} we've obtained the lower cutoff frequency.
+
+Moving on to the higher cutoff frequency, we now have to use the OCTC, which has the same steps as the SCTC, but now we analyse the small capacitors associated with the transistor($C_{\pi}$ $C_{o}$). Another difference is the formulae associated with the dominant pole aproxiamtion, which is:
+
+\begin{equation}
+w_H = \frac{1}{\sum_{n = 1}^n R_{iS}C_i}
+\label{wh}
+\end{equation} 
+
+so doing the OCTC we get:
+
+\begin{equation}
+R_{eq_{\pi}} = r_{\pi 1}
+\end{equation} 
+
+\begin{equation}
+R_{eq_{o}} = r_{o}
+\end{equation} 
+
+And once more using the formulae \ref{wh} we've obtained the higher cutoff frequency.
 
 \subsection{Output stage}
 
