@@ -1,0 +1,18 @@
+
+Circuit: options savecurrents
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Warning: vl: no DC value, transient time 0 value used
+
+No. of Data Rows : 1
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Warning: vl: no DC value, transient time 0 value used
+
+No. of Data Rows : 71
+op_ZO_TAB
+Zo = 41.2518 + -1.18453 j
+Zo_ arg = 41.2688
+op_ZO_END
+ngspice-31 done
