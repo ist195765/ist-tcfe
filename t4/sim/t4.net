@@ -9,27 +9,27 @@ Vin in 0 0 ac 1.0 sin(0 10m 1k)
 Rin in in2 100
 
 * input coupling capacitor
-Ci in2 base 1.7695u
+Ci in2 base 750.07u
 
 * bias circuit
-R1 vcc base 6.6346k
-R2 base 0 1.3184k
+R1 vcc base 39.9k
+R2 base 0 2.9353k
 
 * gain stage
 Q1 coll base emit BC547A
-Rc vcc coll 9.9714k
-Re emit 0 1.4440k
+Rc vcc coll 4.9996k
+Re emit 0 100.007
 
 * bypass capacitor
-Cb emit 0 78.6660u
+Cb emit 0 750.7 u
 
 
 * output stage
 Q2 0 coll emit2 BC557A
-Rout emit2 vcc 100
+Rout emit2 vcc 599.52
 
 * output coupling capacitor
-Co emit2 out 1u
+Co emit2 out 649.97u
 
 * load
 RL out 0 8
@@ -79,7 +79,7 @@ hardcopy vo1.ps vdb(coll)
 
 
 * frequency analysis
-ac dec 10 10 100MEG
+ac dec 10 1 100MEG
 plot vdb(coll)
 plot vp(coll)
 hardcopy vo1f.ps vdb(coll)
@@ -103,13 +103,11 @@ let range = max - 3
 meas AC lower WHEN vdb(out) = range
 meas AC upper WHEN vdb(out) = range CROSS=LAST
 
-let bandwidth = upper-lower
 let peak = max
 let lowerCOFF= lower
 let higherCOFF = upper 
-let quality = bandwidth*gain/Cut_Out_Freq
-let bandwidth=f2-f1
-let cost = 100.1039
+let bandwidth = upper - lower
+let cost = 2198
 let merit = (peak*bandwidth)/(lowerCOFF*cost)
 
 *need a different setup to measure output impedance
@@ -127,6 +125,7 @@ echo "results_TAB"
 echo "V_Gain = $&peak"
 echo "Bandwidth = $&bandwidth"
 echo "CO_Freq = $&lowerCOFF"
+echo "CO_Freq = $&higherCOFF"
 echo "results_END"
 
 echo "**************"
