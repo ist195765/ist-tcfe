@@ -39,19 +39,21 @@ RL out 0 8
 
 .control
 
+print all
+
 op
 
 *Verificacao correto funcionamento transistors.
 echo "**************"
 echo "NPN_TAB"
 let V_CE=v(coll)-v(emit)
-echo "V_CE = $&V_CE"
+echo "VCE = $&V_CE"
 let V_BE=v(base)-v(emit)
-echo "V_BE = $&V_BE"
+echo "VBE = $&V_BE"
 if (V_CE>V_BE)
-echo "V_CE>V_BE = Correct F.A.R"
+echo "VCE>VBE = Correct F.A.R"
 else
-echo "V_CE>V_BE = Wrong F.A.R"
+echo "VCE>VBE = Wrong F.A.R"
 endif
 
 echo "NPN_END"
@@ -59,13 +61,13 @@ echo "NPN_END"
 echo "**************"
 echo "PNP_TAB"
 let V_EC=v(emit2)
-echo "V_CE = $&V_EC"
+echo "VCE = $&V_EC"
 let V_EB=v(emit2)-v(coll)
-echo "V_EB = $&V_EB"
+echo "VEB = $&V_EB"
 if (V_EC>V_EB)
-echo "V_EC>V_EB = Correct F.A.R"
+echo "VEC>VEB = Correct F.A.R"
 else
-echo "V_EC>V_EB = Wrong F.A.R"
+echo "VEC>VEB = Wrong F.A.R"
 endif
 echo "PNP_END"
 
@@ -74,28 +76,29 @@ echo "PNP_END"
 
 * time analysis
 tran 1e-5 1e-2
-plot v(coll)
+*plot v(coll)
 hardcopy vo1.ps vdb(coll)
+
 
 
 * frequency analysis
 ac dec 10 1 100MEG
-plot vdb(coll)
-plot vp(coll)
+*plot vdb(coll)
+*plot vp(coll)
 hardcopy vo1f.ps vdb(coll)
 
 
-
-plot vdb(out)
-plot vp(out)
+*plot vdb(out)
+*plot vp(out)
 hardcopy vo2f.ps vdb(out)
+
 
 *input impedance in kohm
 print all
 
-plot abs(v(in2)[40]/vin#branch[40]/(-1000))
+*plot abs(v(in2)[40]/vin#branch[40]/(-1000))
 print v(in2)[40]/vin#branch[40]/(-1000)
-<<<<<<< HEAD:t4/sim/t4.net
+
 
 meas AC max MAX vdb(out) from=10 to=100MEG
 let range = max - 3
@@ -122,10 +125,10 @@ echo "Zin_END"
 
 
 echo "results_TAB"
-echo "V_Gain = $&peak"
+echo "V-Gain = $&peak"
 echo "Bandwidth = $&bandwidth"
-echo "CO_Freq = $&lowerCOFF"
-echo "CO_Freq = $&higherCOFF"
+echo "CO-lowerFreq = $&lowerCOFF"
+echo "CO-higherFreq = $&higherCOFF"
 echo "results_END"
 
 echo "**************"

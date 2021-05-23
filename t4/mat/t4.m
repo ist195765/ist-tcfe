@@ -111,16 +111,16 @@ printf ("ponto1_END\n\n");
 %Ponto 2 Teorica
 printf ("ponto2_TAB\n");
 printf ("First Stage\n");
-printf ("AV1_DB = %e dB\n", AV1_DB);
+printf ("AV1-DB = %e dB\n", AV1_DB);
 printf ("ZI1 = %e Omega \n", ZI1);
 printf ("ZO1 = %e Omega \n", ZO1);
 printf ("Second Stage\n");
-printf ("AV2_DB = %e dB\n", AV2_DB);
+printf ("AV2-DB = %e dB\n", AV2_DB);
 printf ("ZI2 = %e Omega \n", ZI2);
 printf ("ZO2 = %e Omega \n", ZO2);
 printf ("Complete\n");
 printf ("ZO = %e Omega\n", ZO);
-printf ("AV_DB = %e dB\n", AV_DB);
+printf ("AV-DB = %e dB\n", AV_DB);
 printf ("Merit = %e \n", Merit);
 printf ("HighCutOff frequency = %e Hz\n", fH);
 printf ("LowCutOff frequency = %e Hz\n", fL);
@@ -129,11 +129,11 @@ printf ("Bandwidth = %e rad/s\n", fH-fL);
 printf ("ponto2_END\n\n");
 
 %Ponto 3 Teorica
-teorica = figure ();
+Gain = figure ();
 plot(log10(w/(2*pi)),Tdb,"g");
 legend("v_o(f)/v_i(f)");
 
 xlabel ("Log10(Frequency [Hz])");
 ylabel ("Gain");
 
-print (teorica, "teoria", "-depsc");
+print (Gain, "Gain", "-depsc");

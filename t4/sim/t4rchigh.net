@@ -43,7 +43,7 @@ op
 
 * frequency analysis
 ac dec 10 1 100MEG
-plot vdb(out)
+*plot vdb(out)
 hardcopy rchigh.ps vdb(out)
 
 .endc
