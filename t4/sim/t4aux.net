@@ -53,10 +53,8 @@ let ARG= abs(Zo[40])
 
 echo "op_ZO_TAB"
 echo "Zo = $&REAL + $&Im j"
-echo "Zoarg = $&ARG"
+echo "Zoabs = $&ARG"
 echo "op_ZO_END"
-
-
 
 
 quit

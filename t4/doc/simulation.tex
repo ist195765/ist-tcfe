@@ -171,7 +171,7 @@ The next tables represent both the theoretically and the simulation results, res
 		>{\columncolor[HTML]{FFCC67}}l |c|}
 		\hline
 		\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
-		\input{../sim/Zin_tab}
+		\input{../mat/ImportantValues_TAB}
 	\end{tabular}
       \caption{Octave}
     \end{minipage}%
@@ -181,11 +181,11 @@ The next tables represent both the theoretically and the simulation results, res
 		>{\columncolor[HTML]{FFCC67}}l |c|}
 		\hline
 		\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
-		\input{../sim/Zin_tab}
+		\input{../sim/simvalues_TAB}
 	\end{tabular}
        \caption{NGspice}
     \end{minipage} 
-   \caption{$Z_in$}
+   \caption{Results}
 \end{table}
 
 \begin{table}[H]
@@ -195,7 +195,7 @@ The next tables represent both the theoretically and the simulation results, res
 		>{\columncolor[HTML]{FFCC67}}l |c|}
 		\hline
 		\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
-		\input{../sim/Zin_tab}
+		\input{../mat/ImportantValues_TAB}
 	\end{tabular}
       \caption{Octave}
     \end{minipage}%
@@ -205,11 +205,11 @@ The next tables represent both the theoretically and the simulation results, res
 		>{\columncolor[HTML]{FFCC67}}l |c|}
 		\hline
 		\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
-		\input{../sim/op_ZO_tab}
+		\input{../sim/impedanceZ_TAB}
 	\end{tabular}
        \caption{NGspice}
     \end{minipage} 
-   \caption{$Z_out$}
+   \caption{$Impedance_{in}$}
 \end{table}
 
 \begin{table}[H]
@@ -219,7 +219,7 @@ The next tables represent both the theoretically and the simulation results, res
 		>{\columncolor[HTML]{FFCC67}}l |c|}
 		\hline
 		\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
-		\input{../sim/Zin_tab}
+		\input{../mat/ImportantValues_TAB}
 	\end{tabular}
       \caption{Octave}
     \end{minipage}%
@@ -229,62 +229,14 @@ The next tables represent both the theoretically and the simulation results, res
 		>{\columncolor[HTML]{FFCC67}}l |c|}
 		\hline
 		\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
-		\input{../sim/Zin_tab}
+		\input{../sim/op_ZO_TAB}
 	\end{tabular}
        \caption{NGspice}
     \end{minipage} 
-   \caption{$W_L$}
+   \caption{$Impedance_{out}$}
 \end{table}
 
-\begin{table}[H]
-    \begin{minipage}{.5\linewidth}
-      \centering
-        \begin{tabular}{|
-		>{\columncolor[HTML]{FFCC67}}l |c|}
-		\hline
-		\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
-		\input{../sim/Zin_tab}
-	\end{tabular}
-      \caption{Octave}
-    \end{minipage}%
-    \begin{minipage}{.5\linewidth}
-      \centering
-        \begin{tabular}{|
-		>{\columncolor[HTML]{FFCC67}}l |c|}
-		\hline
-		\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
-		\input{../sim/Zin_tab}
-	\end{tabular}
-       \caption{NGspice}
-    \end{minipage} 
-   \caption{$W_H$}
-\end{table}
-
-\begin{table}[H]
-    \begin{minipage}{.5\linewidth}
-      \centering
-        \begin{tabular}{|
-		>{\columncolor[HTML]{FFCC67}}l |c|}
-		\hline
-		\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
-		\input{../sim/Zin_tab}
-	\end{tabular}
-      \caption{Octave}
-    \end{minipage}%
-    \begin{minipage}{.5\linewidth}
-      \centering
-        \begin{tabular}{|
-		>{\columncolor[HTML]{FFCC67}}l |c|}
-		\hline
-		\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
-		\input{../sim/Zin_tab}
-	\end{tabular}
-       \caption{NGspice}
-    \end{minipage} 
-   \caption{$A_v$}
-\end{table}
-
-With the values side by side, in a more detailed analysis, of $Z_{in}$, $Z_{out}$ ,$A_V$,$\omega _{CO_H}$ and $\omega _{CO_L}$ despite the obvious differences, the comparison is satisfatory. When comparing the order of magnitude they are within reasonable intervals of similarity. In fact, the lower cut-off frequencies are really similar, especially when they are plotted in a logscale graph.
+With the values side by side, in a more detailed analysis, of $Z_{in}$, $Z_{out}$ ,$A_V$,$f_{CO_H}$ and $f_{CO_L}$ despite the obvious differences, the comparison is satisfatory. When comparing the order of magnitude they are within reasonable intervals of similarity. In fact, the lower cut-off frequencies are really similar, especially when they are plotted in a logscale graph.
 
 \subsection{Merit Results}
 \label{merit}

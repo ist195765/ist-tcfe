@@ -51,9 +51,9 @@ echo "VCE = $&V_CE"
 let V_BE=v(base)-v(emit)
 echo "VBE = $&V_BE"
 if (V_CE>V_BE)
-echo "VCE>VBE = Correct F.A.R"
+echo "VCE greater than VBE = Correct F.A.R"
 else
-echo "VCE>VBE = Wrong F.A.R"
+echo "VCE minor than VBE = Wrong F.A.R"
 endif
 
 echo "NPN_END"
@@ -65,9 +65,9 @@ echo "VCE = $&V_EC"
 let V_EB=v(emit2)-v(coll)
 echo "VEB = $&V_EB"
 if (V_EC>V_EB)
-echo "VEC>VEB = Correct F.A.R"
+echo "VEC greater than VEB = Correct F.A.R"
 else
-echo "VEC>VEB = Wrong F.A.R"
+echo "VEC minor than VEB = Wrong F.A.R"
 endif
 echo "PNP_END"
 
@@ -114,6 +114,8 @@ let bandwidth = upper - lower
 let cost = 2241.9
 let merit = (gain*bandwidth)/(lowerCOFF*cost)
 
+
+
 *need a different setup to measure output impedance
 
 *input impedance in ohm
@@ -123,7 +125,7 @@ let Zim_in= Im(v(in2)[40]/i(Vin)[40])
 echo "Zin = $&Zr_in + $&Zim_in j"
 echo "Zin_END"
 
-
+let ARG= abs(v(in2)[40]/i(Vin)[40])
 
 echo "results_TAB"
 echo "V-Gain = $&gain"
@@ -139,5 +141,16 @@ echo "merit = $&merit"
 echo "cost_END"
 echo "**************"
 
-.endc
+echo "simvalues_TAB"
+echo "V-Gain = $&gain"
+echo "CO-higherFreq = $&higherCOFF"
+echo "CO-lowerFreq = $&lowerCOFF"
+echo "simvalues_END"
 
+
+echo "impedanceZ_TAB"
+echo "Zin = $&Zr_in + $&Zim_in j"
+echo "Zinabs = $&ARG"
+echo "impedanceZ_END"
+
+.endc
