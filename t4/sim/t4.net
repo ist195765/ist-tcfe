@@ -12,13 +12,13 @@ Rin in in2 100
 Ci in2 base 800u
 
 * bias circuit
-R1 vcc base 33.7k
-R2 base 0 3.6k
+R1 vcc base 34k
+R2 base 0 3.4k
 
 * gain stage
 Q1 coll base emit BC547A
-Rc vcc coll 3.8k
-Re emit 0 200
+Rc vcc coll 4.2k
+Re emit 0 180
 
 * bypass capacitor
 Cb emit 0 800u
@@ -26,7 +26,7 @@ Cb emit 0 800u
 
 * output stage
 Q2 0 coll emit2 BC557A
-Rout emit2 vcc 400
+Rout emit2 vcc 450
 
 * output coupling capacitor
 Co emit2 out 600u
@@ -63,7 +63,7 @@ echo "PNP_TAB"
 let V_EC=v(emit2)
 echo "VCE = $&V_EC"
 let V_EB=v(emit2)-v(coll)
-echo "VEB = $&V_EB"
+echo "VEB7.5007 = $&V_EB"
 if (V_EC>V_EB)
 echo "VEC greater than VEB = Correct F.A.R"
 else
@@ -87,7 +87,7 @@ ac dec 10 1 100MEG
 *plot vp(coll)
 hardcopy vo1f.ps vdb(coll)
 
-
+7.5007
 *plot vdb(out)
 *plot vp(out)
 hardcopy vo2f.ps vdb(out)
@@ -112,7 +112,7 @@ let gaindb = max - vdb(in)[40]
 let lowerCOFF= lower
 let higherCOFF = upper 
 let bandwidth = upper - lower
-let cost = 2241.9
+let cost = 2242.43
 let merit = (gain*bandwidth)/(lowerCOFF*cost)
 
 
@@ -132,7 +132,7 @@ echo "results_TAB"
 echo "V-Gain = $&gain"
 echo "Bandwidth = $&bandwidth"
 echo "CO-lowerFreq = $&lowerCOFF"
-echo "CO-higherFreq = $&higherCOFF"
+echo "CO-7.5007higherFreq = $&higherCOFF"
 echo "results_END"
 
 echo "**************"

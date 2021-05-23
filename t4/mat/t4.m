@@ -1,13 +1,13 @@
 %Optimized values
 
-C1 = 7.5007e-04;
-C2 = 7.5007e-04;
-C3 = 6.4997e-04;
-RB1 = 3.9999e+04;
-RB2 = 2.9353e+03;
-RC1 = 4.9996e+03;
-RE1 = 100.0070;
-RE2 = 599.5248;
+C1 = 8e-04;
+C2 = 8e-04;
+C3 = 6e-04;
+RB1 = 3.4e+04;
+RB2 = 3.4e+03;
+RC1 = 4.2e+03;
+RE1 = 180;
+RE2 = 450;
 
 VT=25e-3;
 BFN=178.7;
@@ -72,8 +72,8 @@ ZO=1/(go2+gm2/gpi2*gB+ge2+gB);
 R1S = RS + (1/(1/RB + 1/rpi1));
 R2S = RL + (1/(1/RC1 + 1/ro1));
 R3S = 1/((1/RE1) + (1/(rpi1 + (1/(1/RS + 1/RB)))) + ((gm1*rpi1)/(rpi1 + (1/(1/RS + 1/RB)))));
-wL = 1/(R1S*C1) + 1/(R2S*C2) + 1/(R3S*C3);
-fL = wL/(2*pi);
+wL = 1/(R1S*C1) + 1/(R2S*C2) + 1/(R3S*C3)
+fL = wL/(2*pi)
 
 %HighCutOff Frequency
 Cpi = 16.1e-12;
@@ -202,10 +202,9 @@ printf ("Gain_END\n\n");
 
 printf ("ImportantValues1_TAB\n");
 printf ("VoltageGain = %e dB\n", AV_DB);
-printf ("HighCutOff frequency = %e Hz\n", wH);
-printf ("LowCutOff frequency = %e Hz\n", wL);
+printf ("HighCutOff frequency = %e Hz\n", fH);
+printf ("LowCutOff frequency = %e Hz\n", fL);
 printf ("ImportantValues1_END\n\n");
-
 
 printf ("ImportantValues2_TAB\n");
 printf ("ZIn = %e Omega \n", ZI1);
