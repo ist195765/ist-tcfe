@@ -61,7 +61,7 @@ The file "vo1f.ps" may be printed on a postscript printer.
 
 The file "vo2f.ps" may be printed on a postscript printer.
                              .options savecurrents
-                             AC Analysis  Sun May 23 22:18:48  2021
+                             AC Analysis  Sun May 23 22:25:50  2021
 --------------------------------------------------------------------------------
 Index   frequency       base                            
 --------------------------------------------------------------------------------
@@ -151,7 +151,7 @@ Index   frequency       base
 80	1.000000e+08	4.821978e-02,	-1.55454e-01	
 
                              .options savecurrents
-                             AC Analysis  Sun May 23 22:18:48  2021
+                             AC Analysis  Sun May 23 22:25:50  2021
 --------------------------------------------------------------------------------
 Index   frequency       coll                            
 --------------------------------------------------------------------------------
@@ -241,7 +241,7 @@ Index   frequency       coll
 80	1.000000e+08	2.146142e-01,	1.565192e-01	
 
                              .options savecurrents
-                             AC Analysis  Sun May 23 22:18:48  2021
+                             AC Analysis  Sun May 23 22:25:50  2021
 --------------------------------------------------------------------------------
 Index   frequency       emit                            
 --------------------------------------------------------------------------------
@@ -331,7 +331,7 @@ Index   frequency       emit
 80	1.000000e+08	-2.16834e-08,	-2.33762e-08	
 
                              .options savecurrents
-                             AC Analysis  Sun May 23 22:18:48  2021
+                             AC Analysis  Sun May 23 22:25:50  2021
 --------------------------------------------------------------------------------
 Index   frequency       emit2                           
 --------------------------------------------------------------------------------
@@ -421,7 +421,7 @@ Index   frequency       emit2
 80	1.000000e+08	1.643032e-01,	1.262682e-01	
 
                              .options savecurrents
-                             AC Analysis  Sun May 23 22:18:48  2021
+                             AC Analysis  Sun May 23 22:25:50  2021
 --------------------------------------------------------------------------------
 Index   frequency       in                              
 --------------------------------------------------------------------------------
@@ -511,7 +511,7 @@ Index   frequency       in
 80	1.000000e+08	1.000000e+00,	0.000000e+00	
 
                              .options savecurrents
-                             AC Analysis  Sun May 23 22:18:48  2021
+                             AC Analysis  Sun May 23 22:25:50  2021
 --------------------------------------------------------------------------------
 Index   frequency       in2                             
 --------------------------------------------------------------------------------
@@ -601,7 +601,7 @@ Index   frequency       in2
 80	1.000000e+08	4.821978e-02,	-1.55454e-01	
 
                              .options savecurrents
-                             AC Analysis  Sun May 23 22:18:48  2021
+                             AC Analysis  Sun May 23 22:25:50  2021
 --------------------------------------------------------------------------------
 Index   frequency       out                             
 --------------------------------------------------------------------------------
@@ -691,7 +691,7 @@ Index   frequency       out
 80	1.000000e+08	1.643032e-01,	1.262682e-01	
 
                              .options savecurrents
-                             AC Analysis  Sun May 23 22:18:48  2021
+                             AC Analysis  Sun May 23 22:25:50  2021
 --------------------------------------------------------------------------------
 Index   frequency       vcc                             
 --------------------------------------------------------------------------------
@@ -781,7 +781,7 @@ Index   frequency       vcc
 80	1.000000e+08	0.000000e+00,	0.000000e+00	
 
                              .options savecurrents
-                             AC Analysis  Sun May 23 22:18:48  2021
+                             AC Analysis  Sun May 23 22:25:50  2021
 --------------------------------------------------------------------------------
 Index   frequency       vcc#branch                      
 --------------------------------------------------------------------------------
@@ -871,7 +871,7 @@ Index   frequency       vcc#branch
 80	1.000000e+08	4.686663e-04,	3.522468e-04	
 
                              .options savecurrents
-                             AC Analysis  Sun May 23 22:18:48  2021
+                             AC Analysis  Sun May 23 22:25:50  2021
 --------------------------------------------------------------------------------
 Index   frequency       vin#branch                      
 --------------------------------------------------------------------------------
@@ -1238,15 +1238,15 @@ capacitance                0.0006                0.0008                0.0008
           p                    -0              0.251583
 
 
-Total analysis time (seconds) = 0.013
+Total analysis time (seconds) = 0.067
 
-Total elapsed time (seconds) = 0.042 
+Total elapsed time (seconds) = 0.118 
 
-Total DRAM available = 3935.883 MB.
-DRAM currently available =  277.074 MB.
+Total DRAM available = 3935.879 MB.
+DRAM currently available =  174.625 MB.
 Total ngspice program size =   22.125 MB.
-Resident set size =   10.500 MB.
-Shared ngspice pages =    8.355 MB.
+Resident set size =   10.211 MB.
+Shared ngspice pages =    8.074 MB.
 Text (code) pages =    5.070 MB.
 Stack = 0 bytes.
 Library pages =    2.383 MB.

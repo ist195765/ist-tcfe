@@ -271,15 +271,15 @@ capacitance            0.00064997                     1            0.00075007
           p                    -0              0.145934
 
 
-Total analysis time (seconds) = 0
+Total analysis time (seconds) = 0.001
 
-Total elapsed time (seconds) = 0.003 
+Total elapsed time (seconds) = 0.012 
 
-Total DRAM available = 3935.883 MB.
-DRAM currently available =  277.289 MB.
+Total DRAM available = 3935.879 MB.
+DRAM currently available =  175.117 MB.
 Total ngspice program size =   21.992 MB.
-Resident set size =    9.988 MB.
-Shared ngspice pages =    8.098 MB.
+Resident set size =   10.090 MB.
+Shared ngspice pages =    8.203 MB.
 Text (code) pages =    5.070 MB.
 Stack = 0 bytes.
 Library pages =    2.250 MB.
