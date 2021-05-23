@@ -13,7 +13,7 @@ The constants values used are expressed in the following table.
 \multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
 \input{../mat/optimisedvalues_tab}
 \end{tabular}
-\caption{optab}
+\caption{Components Values}
 \end{table}
 
 \subsection{Gain Stage}
@@ -36,10 +36,37 @@ Generally, the output impedance of this stage is high, when compared with the lo
 being this the major reason why we cant use just this stage, and we need another one. \par
 Both of the capacitors are being analysed in the section of Simulation Analysis.
 
+\subsection{Output stage}
+
+As we could see in the section of the Gain stage, we end up with a high output impedance $Z_O1$ . For that reason, we
+connect a second circuit to the output of the Gain Stage, that produce a low output impedance.
+This part of the stage is presented in the figure below:
+
+\begin{figure}[H] 
+\centering
+\includegraphics[width = 8cm]{Incremental_Gain.pdf} 
+\caption{Output}
+\label{output}
+\end{figure}
+
+By analysing the figure, we can conclude that this circuit presents similar components but with some differences.
+Instead of a NPN BJT, we use a PNP BJT, because it has a higher $\beta_F$, that lowers the
+output impedance as we desire. It also illustrates the use of another BJT transistor. \par
+Another capacitor, $C_o$ , is used with a similar goal as the previous coupling capacitor. If we
+didn’t use this component, the gain stage would introduce a DC voltage of 0 to the second stage,
+which as previous would change and ruin the transistor’s Operating Point. \par
+We will end up with a lower output impedance in this stage, when compared to
+the load, and a higher input impedance when compared to the output impedance of the gain
+stage. When we combine both stages, we need to ensure that there is a compatibility between the
+impedances of both stages. In fact, by the voltage divider law, to make sure no voltage signal is lost, the input
+impedance of the second stage should be much greater than the output impedance of the first
+one.\par
+
+To conclude, when we merge these two circuits, we end up with the BJT Audio Amplifier represented in Figure 1.
 
 
 
-\subsubsection{Inspection analysis}
+\subsection{Inspection analysis}
 
 From the simulation results we know that the voltage gain curve is maximum for medium frequencies. So, in order to analyse this circuit, we start from the inspection analysis, this is, analysing the circuit for the medium frequencies to obtain the maximum voltage gain. 
 
@@ -58,7 +85,7 @@ I_E
 \end{pmatrix}
 =
 \begin{pmatrix}
-\frac{R_{B2}}{R_{B1} + R_{B2}V_{CC} - V_{BEON}}\\
+\frac{R_{B2}}{R_{B1} + R_{B2}V_{CC}} - V_{BEON}\\
 0\\
 0
 \end{pmatrix}
@@ -74,7 +101,7 @@ From this matrix we've obtain the following values:
 \multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
 \input{../mat/stage1dc_tab}
 \end{tabular}
-\caption{optab}
+\caption{Operating Point Values Gain Stage}
 \end{table}
 
 Which indicate that the transistor is always operating in the FAR.
@@ -84,7 +111,7 @@ After this we procede to the incremental analysis, which we'll determine what is
 \begin{figure}[H] 
 \centering
 \includegraphics[width = 8cm]{Incremental_Gain.pdf} 
-\caption{Output}
+\caption{Incremental Circuit Gain Stage}
 \label{output}
 \end{figure}
 
@@ -96,6 +123,13 @@ Using the mesh method again, the expression for the voltage gain is presented be
 
 For the output stage we use the same procedure and its OP results are presented below:
 
+\begin{figure}[H] 
+\centering
+\includegraphics[width = 8cm]{Lab41.pdf} 
+\caption{Incremental Circuit Output Stage}
+\label{output}
+\end{figure}
+
 \begin{table}[H] \centering
 \begin{tabular}{|
 >{\columncolor[HTML]{FFCC67}}l |c|}
@@ -103,14 +137,25 @@ For the output stage we use the same procedure and its OP results are presented 
 \multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
 \input{../mat/stage2dc_tab}
 \end{tabular}
-\caption{optab}
+\caption{Operating Point Values Output Stage}
 \end{table}
 
 Which means that the transistor is always operating in the FAR.
 
 For the voltage gain in this stage, table below presents all the gains for the 2 stages and for the complete circuit.
 
-\subsubsection{Impedances}
+\begin{table}[H] \centering
+\begin{tabular}{|
+>{\columncolor[HTML]{FFCC67}}l |c|}
+\hline
+\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
+\input{../mat/Gain_tab}
+\end{tabular}
+\caption{Volatge Gain in both stages}
+\end{table}
+
+
+\subsection{Impedances}
 
 In the thereotical analysis of the impedances, we will evaluate the four impedances associated with the two
 stages ($Z_in1$ \& $Z_out1$ for the first stage, $Z_in2$ \& $Z_out2$ for the second stage) as well as the two gains associated with each stage ($A_V1$ and $A_V2$, respectively). To do so, we need to perform an Operating Point Analysis to find the values necessary or the Incremental Analysis. \par
@@ -157,13 +202,23 @@ The 4 values are presented below,
 \caption{optab}
 \end{table}
 
+\begin{table}[H] \centering
+\begin{tabular}{|
+>{\columncolor[HTML]{FFCC67}}l |c|}
+\hline
+\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
+\input{../mat/impedances2_tab}
+\end{tabular}
+\caption{optab}
+\end{table}
+
 Regarding to the compatibility between both stages, remembering that $Z_{out1}$ needs to be  much lower than $Z_{in2}$, we have satisfactory results, in order so that there is no signal degradation or loss between these stages. We can clearly affirm that $V_{in2}$ needs to be as close as possible to $V_{out2}$, confirmed if we apply a voltage divider with $Z_{in2}>>Z_{out1}$:
 
 \begin{equation}
     V_{in2} = \frac{Z_{in2}}{Z_{in2}+Z_{out1}} V_{out2}. 
 \end{equation}
 
-\subsubsection{Cutoff frequencies}
+\subsection{Cutoff frequencies}
 
 After obtaining the gain for the medium frequencies we need to determine the frequency dependance of this gain. To do so we've used two methods called short circuit time constant (SCTC) and open circuit time constant (OCTC). The SCTC was used in the determination of the lower cutoff frequency and it consists in the determination of the equivalent resistance seen by all capacitors individually using the in the following steps:
 
@@ -229,58 +284,12 @@ And once more using the formulae \ref{wh} we've obtained the higher cutoff frequ
 \multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
 \input{../mat/cutoff_tab}
 \end{tabular}
-\caption{optab}
+\caption{Cutoff Frequencies}
 \end{table}
 
 
 
-\subsection{Output stage}
 
-As we could see in the section of the Gain stage, we end up with a high output impedance $Z_O1$ . For that reason, we
-connect a second circuit to the output of the Gain Stage, that produce a low output impedance.
-This part of the stage is presented in the figure below:
-
-\begin{figure}[H] 
-\centering
-\includegraphics[width = 8cm]{Incremental_Gain.pdf} 
-\caption{Output}
-\label{output}
-\end{figure}
-
-By analysing the figure, we can conclude that this circuit presents similar components but with some differences.
-Instead of a NPN BJT, we use a PNP BJT, because it has a higher $\beta_F$, that lowers the
-output impedance as we desire. It also illustrates the use of another BJT transistor. \par
-Another capacitor, $C_o$ , is used with a similar goal as the previous coupling capacitor. If we
-didn’t use this component, the gain stage would introduce a DC voltage of 0 to the second stage,
-which as previous would change and ruin the transistor’s Operating Point. \par
-We will end up with a lower output impedance in this stage, when compared to
-the load, and a higher input impedance when compared to the output impedance of the gain
-stage. When we combine both stages, we need to ensure that there is a compatibility between the
-impedances of both stages. In fact, by the voltage divider law, to make sure no voltage signal is lost, the input
-impedance of the second stage should be much greater than the output impedance of the first
-one.\par
-
-\begin{table}[H] \centering
-\begin{tabular}{|
->{\columncolor[HTML]{FFCC67}}l |c|}
-\hline
-\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
-\input{../mat/impedances2_tab}
-\end{tabular}
-\caption{optab}
-\end{table}
-
-To conclude, when we merge these two circuits, we end up with the BJT Audio Amplifier represented in Figure 1.
-
-\begin{table}[H] \centering
-\begin{tabular}{|
->{\columncolor[HTML]{FFCC67}}l |c|}
-\hline
-\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
-\input{../mat/Gain_tab}
-\end{tabular}
-\caption{optab}
-\end{table}
 
 
 

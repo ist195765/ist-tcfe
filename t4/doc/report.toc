@@ -1,0 +1,15 @@
+\babel@toc {english}{}
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
+\contentsline {section}{\numberline {2}Theoretical Analysis}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Gain Stage}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Output stage}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Inspection analysis}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Impedances}{7}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Cutoff frequencies}{8}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Simulation Analysis}{9}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Coupling Capacitor}{9}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Bypass Capacitor}{9}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}$R_c$}{10}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Comparison}{10}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Merit Results}{10}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Conclusion}{11}{section.4}%
