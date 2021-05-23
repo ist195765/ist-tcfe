@@ -1,57 +1,81 @@
 \section{Simulation Analysis}
 \label{sec:simulation}
 
-In this section, Ngspice was used in order to simulate the audio converter.
+In this section, Ngspice was used in order to simulate the audio converter, therefore, a brief description of the circuit modeled in NGspice is going to be presented and a comparison between the values obtained in NGspice and the ones in Octave is going to be done as well. In order to do that, transistors of the given models were used and the rest of the components specifications changed to be on par with the values through MatLab.
 
- \begin{table}[H] \centering
-\begin{tabular}{|
->{\columncolor[HTML]{FFCC67}}l |c|}
-\hline
-\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
-\input{../sim/cost_tab}
-\end{tabular}
-\caption{COST}
-\end{table}
 
- \begin{table}[H] \centering
-\begin{tabular}{|
->{\columncolor[HTML]{FFCC67}}l |c|}
-\hline
-\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
-\input{../sim/NPN_tab}
-\end{tabular}
-\caption{NPN}
-\end{table}
+\subsection{Coupling Capacitor}
 
- \begin{table}[H] \centering
-\begin{tabular}{|
->{\columncolor[HTML]{FFCC67}}l |c|}
-\hline
-\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
-\input{../sim/PNP_tab}
-\end{tabular}
-\caption{PNP}
-\end{table}
 
- \begin{table}[H] \centering
-\begin{tabular}{|
->{\columncolor[HTML]{FFCC67}}l |c|}
-\hline
-\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
-\input{../sim/results_tab}
-\end{tabular}
-\caption{Results for the output}
-\end{table}
 
- \begin{table}[H] \centering
-\begin{tabular}{|
->{\columncolor[HTML]{FFCC67}}l |c|}
-\hline
-\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
-\input{../sim/Zin_tab}
-\end{tabular}
-\caption{Results for the output of the envelope}
-\end{table}
+
+\subsection{Bypass Capacitor}
+
+
+
+
+
+\subsection{$R_c$}
+
+
+
+
+
+\subsection{Comparison}
+
+
+
+
+
+%\begin{table}[H] \centering
+%\begin{tabular}{|
+%>{\columncolor[HTML]{FFCC67}}l |c|}
+%\hline
+%\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
+%\input{../sim/cost_tab}
+%\end{tabular}
+%\caption{COST}
+%\end{table}
+
+%\begin{table}[H] \centering
+%\begin{tabular}{|
+%>{\columncolor[HTML]{FFCC67}}l |c|}
+%\hline
+%\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
+%\input{../sim/NPN_tab}
+%\end{tabular}
+%\caption{NPN}
+%\end{table}
+
+%\begin{table}[H] \centering
+%\begin{tabular}{|
+%>{\columncolor[HTML]{FFCC67}}l |c|}
+%\hline
+%\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
+%\input{../sim/PNP_tab}
+%\end{tabular}
+%\caption{PNP}
+%\end{table}
+
+%\begin{table}[H] \centering
+%\begin{tabular}{|
+%>{\columncolor[HTML]{FFCC67}}l |c|}
+%\hline
+%\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
+%\input{../sim/results_tab}
+%\end{tabular}
+%\caption{Results for the output}
+%\end{table}
+
+%\begin{table}[H] \centering
+%\begin{tabular}{|
+%>{\columncolor[HTML]{FFCC67}}l |c|}
+%\hline
+%\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
+%\input{../sim/Zin_tab}
+%\end{tabular}
+%\caption{Results for the output of the envelope}
+%\end{table}
 
 \begin{figure}[H] 
 \centering
@@ -69,7 +93,16 @@ In this section, Ngspice was used in order to simulate the audio converter.
 
 \begin{figure}[H] 
 \centering
-\includegraphics[width = 8cm]{vo2.pdf} 
+\includegraphics[width = 8cm]{vo2f.pdf} 
 \caption{Output}
 \label{vo2f}
 \end{figure}
+
+\subsection{Merit Results}
+
+From the results obtained through the Ngspice simulation and considering we used the data shown in table 1, we can compute the merit using the formula given in the lab assignment, represented in the Introduction.
+
+The implemented circuit gave us a MERIT of ??? in NGSpice.
+
+
+

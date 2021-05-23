@@ -21,7 +21,7 @@ Rc vcc coll 4.9996k
 Re emit 0 100.007
 
 * bypass capacitor
-Cb emit 0 750.7 u
+Cb emit 0 750.7u
 
 
 * output stage
