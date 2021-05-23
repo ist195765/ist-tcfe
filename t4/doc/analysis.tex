@@ -42,14 +42,62 @@ Both of the capacitors are being analysed in the section of Simulation Analysis.
 \subsubsection{Inspection analysis}
 
 
-
-
 \subsubsection{Impedances}
 
+In the thereotical analysis of the impedances, we will evaluate the four impedances associated with the two
+stages ($Z_in1$ \& $Z_out1$ for the first stage, $Z_in2$ \& $Z_out2$ for the second stage) as well as the two gains associated with each stage ($A_V1$ and $A_V2$, respectively). To do so, we need to perform an Operating Point Analysis to find the values necessary or the Incremental Analysis. \par
+In the Gain stage, the input ($Z_in$) and output ($Z_out$) impedances can be derived by the Kirchoff Laws.
+Giving us the following equation, where $R_B$ = $R_1$ // $R_2$
+
+\begin{equation}
+    Z_{in1}=R_B // r_{\pi 1}
+\end{equation}
+
+Due to the presence of the bypass capacitor and to the theoretical approach where it is assumed that the capacitors are short-circuited, we consider $R_E$ approximately 0. It is important to say that the Gain Stage input impedance matches also with the total input impedance of the circuit, as this stage is load-independent. \par
+On the other hand, the first stage output impedance can be obtained by:
+
+\begin{equation}
+Z_{out1} = {r_o}//{R_{C}}
+\label{eq3}
+\end{equation} 
+
+Refering the second stage, by analysing the circuit we get:
+
+\begin{equation}
+    Z_{in2}=\frac{(g_{m2}+g_{\pi2}+g_{o2}+g_{E2})}{g_{\pi2}(g_{\pi2}+g_{o2}+g_{E2})}
+\end{equation}
+
+\begin{equation}
+    Z_{out2}=\frac{1}{(g_{m2}+g_{\pi2}+g_{o2}+g_{E2})}
+\end{equation}
+
+And finally, the total output impedance is calculated as the following:
+
+\begin{equation}
+    Z_{Out}=\frac{v_o}{i_o}=\frac{1}{g_{o2}+g_{m2}\frac{r_{\pi2}}{r_{\pi2}+Z_{out1}}+g_{E2}+\frac{1}{r_{\pi2}+Z_{out1}}}
+\end{equation}
+
+The 4 values are presented below,
+
+%\begin{table}[H] \centering
+%\begin{tabular}{|
+%>{\columncolor[HTML]{FFCC67}}l |c|}
+%\hline
+%\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
+%\input{../doc/}
+%\end{tabular}
+%\caption{optab}
+%\end{table}
+
+Regarding to the compatibility between both stages, remembering that $Z_{out1}$ needs to be  much lower than $Z_{in2}$, we have satisfactory results, in order so that there is no signal degradation or loss between these stages. We can clearly affirm that $V_{in2}$ needs to be as close as possible to $V_{out2}$, confirmed if we apply a voltage divider with $Z_{in2}>>Z_{out1}$:
+
+\begin{equation}
+    V_{in2} = \frac{Z_{in2}}{Z_{in2}+Z_{out1}} V_{out2}. 
+\end{equation}
 
 \subsubsection{Cutoff frequencies}
 
-After obtaining the gain for the medium frequencies we need to determine the frequency dependance of this gain. To do so we've used two methods called short circuit time constant(SCTC) and open circuit time constant(OCTC). The SCTC was used in the determination of the lower cutoff frequency and it consists in the determination of the equivalent resistance seen by all capacitors individually using the in the following steps:
+After obtaining the gain for the medium frequencies we need to determine the frequency dependance of this gain. To do so we've used two methods called short circuit time constant (SCTC) and open circuit time constant (OCTC). The SCTC was used in the determination of the lower cutoff frequency and it consists in the determination of the equivalent resistance seen by all capacitors individually using the in the following steps:
 
 \begin{itemize}
 
