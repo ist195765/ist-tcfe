@@ -41,6 +41,32 @@ Both of the capacitors are being analysed in the section of Simulation Analysis.
 
 \subsubsection{Inspection analysis}
 
+From the simulation results we know that the voltage gain curve is maximum for medium frequencies. So, in order to analyse this circuit, we start from the inspection analysis, this is, analysing the circuit for the medium frequencies to obtain the maximum voltage gain. 
+
+To make this analysis we start with computing the operating point (OP), to make sure that our trasistors are always operating in the foward active region(FAR). To compute the operating point for the gain stage we use the mesh method, which leeds to the following matrix:
+
+\begin{equation}
+\begin{pmatrix}
+R_{B1} \parallel R_{B2} & 0 & R_E \\
+-\beta_f & 1 & 0 \\
+-\beta_f - 1 & 0 & 1 \\ 
+\end{pmatrix}
+\begin{pmatrix}
+I_B\\
+I_C\\
+I_E
+\end{pmatrix}
+=
+\begin{pmatrix}
+\frac{R_{B2}}{R_{B1} + R_{B2}V_{CC} - V_{BEON}}\\
+0\\
+0
+\end{pmatrix}
+\centering
+\end{equation}
+
+From this matrix we've obtain the following values:
+
 \begin{table}[H] \centering
 \begin{tabular}{|
 >{\columncolor[HTML]{FFCC67}}l |c|}
@@ -51,6 +77,24 @@ Both of the capacitors are being analysed in the section of Simulation Analysis.
 \caption{optab}
 \end{table}
 
+Which indicate that the transistor is always operating in the FAR.
+
+After this we procede to the incremental analysis, which we'll determine what is the actual voltage gain from the gain stage. The incremental circuit that is going to be analysed, the circuit for medium frequencies where the capacitor $C_e$ is like a short circuit is the following:
+
+\begin{figure}[H] 
+\centering
+\includegraphics[width = 8cm]{Incremental_Gain.pdf} 
+\caption{Output}
+\label{output}
+\end{figure}
+
+Using the mesh method again, the expression for the voltage gain is presented below:
+
+\begin{equation}
+\frac{v_o}{v_i} = -g_m(R_C \parallel r_o)\frac{R_{B1} \parallel R_{B2} \parallel r_{\pi 1}}{R_S + R_{B1} \parallel R_{B2} \parallel r_{\pi 1}}
+\end{equation} 
+
+For the output stage we use the same procedure and its OP results are presented below:
 
 \begin{table}[H] \centering
 \begin{tabular}{|
@@ -62,7 +106,9 @@ Both of the capacitors are being analysed in the section of Simulation Analysis.
 \caption{optab}
 \end{table}
 
+Which means that the transistor is always operating in the FAR.
 
+For the voltage gain in this stage, table below presents all the gains for the 2 stages and for the complete circuit.
 
 \subsubsection{Impedances}
 
