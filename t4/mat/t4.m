@@ -198,6 +198,15 @@ printf ("VoltageGain2 = %e V\n", abs(AV2));
 printf ("VoltageGain = %e V\n", abs(AV));
 printf ("Gain_END\n\n");
 
+%ImportantValues
+
+printf ("ImportantValues_TAB\n");
+printf ("ZIn = %e Omega \n", ZI1);
+printf ("ZOut = %e Omega \n", ZO2);
+printf ("VoltageGain = %e dB\n", AV_DB);
+printf ("HighCutOff frequency = %e Hz\n", fH);
+printf ("LowCutOff frequency = %e Hz\n", fL);
+printf ("ImportantValues_END\n\n");
 
 
 
