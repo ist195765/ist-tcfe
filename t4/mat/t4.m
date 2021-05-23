@@ -137,3 +137,69 @@ xlabel ("Log10(Frequency [Hz])");
 ylabel ("Gain");
 
 print (Gain, "Gain", "-depsc");
+
+
+
+
+%Constant Values
+printf ("optimisedvalues_TAB\n");
+printf ("C1 = %e F\n", C1);
+printf ("C2 = %e F\n", C2);
+printf ("C3 = %e F\n", C3);
+printf ("RB1 = %e Ohm \n", RB1);
+printf ("RB2 = %e Ohm \n", RB2);
+printf ("RC = %e Ohm\n", RC1);
+printf ("RE1 = %e Ohm\n", RE1);
+printf ("RE2 = %e Ohm\n", RE2);
+printf ("optimisedvalues_END\n\n");
+
+%DC Analysis - Stage 1
+printf ("stage1dc_TAB\n");
+printf ("VCE = %e V\n", VCE);
+printf ("VBEON = %e V \n", VBEON);
+printf ("IB1 = %e A \n", IB1);
+printf ("IC1 = %e A \n", IC1);
+printf ("IE1 = %e A \n", IE1);
+printf ("stage1dc_END\n\n");
+
+%DC Analysis - Stage 2
+printf ("stage2dc_TAB\n");
+printf ("VEC = %e V\n", VO2);
+printf ("VEBON = %e V \n", VEBON);
+printf ("IB2 = %e A \n", IC2-IE2);
+printf ("IC2 = %e A \n", IC2);
+printf ("IE2 = %e A \n", IE2);
+printf ("stage2dc_END\n\n");
+
+%Impedances
+printf ("impedances1_TAB\n");
+printf ("ZI1 = %e Omega \n", ZI1);
+printf ("ZO1 = %e Omega \n", ZO1);
+printf ("impedances1_END\n\n");
+
+%Impedances2
+printf ("impedances2_TAB\n");
+printf ("ZI2 = %e Omega \n", ZI2);
+printf ("ZO2 = %e Omega \n", ZO2);
+printf ("impedances2_END\n\n");
+
+
+%CutoffFrequencies
+printf ("cutoff_TAB\n");
+printf ("HighCutOff frequency = %e Hz\n", fH);
+printf ("LowCutOff frequency = %e Hz\n", fL);
+printf ("Bandwidth = %e rad/s\n", fH-fL);
+printf ("cutoff_END\n\n");
+
+%VoltageGain
+printf ("Gain_TAB\n");
+printf ("VoltageGain1= %e V\n", abs(AV1));
+printf ("VoltageGain2 = %e V\n", abs(AV2));
+printf ("VoltageGain = %e V\n", abs(AV));
+printf ("Gain_END\n\n");
+
+
+
+
+
+

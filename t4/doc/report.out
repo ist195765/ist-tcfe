@@ -1,0 +1,14 @@
+\BOOKMARK [1][-]{section.1}{1 Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{2 Theoretical Analysis}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{2.1 Gain Stage}{section.2}% 3
+\BOOKMARK [3][-]{subsubsection.2.1.1}{2.1.1 Inspection analysis}{subsection.2.1}% 4
+\BOOKMARK [3][-]{subsubsection.2.1.2}{2.1.2 Impedances}{subsection.2.1}% 5
+\BOOKMARK [3][-]{subsubsection.2.1.3}{2.1.3 Cutoff frequencies}{subsection.2.1}% 6
+\BOOKMARK [2][-]{subsection.2.2}{2.2 Output stage}{section.2}% 7
+\BOOKMARK [1][-]{section.3}{3 Simulation Analysis}{}% 8
+\BOOKMARK [2][-]{subsection.3.1}{3.1 Coupling Capacitor}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.2}{3.2 Bypass Capacitor}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.3}{3.3 Rc}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.4}{3.4 Comparison}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.5}{3.5 Merit Results}{section.3}% 13
+\BOOKMARK [1][-]{section.4}{4 Conclusion}{}% 14

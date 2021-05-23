@@ -6,15 +6,15 @@ To do so, and because there were several things to be analysed, we divided the t
 
 The constants values used are expressed in the following table.
 
-%\begin{table}[H] \centering
-%\begin{tabular}{|
-%>{\columncolor[HTML]{FFCC67}}l |c|}
-%\hline
-%\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
-%\input{../doc/}
-%\end{tabular}
-%\caption{optab}
-%\end{table}
+\begin{table}[H] \centering
+\begin{tabular}{|
+>{\columncolor[HTML]{FFCC67}}l |c|}
+\hline
+\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
+\input{../mat/optimisedvalues_tab}
+\end{tabular}
+\caption{optab}
+\end{table}
 
 \subsection{Gain Stage}
 
@@ -40,6 +40,28 @@ Both of the capacitors are being analysed in the section of Simulation Analysis.
 
 
 \subsubsection{Inspection analysis}
+
+\begin{table}[H] \centering
+\begin{tabular}{|
+>{\columncolor[HTML]{FFCC67}}l |c|}
+\hline
+\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
+\input{../mat/stage1dc_tab}
+\end{tabular}
+\caption{optab}
+\end{table}
+
+
+\begin{table}[H] \centering
+\begin{tabular}{|
+>{\columncolor[HTML]{FFCC67}}l |c|}
+\hline
+\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
+\input{../mat/stage2dc_tab}
+\end{tabular}
+\caption{optab}
+\end{table}
+
 
 
 \subsubsection{Impedances}
@@ -79,15 +101,15 @@ And finally, the total output impedance is calculated as the following:
 
 The 4 values are presented below,
 
-%\begin{table}[H] \centering
-%\begin{tabular}{|
-%>{\columncolor[HTML]{FFCC67}}l |c|}
-%\hline
-%\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
-%\input{../doc/}
-%\end{tabular}
-%\caption{optab}
-%\end{table}
+\begin{table}[H] \centering
+\begin{tabular}{|
+>{\columncolor[HTML]{FFCC67}}l |c|}
+\hline
+\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
+\input{../mat/impedances1_tab}
+\end{tabular}
+\caption{optab}
+\end{table}
 
 Regarding to the compatibility between both stages, remembering that $Z_{out1}$ needs to be  much lower than $Z_{in2}$, we have satisfactory results, in order so that there is no signal degradation or loss between these stages. We can clearly affirm that $V_{in2}$ needs to be as close as possible to $V_{out2}$, confirmed if we apply a voltage divider with $Z_{in2}>>Z_{out1}$:
 
@@ -154,6 +176,18 @@ R_{eq_{o}} = r_{o}
 
 And once more using the formulae \ref{wh} we've obtained the higher cutoff frequency.
 
+\begin{table}[H] \centering
+\begin{tabular}{|
+>{\columncolor[HTML]{FFCC67}}l |c|}
+\hline
+\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
+\input{../mat/cutoff_tab}
+\end{tabular}
+\caption{optab}
+\end{table}
+
+
+
 \subsection{Output stage}
 
 As we could see in the section of the Gain stage, we end up with a high output impedance $Z_O1$ . For that reason, we
@@ -179,7 +213,30 @@ stage. When we combine both stages, we need to ensure that there is a compatibil
 impedances of both stages. In fact, by the voltage divider law, to make sure no voltage signal is lost, the input
 impedance of the second stage should be much greater than the output impedance of the first
 one.\par
+
+\begin{table}[H] \centering
+\begin{tabular}{|
+>{\columncolor[HTML]{FFCC67}}l |c|}
+\hline
+\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
+\input{../mat/impedances2_tab}
+\end{tabular}
+\caption{optab}
+\end{table}
+
 To conclude, when we merge these two circuits, we end up with the BJT Audio Amplifier represented in Figure 1.
+
+\begin{table}[H] \centering
+\begin{tabular}{|
+>{\columncolor[HTML]{FFCC67}}l |c|}
+\hline
+\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
+\input{../mat/Gain_tab}
+\end{tabular}
+\caption{optab}
+\end{table}
+
+
 
 %\begin{table}[H] \centering
 %\begin{tabular}{|
