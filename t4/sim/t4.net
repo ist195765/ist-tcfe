@@ -108,6 +108,7 @@ meas AC upper WHEN vdb(out) = range CROSS=LAST
 
 let peak = max
 let gain = abs(v(out)[40]/v(in)[40])
+let gaindb = max - vdb(in)[40]
 let lowerCOFF= lower
 let higherCOFF = upper 
 let bandwidth = upper - lower
@@ -142,7 +143,7 @@ echo "cost_END"
 echo "**************"
 
 echo "simvalues_TAB"
-echo "V-Gain = $&gain"
+echo "V-GaindB = $&gaindb"
 echo "CO-higherFreq = $&higherCOFF"
 echo "CO-lowerFreq = $&lowerCOFF"
 echo "simvalues_END"

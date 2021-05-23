@@ -200,15 +200,17 @@ printf ("Gain_END\n\n");
 
 %ImportantValues
 
-printf ("ImportantValues_TAB\n");
-printf ("ZIn = %e Omega \n", ZI1);
-printf ("ZOut = %e Omega \n", ZO2);
+printf ("ImportantValues1_TAB\n");
 printf ("VoltageGain = %e dB\n", AV_DB);
-printf ("HighCutOff frequency = %e Hz\n", fH);
-printf ("LowCutOff frequency = %e Hz\n", fL);
-printf ("ImportantValues_END\n\n");
+printf ("HighCutOff frequency = %e Hz\n", wH);
+printf ("LowCutOff frequency = %e Hz\n", wL);
+printf ("ImportantValues1_END\n\n");
 
 
+printf ("ImportantValues2_TAB\n");
+printf ("ZIn = %e Omega \n", ZI1);
+printf ("ImportantValues2_END\n\n");
 
-
-
+printf ("ImportantValues3_TAB\n");
+printf ("ZOut = %e Omega \n", ZO2);
+printf ("ImportantValues3_END\n\n");
