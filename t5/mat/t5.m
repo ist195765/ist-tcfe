@@ -1,6 +1,6 @@
 %Circuit Components
-C1 =110e-09;
-C2=220e-09;
+C1 =220e-09;
+C2=110e-09;
 R1=1000;
 R2=1000;
 R3=100000;
@@ -51,6 +51,7 @@ Tdb = ones(1,length(s));
 for k = 1:length(s)
   T = ((R1*C1*s(k))/(1+R1*C1*s(k)))*(1+R3/R4)*(1/(1+R2*C2*s(k)));
 	Tdb(k) = 20*log10(abs(T));
+  Tph(k) = arg(T)*180/pi;
 end
 %--------Plot----------%
 theo = figure ();
@@ -59,6 +60,13 @@ legend("v_o(f)/v_i(f)");
 xlabel ("Log10(Frequency [Hz])");
 ylabel ("Gain");
 print (theo, "theo", "-depsc");
+
+phase = figure()
+plot(log10(w/(2*pi)),Tph,"g");
+legend("v_o(f)/v_i(f)");
+xlabel ("Log10(Frequency [Hz])");
+ylabel ("Phase");
+print (phase, "phase", "-depsc");
 
 
 %Merit & Cost

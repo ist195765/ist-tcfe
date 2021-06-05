@@ -67,7 +67,7 @@ R4 2 0 1k
 
 
 R2 4 out 1k
-C2 out 0 220n
+C2 out 0 110n
 
 
 
@@ -93,10 +93,10 @@ op
 print all
 
 
-ac dec 10 10 1MEG
-hardcopy vo1f.ps vdb(out)
-echo vo1f_FIG 
+ac dec 10 10 100MEG
 
+*hardcopy vo1f.ps vdb(out) 
+*echo vo1f_FIG
 
 
 
@@ -106,6 +106,9 @@ let gain = db(v(out)/v(in))
 hardcopy gain.ps gain
 echo gain_FIG
 
+let phase = ph(v(out)/v(in))*180/pi
+hardcopy phase.ps phase
+echo phase_FIG
 
 
 meas AC maximo MAX vdb(out) from=10 to=100MEG
