@@ -54,14 +54,14 @@ for k = 1:length(s)
   Tph(k) = arg(T)*180/pi;
 end
 %--------Plot----------%
-theo = figure ();
+gain = figure ();
 plot(log10(w/(2*pi)),Tdb,"g");
 legend("v_o(f)/v_i(f)");
 xlabel ("Log10(Frequency [Hz])");
 ylabel ("Gain");
-print (theo, "theo", "-depsc");
+print (gain, "gain", "-depsc");
 
-phase = figure()
+phase = figure();
 plot(log10(w/(2*pi)),Tph,"g");
 legend("v_o(f)/v_i(f)");
 xlabel ("Log10(Frequency [Hz])");
@@ -72,8 +72,8 @@ print (phase, "phase", "-depsc");
 %Merit & Cost
 Gain_Deviation = abs(40-Tdb_central_freq);
 Central_Frequency_Deviation=abs(1000-wo_Hz);
-cost = 1e-3*(R1 + R2 + R3 + R4 + 100 + 530500 + 183600 + 13190000 + 150) + 1e6*(C1 + C2) + 38.66e-18 + 0.1*2;
-Merit = 1/(cost * Gain_Deviation * Central_Frequency_Deviation);
+cost = 1e-3*(R1 + R2 + R3 + R4 + 158125) + 1e6*(C1 + 4*C2 + 30e-12) + 22*0.1;
+Merit = 1/(cost * (Gain_Deviation + Central_Frequency_Deviation + 10e-6));
 printf ("Cost_Merit_TAB\n");
 printf ("Cost = %e \n", cost); 
 printf ("Merit = %e \n", Merit);

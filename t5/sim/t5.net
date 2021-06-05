@@ -93,7 +93,7 @@ op
 print all
 
 
-ac dec 10 10 100MEG
+ac dec 10 10 1MEG
 
 *hardcopy vo1f.ps vdb(out) 
 *echo vo1f_FIG
@@ -116,10 +116,10 @@ meas AC Cfreq MAX_AT vdb(out) from=10 to=100MEG
 
 
 
-let cost = 13425.8
+let cost = 2.639850E+02
 let cdevi=abs(1000-Cfreq)
 let gaindevi=abs(100-10^(maximo/20))
-let merit = 1/(cost*gaindevi*cdevi)
+let merit = 1/(cost*(gaindevi + cdevi + 1E-6))
 
 
 
