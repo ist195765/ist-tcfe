@@ -94,7 +94,8 @@ print all
 
 
 ac dec 10 10 1MEG
-hardcopy vo1f.ps vdb(out) 
+hardcopy vo1f.ps vdb(out)
+echo vo1f_FIG 
 
 
 
