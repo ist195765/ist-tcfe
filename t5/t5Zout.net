@@ -51,25 +51,24 @@
 
 Vcc vcc 0 10.0
 Vee vee 0 -10.0
-Vin in 0 0 ac 1.0 sin(0 10m 1k)
 
 X1 3 2 vcc vee 4 uA741
 
 
-C1 in 3 220n
-
-R1 3 0 1k
-
+C1 0 3 220n
+R1 2 0 10k
 
 
-R3 2 4 100k
+R3 2 4 300k
 R4 2 0 1k
 
 
-R2 4 out 1k
-C2 out 0 220n
+R2 4 5 1k
+C2 5 0 220n
 
 
+* load
+Vl 5 0 0 ac 1.0 sin(0 1.0 1k)
 
 .op
 .end
@@ -86,67 +85,24 @@ set color4=violet
 set color5=rgb:3/8/0
 set color6=rgb:4/0/0
 
+ac dec 10 10 100MEG
 
 
-op
+let Zo= -v(5)[40]/Vl#branch
 
-print all
-
-
-ac dec 10 10 1MEG
-hardcopy vo1f.ps vdb(out) 
-
-
+let REAL= Re(Zo[40]) 
+let IM= Im(Zo[40])
+let ARG= abs(Zo[40])
 
 
 
+echo "op_ZO_TAB"
+echo "Zo = $&REAL + $&Im j"
 
-let gain = db(v(out)/v(in))
-hardcopy gain.ps gain
-echo gain_FIG
-
-
-
-meas AC maximo MAX vdb(out) from=10 to=100MEG
-meas AC Cfreq MAX_AT vdb(out) from=10 to=100MEG
+echo "op_ZO_END"
 
 
 
-let cost = 13425.8
-let cdevi=abs(1000-Cfreq)
-let gaindevi=abs(100-10^(maximo/20))
-let merit = 1/(cost*gaindevi*cdevi)
-
-
-
-
-
-*input impedance in ohm
-echo "Zin_TAB"
-let Zr_in= Re(-v(in)[40]/i(Vin)[40])
-let Zim_in= Im(-v(in)[40]/i(Vin)[40])
-echo "Zin = $&Zr_in + $&Zim_in j"
-echo "Zin_END"
-
-
-
-
-echo "results_TAB"
-echo "Gain= $&maximo"
-echo "Central Frequency= $&Cfreq"
-echo "Gain deviation=$&gaindevi"
-echo "Central frequency deviation=$&cdevi"
-echo "results_END"
-
-
-
-echo "**************"
-echo "cost_TAB"
-echo "Cost = $&cost"
-echo "Merit = $&merit"
-echo "cost_END"
-echo "**************"
 
 quit
 .endc 
-.end

@@ -1,0 +1,97 @@
+wL =  137.22
+fL =  21.839
+ponto1_TAB
+VCE = 3.363884e+00 V
+VBEON = 7.000000e-01 V 
+VEC = 4.420697e+00 V
+VEBON = 7.000000e-01 V 
+IB1 = 1.103113e-05 A 
+IC1 = 1.971263e-03 A 
+IE1 = 1.982294e-03 A 
+IB2 = -7.377528e-05 A 
+IC2 = 1.676912e-02 A 
+IE2 = 1.684290e-02 A 
+ponto1_END
+
+ponto2_TAB
+First Stage
+AV1-DB = 2.634352e+01 dB
+ZI1 = 2.811209e+03 Omega 
+ZO1 = 3.754073e+03 Omega 
+Second Stage
+AV2-DB = -7.252308e-02 dB
+ZI2 = 4.075483e+04 Omega 
+ZO2 = 1.478440e+00 Omega 
+Complete
+ZO = 1.710806e+01 Omega
+AV-DB = 2.593695e+01 dB
+Merit = 4.398471e+02 
+HighCutOff frequency = 8.304945e+05 Hz
+LowCutOff frequency = 2.183854e+01 Hz
+Cost = 2.242430e+03 MU's
+Bandwidth = 8.304726e+05 rad/s
+ponto2_END
+
+optimisedvalues_TAB
+C1 = 8.000000e-04 F
+C2 = 8.000000e-04 F
+C3 = 6.000000e-04 F
+RB1 = 3.400000e+04 Ohm 
+RB2 = 3.400000e+03 Ohm 
+RC = 4.200000e+03 Ohm
+RE1 = 1.800000e+02 Ohm
+RE2 = 4.500000e+02 Ohm
+optimisedvalues_END
+
+stage1dc_TAB
+VCE = 3.363884e+00 V
+VBEON = 7.000000e-01 V 
+IB1 = 1.103113e-05 A 
+IC1 = 1.971263e-03 A 
+IE1 = 1.982294e-03 A 
+stage1dc_END
+
+stage2dc_TAB
+VEC = 4.420697e+00 V
+VEBON = 7.000000e-01 V 
+IB2 = -7.377528e-05 A 
+IC2 = 1.676912e-02 A 
+IE2 = 1.684290e-02 A 
+stage2dc_END
+
+impedances1_TAB
+ZI1 = 2.811209e+03 Omega 
+ZO1 = 3.754073e+03 Omega 
+impedances1_END
+
+impedances2_TAB
+ZI2 = 4.075483e+04 Omega 
+ZO2 = 1.478440e+00 Omega 
+impedances2_END
+
+cutoff_TAB
+HighCutOff frequency = 8.304945e+05 Hz
+LowCutOff frequency = 2.183854e+01 Hz
+Bandwidth = 8.304726e+05 rad/s
+cutoff_END
+
+Gain_TAB
+VoltageGain1= 2.075755e+01 V
+VoltageGain2 = 9.916852e-01 V
+VoltageGain = 1.980831e+01 V
+Gain_END
+
+ImportantValues1_TAB
+VoltageGain = 2.593695e+01 dB
+HighCutOff frequency = 8.304945e+05 Hz
+LowCutOff frequency = 2.183854e+01 Hz
+ImportantValues1_END
+
+ImportantValues2_TAB
+ZIn = 2.811209e+03 Omega 
+ImportantValues2_END
+
+ImportantValues3_TAB
+ZOut = 1.478440e+00 Omega 
+ImportantValues3_END
+

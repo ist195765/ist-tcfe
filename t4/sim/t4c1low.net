@@ -43,9 +43,30 @@ RL out 0 8
 op
 
 * frequency analysis
+<<<<<<< HEAD:t4/sim/t4c1low.net
 ac dec 10 1 100MEG
 *plot vdb(out)
 hardcopy c1low.ps vdb(out)
+=======
+ac dec 10 10 100MEG
+plot vdb(coll)
+plot vp(coll)
+hardcopy vo1f.ps vdb(coll)
+
+
+
+plot vdb(out)
+plot vp(out)
+hardcopy vo2f.ps vdb(coll)
+
+*input impedance in kohm
+*print all
+
+plot abs(v(in2)/vin#branch/(-1000))
+print v(in2)[40]/vin#branch[40]/(-1000)
+
+*need a different setup to measure output impedance
+>>>>>>> fea4b798e9c83a92c44cb074ddcac821039acd25:t4/t4.net
 
 
 .endc
