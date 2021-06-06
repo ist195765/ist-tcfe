@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.10)  6 JUN 2021 18:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.20)  6 JUN 2021 18:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -49,9 +49,9 @@ File: babel.def 2020/02/14 3.40 Babel common definitions
 Package babel Info: \l@canadian = using hyphenrules for english
 (babel)             (\language0) on input line 102.
 Package babel Info: \l@australian = using hyphenrules for ukenglish
-(babel)             (\language83) on input line 105.
+(babel)             (\language13) on input line 105.
 Package babel Info: \l@newzealand = using hyphenrules for ukenglish
-(babel)             (\language83) on input line 108.
+(babel)             (\language13) on input line 108.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/notoccite/notoccite.sty
 Package: notoccite 2000/07/20
@@ -692,62 +692,82 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--6
 
  []
 
-[4]
+<high_pass_l5.pdf, id=138, 597.50786pt x 597.50786pt>
+File: high_pass_l5.pdf Graphic file (type pdf)
+<use high_pass_l5.pdf>
+Package pdftex.def Info: high_pass_l5.pdf  used on input line 17.
+(pdftex.def)             Requested size: 284.52756pt x 284.53032pt.
+[4 <./high_pass_l5.pdf>]
+<amp_l5.pdf, id=151, 597.50786pt x 711.31892pt>
+File: amp_l5.pdf Graphic file (type pdf)
+<use amp_l5.pdf>
+Package pdftex.def Info: amp_l5.pdf  used on input line 32.
+(pdftex.def)             Requested size: 284.52756pt x 338.7266pt.
+<low_pass_l5.pdf, id=152, 597.50786pt x 512.1496pt>
+File: low_pass_l5.pdf Graphic file (type pdf)
+<use low_pass_l5.pdf>
+Package pdftex.def Info: low_pass_l5.pdf  used on input line 64.
+(pdftex.def)             Requested size: 284.52756pt x 243.88313pt.
+ [5 <./amp_l5.pdf>]
 Package epstopdf Info: Source file: <gain.eps>
-(epstopdf)                    date: 2021-06-06 18:32:52
-(epstopdf)                    size: 9196 bytes
+(epstopdf)                    date: 2021-06-06 18:39:35
+(epstopdf)                    size: 9211 bytes
 (epstopdf)             Output file: <gain-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-06-06 18:32:54
-(epstopdf)                    size: 7187 bytes
+(epstopdf)                    date: 2021-06-06 18:39:38
+(epstopdf)                    size: 7186 bytes
 (epstopdf)             Command: <repstopdf --outfile=gain-eps-converted-to.pdf 
 gain.eps>
-(epstopdf)             \includegraphics on input line 73.
+(epstopdf)             \includegraphics on input line 88.
 Package epstopdf Info: Output file is already uptodate.
-<gain-eps-converted-to.pdf, id=150, 578.16pt x 433.62pt>
+<gain-eps-converted-to.pdf, id=174, 578.16pt x 433.62pt>
 File: gain-eps-converted-to.pdf Graphic file (type pdf)
 <use gain-eps-converted-to.pdf>
-Package pdftex.def Info: gain-eps-converted-to.pdf  used on input line 73.
+Package pdftex.def Info: gain-eps-converted-to.pdf  used on input line 88.
 (pdftex.def)             Requested size: 227.62204pt x 170.71231pt.
 Package epstopdf Info: Source file: <phase.eps>
-(epstopdf)                    date: 2021-06-06 18:32:52
-(epstopdf)                    size: 9022 bytes
+(epstopdf)                    date: 2021-06-06 18:39:35
+(epstopdf)                    size: 9037 bytes
 (epstopdf)             Output file: <phase-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-06-06 18:32:54
-(epstopdf)                    size: 7392 bytes
+(epstopdf)                    date: 2021-06-06 18:39:39
+(epstopdf)                    size: 7394 bytes
 (epstopdf)             Command: <repstopdf --outfile=phase-eps-converted-to.pdf
  phase.eps>
-(epstopdf)             \includegraphics on input line 81.
+(epstopdf)             \includegraphics on input line 96.
 Package epstopdf Info: Output file is already uptodate.
-<phase-eps-converted-to.pdf, id=151, 578.16pt x 433.62pt>
+<phase-eps-converted-to.pdf, id=175, 578.16pt x 433.62pt>
 File: phase-eps-converted-to.pdf Graphic file (type pdf)
 <use phase-eps-converted-to.pdf>
-Package pdftex.def Info: phase-eps-converted-to.pdf  used on input line 81.
+Package pdftex.def Info: phase-eps-converted-to.pdf  used on input line 96.
 (pdftex.def)             Requested size: 227.62204pt x 170.71231pt.
- [5 <./gain-eps-converted-to.pdf> <./phase-eps-converted-to.pdf>]
-(../mat/band_pass_freq_tab.tex) (../mat/wo_freq_gain_tab.tex)
-(../mat/impedances_tab.tex)) (./simulation.tex [6] (../sim/results_tab.tex)
-<gain.pdf, id=185, 597.23125pt x 845.1575pt>
+ [6 <./low_pass_l5.pdf> <./gain-eps-converted-to.pdf>] (../mat/band_pass_freq_t
+ab.tex) (../mat/wo_freq_gain_tab.tex) [7 <./phase-eps-converted-to.pdf>] (../ma
+t/impedances_tab.tex))
+(./simulation.tex (../sim/results_tab.tex)
+<gain.pdf, id=214, 597.23125pt x 845.1575pt>
 File: gain.pdf Graphic file (type pdf)
 <use gain.pdf>
 Package pdftex.def Info: gain.pdf  used on input line 30.
 (pdftex.def)             Requested size: 227.62204pt x 322.1175pt.
-<phase.pdf, id=186, 597.23125pt x 845.1575pt>
+ [8]
+<phase.pdf, id=223, 597.23125pt x 845.1575pt>
 File: phase.pdf Graphic file (type pdf)
 <use phase.pdf>
 Package pdftex.def Info: phase.pdf  used on input line 37.
 (pdftex.def)             Requested size: 227.62204pt x 322.1175pt.
 
-[7 <./gain.pdf>] (../sim/Zin_tab.tex) (../sim/op_ZO_tab.tex)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9 <./gain.pdf>] (../sim/Zin_tab.tex) (../sim/op_ZO_tab.tex)
 (../mat/results_octave_tab.tex) (../sim/results_tab.tex)
 Underfull \vbox (badness 2452) has occurred while \output is active []
 
- [8 <./phase.pdf>]
+ [10 <./phase.pdf>]
 Package epstopdf Info: Source file: <gain.eps>
-(epstopdf)                    date: 2021-06-06 18:32:52
-(epstopdf)                    size: 9196 bytes
+(epstopdf)                    date: 2021-06-06 18:39:35
+(epstopdf)                    size: 9211 bytes
 (epstopdf)             Output file: <gain-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-06-06 18:32:54
-(epstopdf)                    size: 7187 bytes
+(epstopdf)                    date: 2021-06-06 18:39:38
+(epstopdf)                    size: 7186 bytes
 (epstopdf)             Command: <repstopdf --outfile=gain-eps-converted-to.pdf 
 gain.eps>
 (epstopdf)             \includegraphics on input line 114.
@@ -756,17 +776,17 @@ File: gain-eps-converted-to.pdf Graphic file (type pdf)
 <use gain-eps-converted-to.pdf>
 Package pdftex.def Info: gain-eps-converted-to.pdf  used on input line 114.
 (pdftex.def)             Requested size: 157.9144pt x 118.43535pt.
-<Gain.pdf, id=214, 597.23125pt x 845.1575pt>
+<Gain.pdf, id=249, 597.23125pt x 845.1575pt>
 File: Gain.pdf Graphic file (type pdf)
 <use Gain.pdf>
 Package pdftex.def Info: Gain.pdf  used on input line 119.
 (pdftex.def)             Requested size: 157.9144pt x 223.46272pt.
 Package epstopdf Info: Source file: <phase.eps>
-(epstopdf)                    date: 2021-06-06 18:32:52
-(epstopdf)                    size: 9022 bytes
+(epstopdf)                    date: 2021-06-06 18:39:35
+(epstopdf)                    size: 9037 bytes
 (epstopdf)             Output file: <phase-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-06-06 18:32:54
-(epstopdf)                    size: 7392 bytes
+(epstopdf)                    date: 2021-06-06 18:39:39
+(epstopdf)                    size: 7394 bytes
 (epstopdf)             Command: <repstopdf --outfile=phase-eps-converted-to.pdf
  phase.eps>
 (epstopdf)             \includegraphics on input line 131.
@@ -782,11 +802,11 @@ Package pdftex.def Info: phase.pdf  used on input line 136.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9 <./gain.pdf>] (../mat/Cost_Merit_tab.tex) (../sim/cost_tab.tex)) (./conclus
-ion.tex
-[10])
+ [11 <./gain.pdf>] (../mat/Cost_Merit_tab.tex) (../sim/cost_tab.tex)) (./conclu
+sion.tex
+[12])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 162.
- [11]
+ [13]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 162.
  (./report.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 162.
@@ -800,10 +820,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 162.
  ) 
 Here is how much of TeX's memory you used:
- 12212 strings out of 481239
- 192457 string characters out of 5920377
- 588206 words of memory out of 5000000
- 27151 multiletter control sequences out of 15000+600000
+ 12238 strings out of 481239
+ 192921 string characters out of 5920377
+ 586384 words of memory out of 5000000
+ 27169 multiletter control sequences out of 15000+600000
  554997 words of font info for 56 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  41i,12n,42p,925b,484s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -815,10 +835,10 @@ ype1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb
 8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on report.pdf (11 pages, 313505 bytes).
+Output written on report.pdf (13 pages, 336506 bytes).
 PDF statistics:
- 282 PDF objects out of 1000 (max. 8388607)
- 229 compressed objects within 3 object streams
- 57 named destinations out of 1000 (max. 500000)
- 156 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 319 PDF objects out of 1000 (max. 8388607)
+ 255 compressed objects within 3 object streams
+ 62 named destinations out of 1000 (max. 500000)
+ 171 words of extra memory for PDF output out of 10000 (max. 10000000)
 

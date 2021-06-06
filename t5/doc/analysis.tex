@@ -12,7 +12,12 @@ To compute the overall transfer function for this circuit we've computed the tre
 
 \subsubsection{High pass filter stage}
 
-%imagem 
+\begin{figure}[H] 
+\centering
+\includegraphics[width= 10cm]{high_pass_l5.pdf} 
+\caption{High Pass Filter stage circuit}
+\label{hf}
+\end{figure}
 
 Observing the image above and knowing that the input impedance at the op-amp is infinite, by just doing the voltage divider we've obtained the transfer function for these stage:
 
@@ -22,7 +27,12 @@ T_1(s) = \frac{R_1}{R_1 + \frac{1}{sC_1}} = \frac{R_1C_1s}{1+R_1C_1s}
 
 \subsubsection{Gain stage}
 
-%imagem
+\begin{figure}[H] 
+\centering
+\includegraphics[width= 10cm]{amp_l5.pdf} 
+\caption{Gain stage circuit}
+\label{gainstage}
+\end{figure}
 
 To analyse these part of the circuit, first we need to specify some equations for the op-amp. 
 Firstly the voltage in the two terminals is equal, this is, $v_3 = v_2$, and the other important thing to know is that the input impedance of this device is infinite. By kwoning this, we can very quickly determine that the output voltage will be:
@@ -49,7 +59,12 @@ T_2(s) = \frac{v_o}{v_i} = \frac{v_i + v_{R_3}}{v_i} = \frac{(1+\frac{R_3}{R_4})
 
 \subsubsection{Low pass filter stage}
 
-%imagem
+\begin{figure}[H] 
+\centering
+\includegraphics[width= 10cm]{low_pass_l5.pdf} 
+\caption{Low pass filter stage circuit}
+\label{lowpass}
+\end{figure}
 
 Once again, considering the figure above, it's just making the voltage divider formulae and we've obtained the transfer funcuntion for this stage
 
