@@ -93,7 +93,7 @@ op
 print all
 
 
-ac dec 10 10 1MEG
+ac dec 10 10 100MEG
 
 *hardcopy vo1f.ps vdb(out) 
 *echo vo1f_FIG
