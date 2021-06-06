@@ -10,7 +10,9 @@ In this section, a theoretical analysis of the circuit shown in section 1 was co
 
 To compute the overall transfer function for this circuit we've computed the trensfer function for these three stages and multiplied them all to obtain the overall transfer function
 
-\subsubsection{high pass filter stage}
+\subsubsection{High pass filter stage}
+
+%imagem 
 
 Observing the image above and knowing that the input impedance at the op-amp is infinite, by just doing the voltage divider we've obtained the transfer function for these stage:
 
@@ -19,6 +21,8 @@ T_1(s) = \frac{R_1}{R_1 + \frac{1}{sC_1}} = \frac{R_1C_1s}{1+R_1C_1s}
 \end{equation}   
 
 \subsubsection{Gain stage}
+
+%imagem
 
 To analyse these part of the circuit, first we need to specify some equations for the op-amp. 
 Firstly the voltage in the two terminals is equal, this is, $v_3 = v_2$, and the other important thing to know is that the input impedance of this device is infinite. By kwoning this, we can very quickly determine that the output voltage will be:
@@ -44,6 +48,8 @@ T_2(s) = \frac{v_o}{v_i} = \frac{v_i + v_{R_3}}{v_i} = \frac{(1+\frac{R_3}{R_4})
 \end{equation} 
 
 \subsubsection{Low pass filter stage}
+
+%imagem
 
 Once again, considering the figure above, it's just making the voltage divider formulae and we've obtained the transfer funcuntion for this stage
 
@@ -127,10 +133,16 @@ With respect to the central frequency we've also obtained its value in Hz and it
 In order to compute the input impedance we take the circuit and turn off all indepedant sources. After these we connect an independant voltage source in the input of the circuit and de termine th current in these source. Observing the circuit in the introduction and knowing that the input impedance of the op-amp is infinite, we get that the input impedance is just the resistor $R_1$ and the capacitor $C_1$ in series, so the input impedance for the central frequency is:
 
 \begin{equation}
-Z_{in} = R_1 + \frac{1}{j*w_0*C_1}
+Z_{in} = R_1 + \frac{1}{jw_0C_1}
 \end{equation} 
 
-To compute the output stage, we start in the same way as the input impedance, by turning off all the independant sources.
+To compute the output stage, we start in the same way as the input impedance, by turning off all the independant sources. After these, instead of connecting a independant voltage source at the input of the circuit, we connect it to the output, and determine the current at these source in the same way as before. Because the output impedance of the op-amp is 0, the output impedance of the circuit is just the resistor $R_2$ and the capacitor $C_2$ in parallel. So the output uimpedance for the central frequency is given by:
+
+\begin{equation}
+Z_{out} = \frac{R_2}{1 + jR_2C_2w_0}
+\end{equation} 
+
+Using octave, we've obtain the following values for the impedances:
 
 %IMPEDANCES
 \begin{table}[H] \centering

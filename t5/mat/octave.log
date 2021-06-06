@@ -1,0 +1,40 @@
+valores_intro_TAB
+C1 = 2.200000e-07 
+C2 = 1.100000e-07 
+R1 = 1.000000e+03 
+R2 = 1.000000e+03 
+R3 = 1.000000e+05 
+R4 = 1.000000e+03 
+Vcc = 1.000000e+01 
+valores_intro_END
+
+band_pass_freq_TAB
+LowFreq BandPass = 4.545455e+03 
+HighFreq BandPass = 9.090909e+03 
+Central Freq = 6.428243e+03 
+band_pass_freq_END
+
+wo_freq_gain_TAB
+Central Freq (Hz) = 1.023087e+03 
+Gain Central Freq (dB) = 3.656460e+01 
+wo_freq_gain_END
+
+z_in =  1000.00 -  707.11i
+z_out =  666.67 - 471.40i
+impedances_TAB
+Z in = 1.000000e+03 + -7.071068e+02j 
+Z out = 6.666667e+02 + -4.714045e+02j
+impedances_END
+
+Cost_Merit_TAB
+Cost = 2.639850e+02 
+Merit = 6.794373e-05 
+Cost_Merit_END
+
+results_octave_TAB
+Gain = 3.656460e+01 
+Central frequency= 1.023087e+03 
+Gain deviation = 3.266667e+01 
+Central frequency deviation = 2.308672e+01 
+results_octave_END
+
