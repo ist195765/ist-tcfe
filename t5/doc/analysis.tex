@@ -4,20 +4,7 @@
 In this section we will analyse theoretical our bandpass filter using OP AMP. \\
 To do so, and because there were several things to be analysed, we divided the theoretical analysis in the following subsections that explain the different sectors that our circuit has and also each one will be detailed separately.\\
 
-The constants values used are expressed in the following table.
-
-%VALORES INTRO
-\begin{table}[H] \centering
-\begin{tabular}{|
->{\columncolor[HTML]{FFCC67}}l |c|}
-\hline
-\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
-\input{../mat/valores_intro_tab}
-\end{tabular}
-\caption{Inicial Values}
-\end{table}
-
-\section{śPP}
+\subsection{Transfer function computation}
 
 %BANDPASS FREQUENCY
 \begin{table}[H] \centering
@@ -28,28 +15,6 @@ The constants values used are expressed in the following table.
 \input{../mat/band_pass_freq_tab}
 \end{tabular}
 \caption{BANDPASS FREQUENCY}
-\end{table}
-
-%COST/MERIT
-\begin{table}[H] \centering
-\begin{tabular}{|
->{\columncolor[HTML]{FFCC67}}l |c|}
-\hline
-\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
-\input{../mat/Cost_Merit_tab}
-\end{tabular}
-\caption{COST/MERIT}
-\end{table}
-
-%IMPEDANCES
-\begin{table}[H] \centering
-\begin{tabular}{|
->{\columncolor[HTML]{FFCC67}}l |c|}
-\hline
-\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
-\input{../mat/impedances_tab}
-\end{tabular}
-\caption{IMPEDANCES}
 \end{table}
 
 %WO FREQUENCY GAIN
@@ -63,13 +28,35 @@ The constants values used are expressed in the following table.
 \caption{WO FREQUENCY GAIN}
 \end{table}
 
-%FIGURE THEO
+%FIGURE GAIN
 \begin{figure}[H] 
 \centering
-\includegraphics[width = 8cm]{theo.eps} 
-\caption{Theoretical Analysis}
-\label{theo}
+\includegraphics[width = 8cm]{gain.eps} 
+\caption{Gain}
+\label{gain}
 \end{figure}
+
+%FIGURE PHASE
+\begin{figure}[H] 
+\centering
+\includegraphics[width = 8cm]{phase.eps} 
+\caption{Phase}
+\label{phase}
+\end{figure}
+
+\subsection{Input and Output Impedances}
+
+%IMPEDANCES
+\begin{table}[H] \centering
+\begin{tabular}{|
+>{\columncolor[HTML]{FFCC67}}l |c|}
+\hline
+\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
+\input{../mat/impedances_tab}
+\end{tabular}
+\caption{IMPEDANCES}
+\end{table}
+
 
 %LEO
 In this section, a theoretical analysis of the circuit shown in section 1 was conducted. The OP Amp was considered ideal (internal impedance between v+ and v- is infinite, which means no current flows through it and vos=0 or in other words v+ = v-). So, in order to build a bass pand filter, a capactior was connected in series (C1) with the input voltage which will function as a high pass filter (for low frequencies, the impedance goes to infinity and the capacitor is basically an open circuit)  and other capacitor (C2) was connected in parallel with the output voltage, functioning as a low pass filter (for high impedances, the impedance goes to 0 and the capacitor is basically a short circuit). To sum up, this circuit consists of a high pass filter, a signal amplifier and a low pass filter in series.

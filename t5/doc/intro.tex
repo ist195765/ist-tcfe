@@ -7,7 +7,7 @@ The objective of this laboratory assignment is to choose the best architecture o
 This merit is calculated exactly as the next equation:
 
 \begin{equation} 
-M = \frac{1}{cost * gain deviation * central frequency deviation}
+M = \frac{1}{cost * (gain deviation * central frequency deviation + 1e-6)}
 \label{eq1}
 \end{equation}
 
@@ -26,6 +26,19 @@ Being the cost the following:
 \caption{Main circuit}
 \label{first}
 \end{figure}
+
+The constants values used are expressed in the following table.
+
+%VALORES INTRO
+\begin{table}[H] \centering
+\begin{tabular}{|
+>{\columncolor[HTML]{FFCC67}}l |c|}
+\hline
+\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
+\input{../mat/valores_intro_tab}
+\end{tabular}
+\caption{Inicial Values}
+\end{table}
 
 In Section~\ref{sec:analysis}, a theoretical analysis of the circuit is
 presented. In Section~\ref{sec:simulation}, the circuit is analysed by

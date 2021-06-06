@@ -3,7 +3,10 @@
 
 In this section, Ngspice was used in order to simulate the Bandpass Filter. A brief description of the circuit modeled in NGspice is going to be presented and a comparison between the values obtained in NGspice and the ones in Octave is going to be done as well. In order to do that, OP AMP of the given models were used and the rest of the components specifications changed to be on par with the values through MatLab.
 
-In the next sections we are interested in ... . The measurement of these parameters and the overall performance of the circuit is well represented in the section \ref{merit}.\par 
+In the next sections we are interested in ... . 
+The measurement of these parameters and the overall performance of the circuit is represented in the beggining of the \ref{merit}.\par 
+
+\subsection{Circuit simulation}
 
 %Results
 \begin{table}[H] \centering
@@ -16,6 +19,9 @@ In the next sections we are interested in ... . The measurement of these paramet
 \caption{Results}
 \end{table}
 
+
+\subsection{Input and Output Impedances}
+
 %Zin
 \begin{table}[H] \centering
 \begin{tabular}{|
@@ -27,13 +33,24 @@ In the next sections we are interested in ... . The measurement of these paramet
 \caption{Zin}
 \end{table}
 
+%Zout
+\begin{table}[H] \centering
+\begin{tabular}{|
+>{\columncolor[HTML]{FFCC67}}l |c|}
+\hline
+\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
+\input{../sim/op_ZO_tab}
+\end{tabular}
+\caption{Zout}
+\end{table}
+
 
 %Gain comparison
 
 \begin{figure}[H] 
 \centering
 \begin{subfigure}{0.3\textwidth}
-\includegraphics[width=\textwidth]{theo.eps}
+\includegraphics[width=\textwidth]{gain.eps}
 \caption{OCTAVE}
 \label{Octave_gain}
 \end{subfigure}
@@ -45,22 +62,22 @@ In the next sections we are interested in ... . The measurement of these paramet
 \caption{Gain}
 \end{figure}
 
-%vo1f
+%phase
 
-%\begin{figure}[H] 
-%\centering
-%\begin{subfigure}{0.3\textwidth}
-%\includegraphics[width=\textwidth]{theo.eps}
-%\caption{OCTAVE}
-%\label{Octave_vo1f}
-%\end{subfigure}
-%\begin{subfigure}{0.3\textwidth}
-%\includegraphics[width=\textwidth]{vo1f.pdf}
-%\caption{NGSPICE}
-%\label{Ngspice_vo1f}
-%\end{subfigure}
-%\caption{vo1f}
-%\end{figure}
+\begin{figure}[H] 
+\centering
+\begin{subfigure}{0.3\textwidth}
+\includegraphics[width=\textwidth]{phase.eps}
+\caption{OCTAVE}
+\label{Octave_vo1f}
+\end{subfigure}
+\begin{subfigure}{0.3\textwidth}
+\includegraphics[width=\textwidth]{phase.pdf}
+\caption{NGSPICE}
+\label{Ngspice_vo1f}
+\end{subfigure}
+\caption{vo1f}
+\end{figure}
 
 
 
@@ -71,14 +88,28 @@ From the results obtained through the Ngspice simulation and considering we used
 
 The values of cost and merit are represented in the next table:
 
-\begin{table}[H] \centering
-\begin{tabular}{|
->{\columncolor[HTML]{FFCC67}}l |c|}
-\hline
-\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
-\input{../sim/cost_tab}
-\end{tabular}
-\caption{Cost and Merit}
+\begin{table}[H]
+    \begin{minipage}{.5\linewidth}
+      \centering
+        \begin{tabular}{|
+		>{\columncolor[HTML]{FFCC67}}l |c|}
+		\hline
+		\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
+		\input{../mat/Cost_Merit_tab}
+	\end{tabular}
+      \caption{Octave}
+    \end{minipage}%
+    \begin{minipage}{.5\linewidth}
+      \centering
+        \begin{tabular}{|
+		>{\columncolor[HTML]{FFCC67}}l |c|}
+		\hline
+		\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
+		\input{../sim/cost_tab}
+	\end{tabular}
+       \caption{NGspice}
+    \end{minipage} 
+   \caption{Cost and Merit}
 \end{table}
 
 To obtain the best values for the circuit, we've used the matlab simulink to optimize them for the best merit.
