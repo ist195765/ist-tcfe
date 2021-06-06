@@ -85,7 +85,7 @@ The following table represents the comparison between the results obtained from 
 		>{\columncolor[HTML]{FFCC67}}l |c|}
 		\hline
 		\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
-		\input{../mat/valores_intro_tab}
+		\input{../mat/results_octave_TAB}
 	\end{tabular}
       \caption{Octave}
     \end{minipage}%
@@ -99,17 +99,7 @@ The following table represents the comparison between the results obtained from 
 	\end{tabular}
        \caption{NGspice}
     \end{minipage} 
-   \caption{Cost and Merit}
-\end{table}
-%Results
-\begin{table}[H] \centering
-\begin{tabular}{|
->{\columncolor[HTML]{FFCC67}}l |c|}
-\hline
-\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
-\input{../sim/results_tab}
-\end{tabular}
-\caption{Results NGSpice}
+   \caption{Simulation results}
 \end{table}
 
 As seen in the previous table, as requested, we were able to compute the passband frequency in a simulation analysis using the measure funtion and the central frequency in the theoretical analysis as explained in Section~\ref{sec:analysis}.  We have to consider that the OP-AMP model chosen is far more complex in Ngspice than in Octave. The different calculation methods lead to the difference between both methods, being that the calculated and simulated impedances have the same issues.
@@ -140,18 +130,18 @@ Next we present both theoretical and simulation graphs of the frequency response
 \begin{subfigure}{0.3\textwidth}
 \includegraphics[width=\textwidth]{phase.eps}
 \caption{OCTAVE}
-\label{Octave_vo1f}
+\label{Octave_phase}
 \end{subfigure}
 \begin{subfigure}{0.3\textwidth}
 \includegraphics[width=\textwidth]{phase.pdf}
 \caption{NGSPICE}
-\label{Ngspice_vo1f}
+\label{Ngspice_phase}
 \end{subfigure}
-\caption{vo1f}
+\caption{Phase}
 \end{figure}
 
 In general, in terms of the graphs, we achieved satisfactory results.  When an initial comparison of the gain response is executed, using the shape of the graph, isn't difficult to realise that they have a similar behaviour. As seen in the upper graphs, in the initial section, there is a constant slope of +20dB/dec. After that, exists a small pass band, that is also the region where the central frequency is achieved, and a last part with a slope of -20dB/dec.\par
-When it comes to the lower grpahs, in the phase response, both plots differ.  This is because our theoretical model does not predict the existence of capacitors in the OP AMP, as it idealises the gain as being purely real, i.e, there's no shift in phase. In reality, because the OP AMP has two capacitors, it is expected that in the phase frequency response plot each would introduce a shift of -90º,  making the overall phase to go down to -270º = +90º. As we can observe from the initial table of this Section (~\ref{comparison}) we have small relative errors for the values ofinterest (the impedances, the total gain and the central frequency). This somehow proves that,eventhough the OPAMPs are made of dozens of components, some of them non-linear, we can predict with a fairly simple model its behaviour.
+When it comes to the lower grpahs, in the phase response, both plots differ.  This is because our theoretical model does not predict the existence of capacitors in the OP AMP, as it idealises the gain as being purely real, i.e, there's no shift in phase. In reality, because the OP AMP has two capacitors, it is expected that in the phase frequency response plot each would introduce a shift of -90º,  making the overall phase to go down to -270º, in other words, +90º. As we can observe from the initial table of this Section (~\ref{comparison}) we have small relative errors for the values of interest. This somehow proves that, eventhough the OP AMP's are made of dozens of components, being some of them non-linear, we can predict its behaviour.
 
 
 \section{Merit Results}
@@ -184,5 +174,3 @@ The values of cost and merit are represented in the next table:
     \end{minipage} 
    \caption{Cost and Merit}
 \end{table}
-
-To obtain the best values for the circuit, we've used the matlab simulink to optimize them for the best merit.
