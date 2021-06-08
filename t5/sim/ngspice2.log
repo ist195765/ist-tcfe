@@ -1,0 +1,12 @@
+
+Circuit: *-----------------------------------------------------------------------------
+
+Reducing trtol to 1 for xspice 'A' devices
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+No. of Data Rows : 71
+op_ZO_TAB
+Zo = 0.0522978 + -7.23396 j
+op_ZO_END
+ngspice-31 done

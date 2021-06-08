@@ -1,7 +1,7 @@
 \section{Simulation Analysis}
 \label{sec:simulation}
 
-In this section, Ngspice was used in order to simulate the Bandpass Filter. A brief description of the circuit modeled in NGspice is going to be presented and a comparison between the values obtained in NGspice and the ones in Octave is going to be done as well. In order to do that, we used the model$\mu$A741 from Texas In-struments to represent the OP AMP.
+In this section, Ngspice was used in order to simulate the Bandpass Filter. A brief description of the circuit modeled in NGspice is going to be presented and a comparison between the values obtained in NGspice and the ones in Octave is going to be done as well. In order to do that, we used the model$\mu$A741 from Texas In-struments to represent the OP-Amp.
 The measurement of these parameters and the overall performance of the circuit is represented in the beggining of the \ref{merit}.\par 
 
 \subsection{Circuit simulation}
@@ -21,7 +21,7 @@ Then, the results were calculated and are represented in the following table:
 \end{table}
 
 Consequently, the phase and the gain were computed.
-Is also important to remember that the main goal of this assignement was to design a band pass filter, meaning that this filter should cut both low an very high frequencies.
+Is also important to remember that the main goal of this assignement was to design a band pass filter, meaning that this filter should cut both low and high frequencies.
 
 The following graphs represent the results obtained from simulation in NGSpice of the gain and phase:
 
@@ -150,7 +150,7 @@ The following table represents the comparison between the results obtained from 
    \caption{Zout comparison}
 \end{table}
 
-As seen in the previous table, as requested, we were able to compute the passband frequency in a simulation analysis using the measure funtion and the central frequency in the theoretical analysis as explained in Section~\ref{sec:analysis}.  We have to consider that the OP-AMP model chosen is far more complex in Ngspice than in Octave. The different calculation methods lead to the difference between both methods, being that the calculated and simulated impedances have the same issues.
+As seen in the previous table, as requested, we were able to compute the passband frequency in a simulation analysis using the measure funtion and the central frequency in the theoretical analysis as explained in Section~\ref{sec:analysis}.  We have to consider that the OP-Amp model chosen is far more complex in Ngspice than in Octave. The different calculation methods lead to the difference between both methods, being that the calculated and simulated impedances have the same issues, explaining why there is a significant variation between impedances of both analyses.
 
 Next we present both theoretical and simulation graphs of the frequency response of the gain and the phase side by side.
 

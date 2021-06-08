@@ -1,0 +1,103 @@
+
+Circuit: *-----------------------------------------------------------------------------
+
+Reducing trtol to 1 for xspice 'A' devices
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+No. of Data Rows : 1
+@c.x1.c1[i] = 0.000000e+00
+@c.x1.c2[i] = 0.000000e+00
+@c1[i] = 0.000000e+00
+@c2[i] = 0.000000e+00
+@d.x1.dc[id] = -8.99893e-12
+@d.x1.de[id] = -9.00267e-12
+@d.x1.dln[id] = -4.00008e-11
+@d.x1.dlp[id] = -4.00008e-11
+@d.x1.dp[id] = -2.00008e-11
+@g.x1.ga[i] = -3.62108e-09
+@g.x1.gcm[i] = -3.62285e-09
+@i.x1.iee[current] = 1.516000e-05
+@q.x1.q1[ib] = 7.976679e-08
+@q.x1.q1[ic] = 7.479024e-06
+@q.x1.q1[ie] = -7.55880e-06
+@q.x1.q1[is] = 9.960324e-12
+@q.x1.q2[ib] = 7.972816e-08
+@q.x1.q2[ic] = 7.475403e-06
+@q.x1.q2[ie] = -7.55514e-06
+@q.x1.q2[is] = 9.960343e-12
+@r.x1.r2[i] = -1.76940e-12
+@r.x1.rc1[i] = 7.479034e-06
+@r.x1.rc2[i] = 7.475413e-06
+@r.x1.re1[i] = 7.558791e-06
+@r.x1.re2[i] = 7.555132e-06
+@r.x1.ree[i] = -4.60772e-08
+@r.x1.ro1[i] = 1.928391e-08
+@r.x1.ro2[i] = 1.868872e-05
+@r.x1.rp[i] = 1.101322e-03
+@r1[i] = -7.97282e-08
+@r2[i] = 0.000000e+00
+@r3[i] = -1.92839e-08
+@r4[i] = -6.04829e-08
+v(2) = -6.04829e-05
+v(3) = -7.97282e-05
+v(4) = 1.867908e-03
+a$poly$e.x1.egnd#branch_1_0 = -6.53611e-08
+h.x1.hlim#branch = -3.85705e-17
+in = 0.000000e+00
+out = 1.867908e-03
+v.x1.vb#branch = -1.76940e-12
+v.x1.vc#branch = 8.998932e-12
+v.x1.ve#branch = 9.002668e-12
+v.x1.vlim#branch = 1.928391e-08
+v.x1.vln#branch = -4.00036e-11
+v.x1.vlp#branch = -4.00008e-11
+vcc = 1.000000e+01
+vcc#branch = -1.11628e-03
+vee = -1.00000e+01
+vee#branch = 1.116482e-03
+vin#branch = 0.000000e+00
+x1.6 = -1.76940e-07
+x1.7 = 1.868872e-03
+x1.8 = 1.868872e-03
+x1.9 = 0.000000e+00
+x1.10 = -6.07758e-01
+x1.11 = 9.960324e+00
+x1.12 = 9.960343e+00
+x1.13 = -5.93880e-01
+x1.14 = -5.93887e-01
+x1.53 = 9.000000e+00
+x1.54 = -9.00000e+00
+x1.90 = 1.928391e-05
+x1.91 = 4.000000e+01
+x1.92 = -4.00000e+01
+x1.99 = 0.000000e+00
+Reducing trtol to 1 for xspice 'A' devices
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+No. of Data Rows : 71
+
+The file "gain.ps" may be printed on a postscript printer.
+gain_FIG
+
+The file "phase.ps" may be printed on a postscript printer.
+phase_FIG
+maximo              =  3.653233e+01 at=  1.000000e+03
+cfreq               =  1.000000e+03 with=  3.653233e+01
+Zin_TAB
+Zin = 999.002 + -7.3282 j
+Zin_END
+results_TAB
+Gain= 36.5323
+Central Frequency= 1000
+Gain deviation=32.9164
+Central frequency deviation=0
+results_END
+**************
+cost_TAB
+Cost = 13426.7
+Merit = 2.26266E-06
+cost_END
+**************
+ngspice-31 done
