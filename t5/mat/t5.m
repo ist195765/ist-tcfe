@@ -72,7 +72,7 @@ print (phase, "phase", "-depsc");
 %Merit & Cost
 Gain_Deviation = abs(100-T_central_freq);
 Central_Frequency_Deviation=abs(1000-wo_Hz);
-cost = 1e-3*(R1 + R2 + R3 + R4 + 158125) + 1e6*(C1 + 4*C2 + 30e-12) + 22*0.1;
+cost = 1e-3*(R1 + R2 + R3 + R4) + 1e6*(C1 + 4*C2) + 13323;
 Merit = 1/(cost * (Gain_Deviation + Central_Frequency_Deviation + 1e-6));
 
 printf ("Cost_Merit_TAB\n");
@@ -86,3 +86,11 @@ printf ("Central frequency= %e \n", wo_Hz);
 printf ("Gain deviation = %e \n", Gain_Deviation);
 printf ("Central frequency deviation = %e \n", Central_Frequency_Deviation); 
 printf ("results_octave_END\n\n");
+
+printf ("zin_TAB\n");
+printf ("Z in = %e + %ej \n", real(z_in), imag(z_in)); 
+printf ("zin_END\n\n");
+
+printf ("zout_TAB\n");
+printf ("Z out = %e + %ej\n", real(z_out) , imag(z_out));
+printf ("zout_END\n\n");

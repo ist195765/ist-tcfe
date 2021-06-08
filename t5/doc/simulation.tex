@@ -99,7 +99,55 @@ The following table represents the comparison between the results obtained from 
 	\end{tabular}
        \caption{NGspice}
     \end{minipage} 
-   \caption{Simulation results}
+   \caption{Simulation results - comparison}
+\end{table}
+%Zin
+\begin{table}[H]
+    \begin{minipage}{.5\linewidth}
+      \centering
+        \begin{tabular}{|
+		>{\columncolor[HTML]{FFCC67}}l |c|}
+		\hline
+		\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
+		\input{../mat/zin_TAB}
+	\end{tabular}
+      \caption{Octave}
+    \end{minipage}%
+    \begin{minipage}{.5\linewidth}
+      \centering
+        \begin{tabular}{|
+		>{\columncolor[HTML]{FFCC67}}l |c|}
+		\hline
+		\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
+		\input{../sim/Zin_tab}
+	\end{tabular}
+       \caption{NGspice}
+    \end{minipage} 
+   \caption{Zin comparison}
+\end{table}
+%Zout
+\begin{table}[H]
+    \begin{minipage}{.5\linewidth}
+      \centering
+        \begin{tabular}{|
+		>{\columncolor[HTML]{FFCC67}}l |c|}
+		\hline
+		\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
+		\input{../mat/zout_TAB}
+	\end{tabular}
+      \caption{Octave}
+    \end{minipage}%
+    \begin{minipage}{.5\linewidth}
+      \centering
+        \begin{tabular}{|
+		>{\columncolor[HTML]{FFCC67}}l |c|}
+		\hline
+		\multicolumn{2}{|l|}{\cellcolor[HTML]{EABD8B}Name - Value} \\ \hline
+		\input{../sim/op_ZO_tab}
+	\end{tabular}
+       \caption{NGspice}
+    \end{minipage} 
+   \caption{Zout comparison}
 \end{table}
 
 As seen in the previous table, as requested, we were able to compute the passband frequency in a simulation analysis using the measure funtion and the central frequency in the theoretical analysis as explained in Section~\ref{sec:analysis}.  We have to consider that the OP-AMP model chosen is far more complex in Ngspice than in Octave. The different calculation methods lead to the difference between both methods, being that the calculated and simulated impedances have the same issues.

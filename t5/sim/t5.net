@@ -116,7 +116,7 @@ meas AC Cfreq MAX_AT vdb(out) from=10 to=100MEG
 
 
 
-let cost = 2.639850E+02
+let cost = 1.342666E+04
 let cdevi=abs(1000-Cfreq)
 let gaindevi=abs(100-10^(maximo/20))
 let merit = 1/(cost*(gaindevi + cdevi + 1E-6))
